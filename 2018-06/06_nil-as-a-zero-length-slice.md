@@ -4,7 +4,7 @@
 
 ## 確認コード
 
-```
+```golang
 package main
 
 import (

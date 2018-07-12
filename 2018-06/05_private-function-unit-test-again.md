@@ -7,7 +7,7 @@
 もちろんテストのためだけにアクセス修飾子を変えるのはどうよと言われるとそれはそれで悩ましいところがありますが、`internal`の方が気楽な感じがしました.
 
 
-```
+```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TestTarget;
 

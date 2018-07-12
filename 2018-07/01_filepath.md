@@ -12,7 +12,7 @@ Go 言語でのプログラミング中に Delphi の`ChangeFileExt`、.NET Fram
 
 それはさておき拡張子を置換するコードはこうなった.
 
-```
+```golang
 func changeExt(path string, ext string) string {
 	return path[:len(path)-len(filepath.Ext(path))] + ext
 }

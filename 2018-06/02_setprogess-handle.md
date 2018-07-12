@@ -2,7 +2,7 @@
 
 Windows 7 でタスクバーで進捗表示をする機能が実装された. Delphi 10.2.3 で以下の通り PoC を実装したところ動作した.
 
-```
+```pascal
 procedure TForm1.Button1Click(Sender: TObject);
 var
   I: Integer;
@@ -31,7 +31,7 @@ Delphi はウインドウ管理が MDI (Multiple Documents Interface) のよう�
 
 Delphi2007 以降であれば、以下の行を dpr ファイルに書くことにより、メインフォームの `Handle` がタスクバーに紐付いたものになるよう(また、新規にプロジェクトを作成すれば以下の行が含まれる).
 
-```
+```pascal
 Application.MainFormOnTaskbar := True;
 ```
 
