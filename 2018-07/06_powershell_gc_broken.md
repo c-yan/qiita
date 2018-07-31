@@ -1,5 +1,13 @@
 # PowerShell の GC が壊れているとしか思えない件について
 
+
+**8/1 追記: GC に問題があるのではなく、PowerShell の範囲オペレータが配列(イテレータではなく)を返すという仕様の問題でした.**
+
+[About Operators](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-3.0)
+> Represents the sequential integers in an integer array, given an upper and lower boundary.
+
+以下、元記事.
+
 ```powershell
 PS> $PSVersionTable
 
