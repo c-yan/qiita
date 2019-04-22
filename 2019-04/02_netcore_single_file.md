@@ -2,7 +2,9 @@
 
 .NET Core 3.0 の目玉の single exe がどれくらいのサイズになるのか興味があって、 preview3 で試してみようとしたら、出来なかった話.
 
-それはそれとして、.NET Core SDK 3.0.100-preview3-010431 を入れても、Visual Studio 2019 がうんともすんとも .NET Core 3.0 を認識しないのは何故だろう. インストール画面眺めてたときに TargetPack がインストールされているのは確認できたのに…….
+~~それはそれとして、.NET Core SDK 3.0.100-preview3-010431 を入れても、Visual Studio 2019 がうんともすんとも .NET Core 3.0 を認識しないのは何故だろう. インストール画面眺めてたときに TargetPack がインストールされているのは確認できたのに…….~~
+
+preview チャネルの VS2019 じゃないと駄目だよとダウンロードページに書かれていることに preview4 をダウンロードに行って気づいた orz. (推奨されないけど、設定で有効にすることもできる [.NET Core tooling update for Visual Studio 2017 version 15.9](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/))
 
 というわけで、.NET Core 2.1 で ConsoleApp を作成し、.csproj の TargetFramework を手で netcoreapp3.0 に書き換えるところからスタート.
 
