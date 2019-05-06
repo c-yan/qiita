@@ -50,11 +50,11 @@ PS> $aes.IV = $kiv[16..31]
 PS> $aes.BlockSize = 128
 PS> $aes.Mode = [Security.Cryptography.CipherMode]::CBC
 PS> $aes.Padding = [Security.Cryptography.PaddingMode]::PKCS7
-PS> $decryptor = $aes.CreateEncryptor()
+PS> $encryptor = $aes.CreateEncryptor()
 PS> $plainBytes = [Text.Encoding]::UTF8.GetBytes($plainText)
-PS> [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("Salted__") + $salt + $decryptor.TransformFinalBlock($plainBytes, 0, $plainBytes.Length))
+PS> [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("Salted__") + $salt + $encryptor.TransformFinalBlock($plainBytes, 0, $plainBytes.Length))
 U2FsdGVkX18h9BZVxCv8LUEoORGQg4XKivd4mq6r/q4=
-PS> $decryptor.Dispose()
+PS> $encryptor.Dispose()
 PS> $aes.Dispose()
 PS>
 ```
