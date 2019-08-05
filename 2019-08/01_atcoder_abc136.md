@@ -100,3 +100,27 @@ for i in range(n):
     count += 1
 print(' '.join(map(str, result)))
 ```
+
+追記: というわけでタイムアップ直前に思いついた着想で書いてみたら15分で書けた挙げ句、PyPy 使わずに一発 AC で、もっと早く思いつけよとしか言いようがなかった.
+
+```python
+s = input()
+n = len(s)
+result = [0 for _ in range(n)]
+start = 0
+c = 'R'
+for i in range(1, n):
+  if s[i] != c:
+    if c == 'R':
+      result[i - 1] += (i - start) // 2 + (i - start) % 2
+      result[i] += (i - start) // 2
+      c = 'L'
+    else:
+      result[start] += (i - start) // 2 + (i - start) % 2
+      result[start - 1] += (i - start) // 2
+      c = 'R'
+    start = i
+result[start] += (n - start) // 2 + (n - start) % 2
+result[start - 1] += (n - start) // 2
+print(*result)
+```
