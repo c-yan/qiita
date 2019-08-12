@@ -88,3 +88,30 @@ print(result)
 ```
 
 過去、main 関数を作ってコードをその中に入れ呼ぶようにすると、変数がローカル変数になるため、1割～2割程度高速化していたのだが、今回は不思議なことに遅くなってしまった. 要研究. あと、Python3 では AC なのに、PyPy3 では WA になるのを初めてみた. PyPy3 の秘孔をついてしまったか.
+
+追記: カツカツに最適化しても Python3 の TLE は一つも消えず困ったなあと思っていたが、解説で使うことになっている順序付きキューが最小のしか Python のビルトインにはなく、使えなくどうしようって感じだったけど、マイナスで突っ込んで、取り出したらマイナスして戻すという使い方をするということを知って、実装したらサクッと通った.
+
+```python
+from heapq import heappush, heappop
+n, m = map(int, input().split())
+jobs = {}
+for _ in range(n):
+  a, b = map(int, input().split())
+  if a > m:
+    continue
+  if a in jobs:
+    jobs[a].append(b)
+  else:
+    jobs[a] = [b]
+result = 0
+candidates = []
+for a in range(1, m + 1):
+  if a in jobs:
+    for b in jobs[a]:
+      heappush(candidates, -b)
+  else:
+    if len(candidates) == 0:
+      continue
+  result += -heappop(candidates)
+print(result)
+```
