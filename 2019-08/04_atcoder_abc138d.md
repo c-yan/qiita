@@ -1,5 +1,8 @@
 # AtCoder Beginner Contest 138 D - Ki のテストケースがコンテスト後に増えている件について
 
+**追記: 1≤a<sub>i</sub>&lt;b<sub>i</sub>≤N の条件があるので、以下の想像は誤りです!!**
+**追々記: [AtCoder Beginner Contest 138 D - Ki のテストケースがコンテスト後に増えている件について (修正版) - Qiita](https://qiita.com/c-yan/items/887e2c2f410ecec60650) をご覧ください**
+
 AtCoder Beginner Contest 138 の終了後も D 問題を解説を見て試行錯誤していたら、AC だったコードが WA になって、after_contest_15, after_contest_16, after_contest_17 が増えていることに気づいた. 解説 PDF にも修正が入っていた.
 
 問題文には 「この木の根は頂点 1 で、i 番目の辺 (1≤i≤N−1) は頂点 a<sub>i</sub> と頂点 b<sub>i</sub> を結びます。」とだけ書かれていて、頂点 a<sub>i</sub> と頂点 b<sub>i</sub> のどちらが根に近いかは不明なのだが、テストケースが追加される前は頂点 a<sub>i</sub> のほうが根に近いという決めつけをしていても通るテストケースになっていたと思われます. 追加されたテストケースはこの決めつけをしていると通らないように思われます. (だから解説 PDF に「根に近い頂点から順に行えば」という追記が入ったと思われる).
