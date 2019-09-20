@@ -280,3 +280,14 @@ for j in range(13):
   for k in range(10):
     dp[i + 1][lut[j * 10 + k]] += dp[i][j]
 ```
+
+## その他
+
+### 再帰限界数の設定
+
+コードの中に再帰関数があって、入出力例が通って、提出したら RE になった場合はだいたいこれ. Python は再帰関数の再帰回数の制限が厳しく、設定を変えないとだいたい通らない. AtCoder ではメモ化再帰で再帰関数をよく使うので忘れないよう注意.
+
+```python
+from sys import setrecursionlimit
+setrecursionlimit(1000000)
+```
