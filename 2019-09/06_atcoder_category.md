@@ -8,17 +8,37 @@
 
 * [Educational DP Contest / DP まとめコンテスト](https://atcoder.jp/contests/dp)
 * [Typical DP Contest](https://atcoder.jp/contests/tdpc/)
+* [ABC040C - 柱柱柱柱柱](https://atcoder.jp/contests/abc040/tasks/abc040_c)
+* [ABC087C - Candies](https://atcoder.jp/contests/abc087/tasks/arc090_a)
 * [ABC099C - Strange Bank](https://atcoder.jp/contests/abc099/tasks/abc099_c)
 * [ABC129C - Typical Stairs](https://atcoder.jp/contests/abc129/tasks/abc129_c)
+* [ABC054D - Mixing Experiment](https://atcoder.jp/contests/abc054/tasks/abc054_d)
 * [ABC135D - Digits Parade](https://atcoder.jp/contests/abc135/tasks/abc135_d)
 * [ABC141E - Who Says a Pun?](https://atcoder.jp/contests/abc141/tasks/abc141_e)
 
+<!--
+* [ABC118D - Match Matching](https://atcoder.jp/contests/abc118/tasks/abc118_d)
+-->
+
 ## 累積和
 
+* [ABC087C - Candies](https://atcoder.jp/contests/abc087/tasks/arc090_a)
 * [ABC122C - GeT AC](https://atcoder.jp/contests/abc122/tasks/abc122_c)
 * [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (累積GCD)
 * [ABC134C - Exception Handling](https://atcoder.jp/contests/abc134/tasks/abc134_c) (累積Max)
 * [ABC084D - 2017-like Number](https://atcoder.jp/contests/abc084/tasks/abc084_d)
+
+## しゃくとり法
+
+* [ABC130D - Enough Array](https://atcoder.jp/contests/abc130/tasks/abc130_d)
+
+<!--
+* [ABC032C - 列](https://atcoder.jp/contests/abc032/tasks/abc032_c)
+* [ABC038C - 単調増加](https://atcoder.jp/contests/abc038/tasks/abc038_c)
+* [ARC022B - 細長いお菓子](https://atcoder.jp/contests/arc022/tasks/arc022_2)
+* [ABC098D - Xor Sum 2](https://atcoder.jp/contests/abc098/tasks/arc098_b)
+* [ABC017D - サプリメント](https://atcoder.jp/contests/abc017/tasks/abc017_4)
+-->
 
 ## imos 法
 
@@ -51,6 +71,11 @@
 * [ABC007C - 幅優先探索](https://atcoder.jp/contests/abc007/tasks/abc007_3)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
+
+## 二分探索
+
+* [ABC113C - ID](https://atcoder.jp/contests/abc113/tasks/abc113_c)
+* [ABC119D - Lazy Faith](https://atcoder.jp/contests/abc119/tasks/abc119_d)
 
 ## 優先度付きキュー
 
