@@ -17,8 +17,8 @@
 * [ABC141E - Who Says a Pun?](https://atcoder.jp/contests/abc141/tasks/abc141_e)
 
 <!--
-011C
-122D
+* [ABC011C - 123引き算](https://atcoder.jp/contests/abc011/tasks/abc011_3)
+* [ABC122D - We Like AGC](https://atcoder.jp/contests/abc122/tasks/abc122_d)
 * [ABC118D - Match Matching](https://atcoder.jp/contests/abc118/tasks/abc118_d)
 -->
 
@@ -31,24 +31,24 @@
 * [ABC084D - 2017-like Number](https://atcoder.jp/contests/abc084/tasks/abc084_d)
 
 <!--
-017C
-018C
-038C
-098C
-124D
-129D
+* [ABC017C - ハイスコア](https://atcoder.jp/contests/abc017/tasks/abc017_3)
+* [ABC018C - 菱型カウント](https://atcoder.jp/contests/abc018/tasks/abc018_3)
+* [ABC038C - 単調増加](https://atcoder.jp/contests/abc038/tasks/abc038_c)
+* [ABC098C - Attention](https://atcoder.jp/contests/abc098/tasks/arc098_a)
+* [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
+* [ABC129D - Lamp](https://atcoder.jp/contests/abc129/tasks/abc129_d) *****
 -->
 
 ## imos 法
 
 * [ABC014C - AtColor](https://atcoder.jp/contests/abc014/tasks/abc014_3)
 * [ABC035C - オセロ](https://atcoder.jp/contests/abc035/tasks/abc035_c)
+* [ABC127C - Prison](https://atcoder.jp/contests/abc127/tasks/abc127_c)
 * [ABC141C - Attack Survival](https://atcoder.jp/contests/abc141/tasks/abc141_c)
 
 <!--
-017C
-124D
-127C
+* [ABC017C - ハイスコア](https://atcoder.jp/contests/abc017/tasks/abc017_3)
+* [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
 * [ABC080D - Recording](https://atcoder.jp/contests/abc080/tasks/abc080_d)
 -->
 
@@ -58,7 +58,7 @@
 * [ABC130D - Enough Array](https://atcoder.jp/contests/abc130/tasks/abc130_d)
 
 <!--
-033C
+* [ABC033C - 数式の書き換え](https://atcoder.jp/contests/abc033/tasks/abc033_c)
 * [ABC038C - 単調増加](https://atcoder.jp/contests/abc038/tasks/abc038_c)
 * [ARC022B - 細長いお菓子](https://atcoder.jp/contests/arc022/tasks/arc022_2)
 * [ABC098D - Xor Sum 2](https://atcoder.jp/contests/abc098/tasks/arc098_b)
@@ -82,8 +82,8 @@
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
 
 <!--
-015C
-020C
+* [ABC015C - 高橋くんのバグ探し](https://atcoder.jp/contests/abc015/tasks/abc015_3)
+* [ABC020C - 壁抜け](https://atcoder.jp/contests/abc020/tasks/abc020_c)
 -->
 
 ## BFS (幅優先探索)
@@ -93,7 +93,7 @@
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
 
 <!--
-126D
+* [ABC126D - Even Relation](https://atcoder.jp/contests/abc126/tasks/abc126_d)
 -->
 
 ## 二分探索
@@ -102,9 +102,9 @@
 * [ABC119D - Lazy Faith](https://atcoder.jp/contests/abc119/tasks/abc119_d)
 
 <!--
-030C
-077C
-114C
+* [ABC030C - 飛行機乗り](https://atcoder.jp/contests/abc030/tasks/abc030_c)
+* [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
+* [ABC114C - 755](https://atcoder.jp/contests/abc114/tasks/abc114_c) *****
 -->
 
 ## 優先度付きキュー
