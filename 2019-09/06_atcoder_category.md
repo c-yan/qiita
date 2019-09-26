@@ -99,11 +99,11 @@
 
 ## 二分探索
 
+* [ABC030C - 飛行機乗り](https://atcoder.jp/contests/abc030/tasks/abc030_c)
 * [ABC113C - ID](https://atcoder.jp/contests/abc113/tasks/abc113_c)
 * [ABC119D - Lazy Faith](https://atcoder.jp/contests/abc119/tasks/abc119_d)
 
 <!--
-* [ABC030C - 飛行機乗り](https://atcoder.jp/contests/abc030/tasks/abc030_c)
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC114C - 755](https://atcoder.jp/contests/abc114/tasks/abc114_c) *****
 -->
