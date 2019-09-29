@@ -15,6 +15,7 @@
 * [ABC054D - Mixing Experiment](https://atcoder.jp/contests/abc054/tasks/abc054_d)
 * [ABC135D - Digits Parade](https://atcoder.jp/contests/abc135/tasks/abc135_d)
 * [ABC141E - Who Says a Pun?](https://atcoder.jp/contests/abc141/tasks/abc141_e)
+* [ABC142E - Get Everything](https://atcoder.jp/contests/abc142/tasks/abc142_e)
 
 <!--
 * [ABC011C - 123引き算](https://atcoder.jp/contests/abc011/tasks/abc011_3)
@@ -57,6 +58,7 @@
 
 * [ABC032C - 列](https://atcoder.jp/contests/abc032/tasks/abc032_c)
 * [ABC130D - Enough Array](https://atcoder.jp/contests/abc130/tasks/abc130_d)
+* [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
 
 <!--
 * [ABC033C - 数式の書き換え](https://atcoder.jp/contests/abc033/tasks/abc033_c)
@@ -69,6 +71,7 @@
 ## Union Find 木
 
 * [ATC001B - Union Find](https://atcoder.jp/contests/atc001/tasks/unionfind_a)
+* [ABC075C - Bridge](https://atcoder.jp/contests/abc075/tasks/abc075_c)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
 * [ABC120D - Decayed Bridges](https://atcoder.jp/contests/abc120/tasks/abc120_d)
 
