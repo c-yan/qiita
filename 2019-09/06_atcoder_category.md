@@ -35,7 +35,6 @@
 * [ABC038C - 単調増加](https://atcoder.jp/contests/abc038/tasks/abc038_c)
 
 <!--
-* [ABC017C - ハイスコア](https://atcoder.jp/contests/abc017/tasks/abc017_3)
 * [ABC018C - 菱型カウント](https://atcoder.jp/contests/abc018/tasks/abc018_3)
 * [ABC098C - Attention](https://atcoder.jp/contests/abc098/tasks/arc098_a)
 * [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d) *****
@@ -44,13 +43,12 @@
 ## imos 法
 
 * [ABC014C - AtColor](https://atcoder.jp/contests/abc014/tasks/abc014_3)
+* [ABC017C - ハイスコア](https://atcoder.jp/contests/abc017/tasks/abc017_3)
 * [ABC035C - オセロ](https://atcoder.jp/contests/abc035/tasks/abc035_c)
 * [ABC127C - Prison](https://atcoder.jp/contests/abc127/tasks/abc127_c)
 * [ABC141C - Attack Survival](https://atcoder.jp/contests/abc141/tasks/abc141_c)
 
 <!--
-* [ABC017C - ハイスコア](https://atcoder.jp/contests/abc017/tasks/abc017_3)
-* [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
 * [ABC080D - Recording](https://atcoder.jp/contests/abc080/tasks/abc080_d)
 -->
 
