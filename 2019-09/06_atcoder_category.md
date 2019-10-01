@@ -45,6 +45,7 @@
 * [ABC014C - AtColor](https://atcoder.jp/contests/abc014/tasks/abc014_3)
 * [ABC017C - ハイスコア](https://atcoder.jp/contests/abc017/tasks/abc017_3)
 * [ABC035C - オセロ](https://atcoder.jp/contests/abc035/tasks/abc035_c)
+* [ABC072C - Together](https://atcoder.jp/contests/abc072/tasks/arc082_a)
 * [ABC127C - Prison](https://atcoder.jp/contests/abc127/tasks/abc127_c)
 * [ABC141C - Attack Survival](https://atcoder.jp/contests/abc141/tasks/abc141_c)
 
