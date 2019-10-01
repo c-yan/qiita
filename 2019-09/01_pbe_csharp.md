@@ -25,7 +25,7 @@ $ echo 'U2FsdGVkX1+ymkCPB8EdLXrTUPQcL8q1q0f8YEryZ/Y=' | openssl enc -d -a -pbkdf
 test
 ```
 
-Rfc2898DeriveBytes のコンストラクタの引数に HashAlgorithmName のオプションが増えたのは .NET Framework 4.7.2 / .NET Core 2.0 以降で、以下のコードは .NET Standard 2.0 ではビルドできない.
+Rfc2898DeriveBytes のコンストラクタの引数に HashAlgorithmName のオプションが増えたのは .NET Framework 4.7.2 / .NET Core 2.0 以降で、以下のコードは .NET Standard 2.0 ではビルドできない. (追記: .NET Standard 2.1 でビルドできるようになった)
 
 ```csharp
 using System;
