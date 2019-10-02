@@ -25,6 +25,7 @@
 
 ## 累積和
 
+* [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC087C - Candies](https://atcoder.jp/contests/abc087/tasks/arc090_a)
 * [ABC122C - GeT AC](https://atcoder.jp/contests/abc122/tasks/abc122_c)
 * [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (累積GCD)
@@ -102,11 +103,11 @@
 ## 二分探索
 
 * [ABC030C - 飛行機乗り](https://atcoder.jp/contests/abc030/tasks/abc030_c)
+* [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC113C - ID](https://atcoder.jp/contests/abc113/tasks/abc113_c)
 * [ABC119D - Lazy Faith](https://atcoder.jp/contests/abc119/tasks/abc119_d)
 
 <!--
-* [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC114C - 755](https://atcoder.jp/contests/abc114/tasks/abc114_c) *****
 -->
 
