@@ -27,6 +27,7 @@
 
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC087C - Candies](https://atcoder.jp/contests/abc087/tasks/arc090_a)
+* [ABC098C - Attention](https://atcoder.jp/contests/abc098/tasks/arc098_a)
 * [ABC122C - GeT AC](https://atcoder.jp/contests/abc122/tasks/abc122_c)
 * [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (累積GCD)
 * [ABC134C - Exception Handling](https://atcoder.jp/contests/abc134/tasks/abc134_c) (累積Max)
@@ -37,7 +38,6 @@
 
 <!--
 * [ABC018C - 菱型カウント](https://atcoder.jp/contests/abc018/tasks/abc018_3)
-* [ABC098C - Attention](https://atcoder.jp/contests/abc098/tasks/arc098_a)
 * [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d) *****
 -->
 
@@ -106,10 +106,6 @@
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC113C - ID](https://atcoder.jp/contests/abc113/tasks/abc113_c)
 * [ABC119D - Lazy Faith](https://atcoder.jp/contests/abc119/tasks/abc119_d)
-
-<!--
-* [ABC114C - 755](https://atcoder.jp/contests/abc114/tasks/abc114_c) *****
--->
 
 ## 優先度付きキュー
 
