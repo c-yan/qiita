@@ -25,6 +25,7 @@
 
 ## 累積和
 
+* [ABC037C - 総和](https://atcoder.jp/contests/abc037/tasks/abc037_c)
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC087C - Candies](https://atcoder.jp/contests/abc087/tasks/arc090_a)
 * [ABC098C - Attention](https://atcoder.jp/contests/abc098/tasks/arc098_a)
@@ -33,6 +34,7 @@
 * [ABC134C - Exception Handling](https://atcoder.jp/contests/abc134/tasks/abc134_c) (累積Max)
 * [ABC084D - 2017-like Number](https://atcoder.jp/contests/abc084/tasks/abc084_d)
 * [AGC015B - Evilator](https://atcoder.jp/contests/agc015/tasks/agc015_b)
+* [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
 * [ABC129D - Lamp](https://atcoder.jp/contests/abc129/tasks/abc129_d)
 * [ABC038C - 単調増加](https://atcoder.jp/contests/abc038/tasks/abc038_c)
 
@@ -54,11 +56,10 @@
 * [ABC080D - Recording](https://atcoder.jp/contests/abc080/tasks/abc080_d)
 -->
 
-## しゃくとり法
+## しゃくとり法 (Two Pointer)
 
 * [ABC032C - 列](https://atcoder.jp/contests/abc032/tasks/abc032_c)
 * [ABC130D - Enough Array](https://atcoder.jp/contests/abc130/tasks/abc130_d)
-* [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
 
 <!--
 * [ABC033C - 数式の書き換え](https://atcoder.jp/contests/abc033/tasks/abc033_c)
@@ -67,6 +68,11 @@
 * [ABC098D - Xor Sum 2](https://atcoder.jp/contests/abc098/tasks/arc098_b)
 * [ABC017D - サプリメント](https://atcoder.jp/contests/abc017/tasks/abc017_4)
 -->
+
+## Sliding Window
+
+* [ABC037C - 総和](https://atcoder.jp/contests/abc037/tasks/abc037_c)
+* [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
 
 ## Union Find 木
 
@@ -112,6 +118,11 @@
 * [ABC141D - Powerful Discount Tickets](https://atcoder.jp/contests/abc141/tasks/abc141_d)
 * [ABC137D - Summer Vacation](https://atcoder.jp/contests/abc137/tasks/abc137_d)
 * [ABC123D - Cake 123](https://atcoder.jp/contests/abc123/tasks/abc123_d)
+
+## 素因数分解
+
+* [ABC052C - Factors of Factorial](https://atcoder.jp/contests/abc052/tasks/arc067_a)
+* [ABC142D - Disjoint Set of Common Divisors](https://atcoder.jp/contests/abc142/tasks/abc142_d)
 
 ## エラトステネスの篩
 
