@@ -21,6 +21,7 @@
 * [ABC011C - 123引き算](https://atcoder.jp/contests/abc011/tasks/abc011_3)
 * [ABC122D - We Like AGC](https://atcoder.jp/contests/abc122/tasks/abc122_d)
 * [ABC118D - Match Matching](https://atcoder.jp/contests/abc118/tasks/abc118_d)
+* [ABC044C - 高橋君とカード / Tak and Cards](https://atcoder.jp/contests/abc044/tasks/arc060_a)
 -->
 
 ## 累積和
@@ -40,7 +41,6 @@
 
 <!--
 * [ABC018C - 菱型カウント](https://atcoder.jp/contests/abc018/tasks/abc018_3)
-* [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d) *****
 -->
 
 ## imos 法
@@ -63,7 +63,6 @@
 
 <!--
 * [ABC033C - 数式の書き換え](https://atcoder.jp/contests/abc033/tasks/abc033_c)
-* [ABC038C - 単調増加](https://atcoder.jp/contests/abc038/tasks/abc038_c)
 * [ARC022B - 細長いお菓子](https://atcoder.jp/contests/arc022/tasks/arc022_2)
 * [ABC098D - Xor Sum 2](https://atcoder.jp/contests/abc098/tasks/arc098_b)
 * [ABC017D - サプリメント](https://atcoder.jp/contests/abc017/tasks/abc017_4)
@@ -80,6 +79,7 @@
 * [ABC075C - Bridge](https://atcoder.jp/contests/abc075/tasks/abc075_c)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
 * [ABC120D - Decayed Bridges](https://atcoder.jp/contests/abc120/tasks/abc120_d)
+* [ABC126E - 1 or 2](https://atcoder.jp/contests/abc126/tasks/abc126_e)
 
 <!--
 * [ABC087D - People on a Line](https://atcoder.jp/contests/abc087/tasks/arc090_b)
@@ -89,6 +89,7 @@
 
 * [ATC001A - 深さ優先探索](https://atcoder.jp/contests/atc001/tasks/dfs_a)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
+* [ABC126D - Even Relation](https://atcoder.jp/contests/abc126/tasks/abc126_d)
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
 
 <!--
@@ -100,11 +101,8 @@
 
 * [ABC007C - 幅優先探索](https://atcoder.jp/contests/abc007/tasks/abc007_3)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
-* [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
-
-<!--
 * [ABC126D - Even Relation](https://atcoder.jp/contests/abc126/tasks/abc126_d)
--->
+* [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
 
 ## 二分探索
 
