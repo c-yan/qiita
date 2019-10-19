@@ -110,6 +110,7 @@
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC113C - ID](https://atcoder.jp/contests/abc113/tasks/abc113_c)
 * [ABC119D - Lazy Faith](https://atcoder.jp/contests/abc119/tasks/abc119_d)
+* [ABC143D - Triangles](https://atcoder.jp/contests/abc143/tasks/abc143_d)
 
 ## 優先度付きキュー
 
