@@ -24,7 +24,7 @@
 * [ABC044C - 高橋君とカード / Tak and Cards](https://atcoder.jp/contests/abc044/tasks/arc060_a)
 -->
 
-## 累積和
+## 累積和 (Prefix Sum)
 
 * [ABC037C - 総和](https://atcoder.jp/contests/abc037/tasks/abc037_c)
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
@@ -108,13 +108,14 @@
 * [ABC126D - Even Relation](https://atcoder.jp/contests/abc126/tasks/abc126_d)
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
 
-## 二分探索
+## 二分探索 (Binary Search)
 
 * [ABC030C - 飛行機乗り](https://atcoder.jp/contests/abc030/tasks/abc030_c)
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC113C - ID](https://atcoder.jp/contests/abc113/tasks/abc113_c)
 * [ABC119D - Lazy Faith](https://atcoder.jp/contests/abc119/tasks/abc119_d)
 * [ABC143D - Triangles](https://atcoder.jp/contests/abc143/tasks/abc143_d)
+* [ABC144E - Gluttony](https://atcoder.jp/contests/abc144/tasks/abc144_e)
 
 ## ワーシャルフロイド
 
