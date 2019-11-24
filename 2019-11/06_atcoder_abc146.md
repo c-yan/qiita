@@ -43,18 +43,18 @@ A, B, X = map(int, input().split())
 
 
 def is_ok(N):
-    return A * N + B * len(str(N)) > X
+    return A * N + B * len(str(N)) <= X
 
 
-l = 0
-r = 1000000001
-while r > l+1:
-    m = l + (r - l) // 2
+ok = 0
+ng = 10 ** 9 + 1
+while ng - ok > 1:
+    m = (ok + ng) // 2
     if is_ok(m):
-        r = m
+        ok = m
     else:
-        l = m
-print(l)
+        ng = m
+print(ok)
 ```
 
 ## D - Coloring Edges on Tree
