@@ -83,6 +83,27 @@ for i in range(10):
 print(result)
 ```
 
+追記: 圧縮する必要なかった(^^; 約30000文字の連続の先に続きがあるとかの極端なテストケースあると思ってたのになあ. というかないと D 問題難度じゃないよと言うか.
+
+```python
+N = int(input())
+S = input()
+
+result = 0
+for i in range(10):
+  a = S.find(str(i))
+  if a == -1:
+    continue
+  for j in range(10):
+    b = S.find(str(j), a + 1)
+    if b == -1:
+      continue
+    for k in range(10):
+      if S.find(str(k), b + 1) != -1:
+        result += 1
+print(result)
+```
+
 ## E - Colorful Hats 2
 
 28分で突破. WA1. A1 が 0 であると信用したのがいけなかった. 先頭からありえるパターンをかけ続けるだけ. E問題にしては簡単.
