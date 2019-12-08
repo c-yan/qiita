@@ -52,8 +52,6 @@ func main() {
 
 	result := 0
 	for b := 0; b < 60; b++ {
-      B := (1 << uint(b)) % 1000000007
-
 		a := make([]int, N)
 		for i := 0; i < N; i++ {
 			a[i] = (A[i] >> uint(b)) & 1
@@ -72,6 +70,7 @@ func main() {
 			} else {
 				t = (N - (i + 1)) - bs[i+1]
 			}
+			B := (1 << uint(b)) % 1000000007
 			result += (t * B) % 1000000007
 			result = result % 1000000007
 		}
