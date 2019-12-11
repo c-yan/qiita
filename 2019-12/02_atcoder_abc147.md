@@ -107,6 +107,21 @@ func readInt() int {
 }
 ```
 
+追記: 結局この計算は Ai のすべての組み合わせ(Ai 自身同士は含まない)の XOR の合計なので、Ai のあるビットの立っている数の合計を c とすると、Ai のあるビットが0であった場合により計算結果に立つビットの数は c、Ai のあるビットが1であった場合により計算結果に立つビットの数は N - c になるので、あるビットに関する計算結果は c * (N -c) のビットシフトした値になる. 結果として以下の計算で解ける.
+
+```python
+N = int(input())
+A = list(map(int, input().split()))
+
+result = 0
+for bit in range(60):
+    m = 1 << bit
+    c = sum(a & m for a in A) >> bit
+    result += (c * (N - c)) << bit
+    result %= 1000000007
+print(result)
+```
+
 ## C - HonestOrUnkind2
 
 35分くらい?で突破. N≤15 なので、全組み合わせやっても 2<sup>15</sup> でしかなく、やるだけ. だけって言ってもコーディングは中々大変. 最初 `for i in range(1, 2 ** N):` が `for i in range(1, 2 ** N - 1):` になってて WA3 だった. Dが終わった後見直していたら気づいた.
