@@ -67,7 +67,7 @@ result = 0
 for i in range(len(T)):
     if i >= K and d1[T[i]] == hands[i - K]:
         if i + K < N:
-            hands[i] = set('rps') - set(T[i + K]) - set(T[i])
+            hands[i] = list(set('rps') - set(d1[T[i]]) - set(d1[T[i + K]]))[0]
         else:
             hands[i] = T[i]
     else:
