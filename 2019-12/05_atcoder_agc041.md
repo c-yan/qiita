@@ -25,6 +25,17 @@ t = min((N - B + 1) + (N - (A + (N - B + 1))) // 2, t)
 print(t)
 ```
 
+追記: 改めて考えてみると、2と3は要らないし、偶数の場合は端に行くパターンを考える必要はなかった.
+
+```python
+N, A, B = map(int, input().split())
+
+if (B - A) % 2 == 0:
+    print((B - A) // 2)
+else:
+    print(min(A, N - B + 1) + (B - A - 1) // 2)
+```
+
 ## B - Voting Judges
 
 113分で突破. WA5. Python で TLE 食らって、PyPy にしても TLE 食らって、Go で書き直しても TLE 食らって、一箇所無駄なスライスのコピーを消したら AC と、一つだけ重たいテストケースが入っててボコボコにされた.
