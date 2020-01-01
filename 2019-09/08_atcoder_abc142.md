@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 142 参戦記
 
-## A - Odds of Oddness
+## ABC142A - Odds of Oddness
 
 2分半で突破. A問題なのにあってるのかなと考える時点でいつものA問題より難しい. これは書くだけとは言えない.
 
@@ -9,7 +9,7 @@ N = int(input())
 print(int(N / 2 + 0.5) / N)
 ```
 
-## B - Roller Coaster
+## ABC142B - Roller Coaster
 
 3分で突破. 書くだけ. 今回はある意味A問題よりB問題のほうが簡単だった.
 
@@ -19,7 +19,7 @@ h = list(map(int, input().split()))
 print(sum(1 if t >= K else 0 for t in h))
 ```
 
-## C - Go to School
+## ABC142C - Go to School
 
 7分半で突破. 問題そのものは簡単なんだけど、タプルの第二要素でソートするのどうやるんだっけみたいな部分を調べるのに時間を使った.
 
@@ -32,7 +32,7 @@ A = list(map(int, input().split()))
 print(*[t[0] + 1 for t in sorted(enumerate(A), key=itemgetter(1))])
 ```
 
-## D - Disjoint Set of Common Divisors
+## ABC142D - Disjoint Set of Common Divisors
 
 WA が消せず. 最大公約数を取り、その約数のうち素数のものを数え上げるという方針は合っていたのだけど、TLE 対策で `sqrt(gcd(A, B))` までしかループを回さないようにした時に、`sqrt(gcd(A, B))` より大きい素数が1つだけ存在しうることを見落としたせいで、すべてがパーに. この問題を飛ばして、次の問題をやったら解けた可能性が高かったので、今回の ABC は完全に事故った感じに.
 
@@ -62,7 +62,7 @@ A, B = map(int, input().split())
 print(len(prime_factorize(gcd(A, B))) + 1)
 ```
 
-## E - Get Everything
+## ABC142E - Get Everything
 
 手を付けれず. ナップサック問題が解ける人なら大体解けるのではないか.
 

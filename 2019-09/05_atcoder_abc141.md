@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 141 参戦記
 
-## A - Weather Prediction
+## ABC141A - Weather Prediction
 
 3分半で突破. ボーッとしてて開始に気づかなく、40秒くらい損している. もったいない. 書くだけ.
 
@@ -14,7 +14,7 @@ else:
   print('Sunny')
 ```
 
-## B - Tap Dance
+## ABC141B - Tap Dance
 
 3分で突破. 0-indexed と 1-indexed で偶奇がひっくり返ることだけ気にした.
 
@@ -26,7 +26,7 @@ else:
   print('No')
 ```
 
-## C - Attack Survival
+## ABC141C - Attack Survival
 
 10分半で突破. 制約を見るに、素直に N - 1 人のスコアを -1 して回ると TLE になるのは明々白々なので、正解者を +1 点する方向性で書いたらあっさり通りました.
 
@@ -42,7 +42,7 @@ for i in range(1, N + 1):
     print('No')
 ```
 
-## D - Powerful Discount Tickets
+## ABC141D - Powerful Discount Tickets
 
 13分半で突破. ABC137D からそんなに経ってないのにまた優先度付きキューですかーと思いながら実装. D問題だから素直にM回一番大きいやつを割るのではなく、まとめ割がいるかなあと思ったけどそんなことはなかった.
 
@@ -56,7 +56,7 @@ for _ in range(M):
 print(-sum(int(x) for x in a))
 ```
 
-## E - Who Says a Pun?
+## ABC141E - Who Says a Pun?
 
 TLE だらけで敗退.
 

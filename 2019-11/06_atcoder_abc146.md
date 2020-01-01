@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 146 参戦記
 
-## A - Can't Wait for Holiday
+## ABC146A - Can't Wait for Holiday
 
 2分半で突破. 書くだけ.
 
@@ -23,7 +23,7 @@ elif S == 'SAT':
     print(1)
 ```
 
-## B - ROT N
+## ABC146B - ROT N
 
 4分半で突破. 書くだけ.
 
@@ -34,7 +34,7 @@ S = input()
 print(''.join(chr((ord(c) - ord('A') + N) % 26 + ord('A')) for c in S))
 ```
 
-## C - Buy an Integer
+## ABC146C - Buy an Integer
 
 16分で突破. 一目にぶたんで、最近やったなーと ABC144E のソースコードをコピってきて、is_ok を書き直して、調整してポイ. 調整に手間取ったのでまだめぐる式が手についてないなあという感想.
 
@@ -57,7 +57,7 @@ while ng - ok > 1:
 print(ok)
 ```
 
-## D - Coloring Edges on Tree
+## ABC146D - Coloring Edges on Tree
 
 敗退. 幅優先探索というアルゴリズム方針はあっていたようなのだが……. 最初に書いたのは TLE を食らい、書き直したのはデータ構造が駄目で MLE を食らったので…….
 

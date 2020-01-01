@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 147 参戦記
 
-## A - Blackjack
+## ABC147A - Blackjack
 
 2分半で突破. 書くだけ.
 
@@ -13,7 +13,7 @@ else:
   print('win')
 ```
 
-## B - Palindrome-philia
+## ABC147B - Palindrome-philia
 
 2分で突破. 書くだけ.
 
@@ -27,7 +27,7 @@ for i in range(len(S) // 2):
 print(result)
 ```
 
-## D - Xor Sum 4
+## ABC147D - Xor Sum 4
 
 46分くらい?で突破. Cを提出したら WA3 で諦めてこっちに取り掛かったのでよく分からず. ビットごとに累積 XOR をするだけ. だけって言ってもコーディングは中々大変. Python で書いたら TLE になったので、Go で書き直した. `% 1000000007` がある問題はできるだけ Python で書きたいのにね.
 
@@ -122,7 +122,7 @@ for bit in range(60):
 print(result)
 ```
 
-## C - HonestOrUnkind2
+## ABC147C - HonestOrUnkind2
 
 35分くらい?で突破. N≤15 なので、全組み合わせやっても 2<sup>15</sup> でしかなく、やるだけ. だけって言ってもコーディングは中々大変. 最初 `for i in range(1, 2 ** N):` が `for i in range(1, 2 ** N - 1):` になってて WA3 だった. Dが終わった後見直していたら気づいた.
 
@@ -156,6 +156,6 @@ for i in range(1, 2 ** N):
 print(result)
 ```
 
-## E - Balanced Path
+## ABC147E - Balanced Path
 
 突破できず. 貪欲法では駄目なのは分かるけど、じゃあどうすればいいというのが思いつかなかった. 3次元DPかー(解説を見て). 解説読んでもさっぱりわかりませんね.

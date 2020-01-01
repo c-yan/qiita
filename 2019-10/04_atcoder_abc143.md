@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 143 参戦記
 
-## A - Curtain
+## ABC143A - Curtain
 
 2分で突破. マイナスにならないようにするところを忘れないだけ.
 
@@ -10,7 +10,7 @@ A, B = map(int, input().split())
 print(max(A - B * 2, 0))
 ```
 
-## B - TAKOYAKI FESTIVAL 2019
+## ABC143B - TAKOYAKI FESTIVAL 2019
 
 2分半で突破. 書くだけ.
 
@@ -25,7 +25,7 @@ for i in range(N - 1):
 print(result)
 ```
 
-## C - Slimes
+## ABC143C - Slimes
 
 2分半で突破. 書くだけ. 最近の C 問題が簡単とはいえ、簡単にもほどがある.
 
@@ -42,7 +42,7 @@ for i in range(N):
 print(result)
 ```
 
-## D - Triangles
+## ABC143D - Triangles
 
 82分で突破. TLE3つ. 手元で最大の 2×10<sup>3</sup> のデータを作ってテストして0.6秒だったので安心して出したら TLE を食らうという……. でも結局3重ループで突破.
 

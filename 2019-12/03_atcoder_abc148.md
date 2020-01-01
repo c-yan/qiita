@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 148 参戦記
 
-## A - Round One
+## ABC148A - Round One
 
 2分半で突破. 簡単なんだけど、なんかシンプルに書こうと思うと難しいなあと思った.
 
@@ -11,7 +11,7 @@ B = int(input())
 print(*(set([1, 2, 3]) - set([A, B])))
 ```
 
-## B - Strings with the Same Length
+## ABC148B - Strings with the Same Length
 
 1分半で突破. 書くだけ. zip かなあと思いつつ使わなかった.
 
@@ -22,7 +22,7 @@ S, T = input().split()
 print(''.join(S[i] + T[i] for i in range(N)))
 ```
 
-## C - Snack
+## ABC148C - Snack
 
 3分で突破. 最小公倍数が答えだけど、どう解けばいいんだっけ、最大公約数が分かれば分かる?と思いつつ、Google に「最小公倍数 Python」ってググったら `lcm(a, b) = a * b / gcd(a, b)` って出てきたので書いて終わり.
 
@@ -34,7 +34,7 @@ A, B = map(int, input().split())
 print(A * B // gcd(A, B))
 ```
 
-## E - Double Factorial
+## ABC148E - Double Factorial
 
 20分くらい?で突破. WA1. Dをちょっと考えたけど難しかったので、飛ばしてこっちをやってみた. とりあえずナイーブに f(n) を実装して、動かしてみた. N が奇数のときは常に0はすぐ分かった.
 `N // 10` で入力例3を流すとだいぶズレたので、n 増やして試してみたところ、f(50) で数字がずれて、50には5が含まれるからカーとなる. `N // 10 + N // 50` でも入力例3とは合わず、脳内で次は250カーとなってようやくからくりが分かって実装. `while t <= N:` を `while t < N:` と書いて WA を食らったが無事AC.
@@ -56,7 +56,7 @@ while t <= N:
 print(result)
 ```
 
-## D - Brick Break
+## ABC148D - Brick Break
 
 27分くらい?で突破. 右から処理することばっかり考えてて、難しいなと飛ばしてEからやって戻ってきたんだけど、順位表の状況から明らかに簡単なので、多分考えすぎてると左から処理することを考えたら簡単だった orz.
 
@@ -75,7 +75,7 @@ else:
     print(result)
 ```
 
-## F - Playing Tag on Tree
+## ABC148F - Playing Tag on Tree
 
 突破できず. ミニマックス法なのは分かったけど、過去問であたったのは一回だけで、幅優先だとどうなるんだろうと考えているうちに終わった. 精進不足.
 

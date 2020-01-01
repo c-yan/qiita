@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 140 参戦記
 
-## A - Password
+## ABC140A - Password
 
 1分で突破. 書くだけ.
 
@@ -9,7 +9,7 @@ N = int(input())
 print(N ** 3)
 ```
 
-## B - Buffet
+## ABC140B - Buffet
 
 6分半で突破. 1-indexed と 0-indexed を調整するのがめんどくさいだけ.
 最初 before に -1 を入れていたら、料理1始まりの時に誤爆して危なかった. 入出力例3に救われた.
@@ -29,7 +29,7 @@ for i in range(N):
 print(result)
 ```
 
-## C - Maximal Value
+## ABC140C - Maximal Value
 
 7分で突破. なんかややこしいけど手で解けばすぐ min(B<sub>i</sub>, B<sub>i-1</sub>) なのは分かるので、端だけ別処理して終わり.
 
@@ -42,7 +42,7 @@ for i in range(1, N - 1):
 print(result)
 ```
 
-## D - Face Produces Unhappiness
+## ABC140D - Face Produces Unhappiness
 
 敗退. どこをひっくり返しても増える幸福は2ということが見抜けず、一番長いやつと一番長いやつを繋げることに奔走してしまった…….  結果、TLE だらけ.
 
@@ -58,6 +58,6 @@ for i in range(1, N):
 print(min(N - 1, c + K * 2))
 ```
 
-## E - Second Sum
+## ABC140E - Second Sum
 
 敗退. ナイーブに正しい値を求めるコードは書けたけど、10<sup>5</sup> * 10<sup>5</sup> の計算量では TLE 死.

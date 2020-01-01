@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 138 参戦記
 
-## A - Red or Not
+## ABC138A - Red or Not
 
 2分で突破. 書くだけ.
 
@@ -13,7 +13,7 @@ else:
   print('red')
 ```
 
-## B - Resistors in Parallel
+## ABC138B - Resistors in Parallel
 
 4分で突破. 書くだけ.
 
@@ -26,7 +26,7 @@ for i in range(n):
 print(1 / v)
 ```
 
-## C - Alchemist
+## ABC138C - Alchemist
 
 3分半で突破. 書くだけ. 過去の経験からも sort が絡んだC問題ってだいたい簡単だよなあ.
 
@@ -40,7 +40,7 @@ for i in range(1, n):
 print(result)
 ```
 
-## D - Ki
+## ABC138D - Ki
 
 74分半で突破. 最初は真面目に Node クラスを書いていたが14テストケース中 TLE 8個で諦め. Node のフィールドをリストにバラしたけど TLE 8個のまま!? x<sub>j</sub> を取得するたびに子孫に足し込むのをやめても TLE 7個!? 絶望に陥りつつ、ここまで PyPy 3 で流していたので、Python 3 で流したらなんと TLE 1個!? 慌ててローカル変数最適化だけして流したら見事 AC. 4回目にしてようやくABCD完. PyPy で Python と似たような速度になるのはどういうコードかはだいたい把握できているけど、PyPy のほうが遅くなるパターンはよく分からないなあ.
 
@@ -197,7 +197,7 @@ func printIntln(v ...int) {
 }
 ```
 
-## E - Strings of Impurity
+## ABC138E - Strings of Impurity
 
 敗退. まあ、17分しか残ってなかったしね. ナイーブな実装は12分で書けたけど. この問題、自分的には最適化の見通しが完全に立っていたので、あと10分追加で残ってたらと悔しさしかない. D より E のほうが簡単なんて.
 
