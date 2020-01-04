@@ -38,8 +38,10 @@
 * [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
 * [ABC129D - Lamp](https://atcoder.jp/contests/abc129/tasks/abc129_d)
 * [ABC038C - 単調増加](https://atcoder.jp/contests/abc038/tasks/abc038_c)
+* [ABC149E - Handshake](https://atcoder.jp/contests/abc149/tasks/abc149_e)
 
 <!--
+* [ABC089D - Practical Skill Test](https://atcoder.jp/contests/abc089/tasks/abc089_d)
 * [ABC018C - 菱型カウント](https://atcoder.jp/contests/abc018/tasks/abc018_3)
 -->
 
@@ -57,11 +59,11 @@
 
 * [ABC032C - 列](https://atcoder.jp/contests/abc032/tasks/abc032_c)
 * [ABC130D - Enough Array](https://atcoder.jp/contests/abc130/tasks/abc130_d)
+* [ABC098D - Xor Sum 2](https://atcoder.jp/contests/abc098/tasks/arc098_b)
 
 <!--
 * [ABC033C - 数式の書き換え](https://atcoder.jp/contests/abc033/tasks/abc033_c)
 * [ARC022B - 細長いお菓子](https://atcoder.jp/contests/arc022/tasks/arc022_2)
-* [ABC098D - Xor Sum 2](https://atcoder.jp/contests/abc098/tasks/arc098_b)
 * [ABC017D - サプリメント](https://atcoder.jp/contests/abc017/tasks/abc017_4)
 -->
 
@@ -83,12 +85,18 @@
 * [ABC126E - 1 or 2](https://atcoder.jp/contests/abc126/tasks/abc126_e)
 * [ABC087D - People on a Line](https://atcoder.jp/contests/abc087/tasks/arc090_b) (重み付き Union-Find 木)
 
+<!--
+* [ABC040D - 道路の老朽化対策について](https://atcoder.jp/contests/abc040/tasks/abc040_d) (サイズ付き Union-Find 木)
+-->
+
 ## DFS (深さ優先探索)
 
 * [ATC001A - 深さ優先探索](https://atcoder.jp/contests/atc001/tasks/dfs_a)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
 * [ABC126D - Even Relation](https://atcoder.jp/contests/abc126/tasks/abc126_d)
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
+* [ABC146D - Coloring Edges on Tree](https://atcoder.jp/contests/abc146/tasks/abc146_d)
+* [ABC148F - Playing Tag on Tree](https://atcoder.jp/contests/abc148/tasks/abc148_f)
 
 <!--
 * [ABC015C - 高橋くんのバグ探し](https://atcoder.jp/contests/abc015/tasks/abc015_3)
@@ -110,6 +118,16 @@
 * [ABC119D - Lazy Faith](https://atcoder.jp/contests/abc119/tasks/abc119_d)
 * [ABC143D - Triangles](https://atcoder.jp/contests/abc143/tasks/abc143_d)
 * [ABC144E - Gluttony](https://atcoder.jp/contests/abc144/tasks/abc144_e)
+* [ABC146C - Buy an Integer](https://atcoder.jp/contests/abc146/tasks/abc146_c)
+* [ABC149E - Handshake](https://atcoder.jp/contests/abc149/tasks/abc149_e)
+
+<!--
+* [ABC063D - Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
+-->
+
+## bit 全探索
+
+* [ABC147C - HonestOrUnkind2](https://atcoder.jp/contests/abc147/tasks/abc147_c)
 
 ## ワーシャルフロイド
 
@@ -122,6 +140,10 @@
 * [ABC073D - joisino's travel](https://atcoder.jp/contests/abc073/tasks/abc073_d)
 * [ABC079D - Wall](https://atcoder.jp/contests/abc079/tasks/abc079_d)
 * [ABC143E - Travel by Car](https://atcoder.jp/contests/abc143/tasks/abc143_e)
+
+<!--
+* [ABC021 - 多重ループ](https://atcoder.jp/contests/abc143/tasks/abc143_e)
+-->
 
 ## 優先度付きキュー
 
@@ -137,3 +159,12 @@
 ## エラトステネスの篩
 
 * [ABC084D - 2017-like Number](https://atcoder.jp/contests/abc084/tasks/abc084_d)
+* [ABC149C - Next Prime](https://atcoder.jp/contests/abc149/tasks/abc149_c)
+
+## フェルマーの小定理
+
+* [ABC145D - Knight](https://atcoder.jp/contests/abc145/tasks/abc145_d)
+
+<!--
+* [ABC034B - ペア](https://atcoder.jp/contests/abc034/tasks/abc034_b)
+-->
