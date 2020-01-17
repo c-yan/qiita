@@ -83,10 +83,10 @@
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
 * [ABC120D - Decayed Bridges](https://atcoder.jp/contests/abc120/tasks/abc120_d) (サイズ付き Union-Find 木)
 * [ABC126E - 1 or 2](https://atcoder.jp/contests/abc126/tasks/abc126_e)
-* [ABC087D - People on a Line](https://atcoder.jp/contests/abc087/tasks/arc090_b) (重み付き Union-Find 木)
+* [ABC040D - 道路の老朽化対策について](https://atcoder.jp/contests/abc040/tasks/abc040_d) (サイズ付き Union-Find 木)
 
 <!--
-* [ABC040D - 道路の老朽化対策について](https://atcoder.jp/contests/abc040/tasks/abc040_d) (サイズ付き Union-Find 木)
+* [ABC087D - People on a Line](https://atcoder.jp/contests/abc087/tasks/arc090_b) (重み付き Union-Find 木)
 -->
 
 ## DFS (深さ優先探索)
