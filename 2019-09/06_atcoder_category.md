@@ -109,6 +109,7 @@
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
 * [ABC126D - Even Relation](https://atcoder.jp/contests/abc126/tasks/abc126_d)
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
+* [ABC151D - Maze Master](https://atcoder.jp/contests/abc151/tasks/abc151_d)
 
 ## 二分探索 (Binary Search)
 
@@ -140,6 +141,7 @@
 * [ABC073D - joisino's travel](https://atcoder.jp/contests/abc073/tasks/abc073_d)
 * [ABC079D - Wall](https://atcoder.jp/contests/abc079/tasks/abc079_d)
 * [ABC143E - Travel by Car](https://atcoder.jp/contests/abc143/tasks/abc143_e)
+* [ABC151D - Maze Master](https://atcoder.jp/contests/abc151/tasks/abc151_d)
 
 <!--
 * [ABC021 - 多重ループ](https://atcoder.jp/contests/abc143/tasks/abc143_e)
@@ -155,15 +157,18 @@
 
 * [ABC052C - Factors of Factorial](https://atcoder.jp/contests/abc052/tasks/arc067_a)
 * [ABC142D - Disjoint Set of Common Divisors](https://atcoder.jp/contests/abc142/tasks/abc142_d)
+* [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e)
 
 ## エラトステネスの篩
 
 * [ABC084D - 2017-like Number](https://atcoder.jp/contests/abc084/tasks/abc084_d)
 * [ABC149C - Next Prime](https://atcoder.jp/contests/abc149/tasks/abc149_c)
+* [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e)
 
 ## フェルマーの小定理
 
 * [ABC145D - Knight](https://atcoder.jp/contests/abc145/tasks/abc145_d)
+* [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e)
 
 <!--
 * [ABC034B - ペア](https://atcoder.jp/contests/abc034/tasks/abc034_b)
