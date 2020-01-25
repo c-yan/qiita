@@ -128,6 +128,7 @@
 
 ## bit 全探索
 
+* [ABC080C - Shopping Street](https://atcoder.jp/contests/abc080/tasks/abc080_c)
 * [ABC147C - HonestOrUnkind2](https://atcoder.jp/contests/abc147/tasks/abc147_c)
 
 ## ワーシャルフロイド
