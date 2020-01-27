@@ -141,3 +141,29 @@ func readInt() int {
 ## ABC153F - Silver Fox vs Monster
 
 敗退. AtCoder の Go のバージョンがもっと新しくて、スライスのソートができたら突破していたと思う. そうでなくてももう少し時間が残っていたら C# で書き直したのだが…….
+
+追記: 勘違い. 全然理解できていなかった. 爆弾範囲内のモンスターへのダメージの処理を O(N) より低いオーダーで処理できるかが問題の肝だった. 解説動画通り、爆弾のダメージと有効範囲をキューに入れて、範囲外にでたらリタイアさせることで O(1) で実装して AC.
+
+```python
+N, D, A = map(int, input().split())
+XH = [list(map(int, input().split())) for _ in range(N)]
+
+XH.sort()
+q = []
+t = 0
+result = 0
+for x, h in XH:
+    while q:
+        if x <= q[0][0]:
+            break
+        t -= q[0][1]
+        q.pop(0)
+    h -= t
+    if h < 0:
+        continue
+    c = (h + A - 1) // A
+    result += c
+    t += c * A
+    q.append((x + 2 * D, c * A))
+print(result)
+```
