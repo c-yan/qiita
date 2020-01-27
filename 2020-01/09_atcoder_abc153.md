@@ -74,6 +74,8 @@ import (
 )
 
 func main() {
+	AMax := 10000
+
 	H := readInt()
 	N := readInt()
 	AB := make([]struct{ A, B int }, N)
@@ -82,8 +84,9 @@ func main() {
 		AB[i].B = readInt()
 	}
 
-	dp := make([]int, 100000)
-	for i := 0; i < 100000; i++ {
+	dpLen := H + AMax + 1
+	dp := make([]int, dpLen)
+	for i := 0; i < dpLen; i++ {
 		dp[i] = math.MaxInt64
 	}
 
@@ -100,8 +103,9 @@ func main() {
 			}
 		}
 	}
+
 	result := math.MaxInt64
-	for i := H; i < 100000; i++ {
+	for i := H; i < dpLen; i++ {
 		if dp[i] < result {
 			result = dp[i]
 		}
