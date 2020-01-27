@@ -12,7 +12,7 @@ print((H + (A - 1)) // A)
 
 ## ABC153B - Common Raccoon vs Monster
 
-2分半で突破. 書くだけ.
+2分半で突破. 書くだけ. 必殺技の合計ダメージがモンスターの体力を上回っているか、それだけ.
 
 ```python
 H, N = map(int, input().split())
@@ -52,7 +52,7 @@ def f(n):
     if n == 1:
         return 1
     else:
-        return 1 + (n // 2) * 2
+        return 1 + f(n // 2) * 2
 
 
 print(f(H))
