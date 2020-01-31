@@ -145,11 +145,13 @@ func readInt() int {
 追記: 勘違い. 全然理解できていなかった. 爆弾範囲内のモンスターへのダメージの処理を O(N) より低いオーダーで処理できるかが問題の肝だった. 解説動画通り、爆弾のダメージと有効範囲をキューに入れて、範囲外にでたらリタイアさせることで O(1) で実装して AC.
 
 ```python
+from collections import deque
+
 N, D, A = map(int, input().split())
 XH = [list(map(int, input().split())) for _ in range(N)]
 
 XH.sort()
-q = []
+q = deque()
 t = 0
 result = 0
 for x, h in XH:
@@ -157,9 +159,9 @@ for x, h in XH:
         if x <= q[0][0]:
             break
         t -= q[0][1]
-        q.pop(0)
+        q.popleft()
     h -= t
-    if h < 0:
+    if h <= 0:
         continue
     c = (h + A - 1) // A
     result += c
