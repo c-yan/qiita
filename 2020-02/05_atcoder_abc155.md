@@ -47,14 +47,7 @@ for _ in range(N):
         d[S] = 1
 
 m = max(d.values())
-l = []
-for k in d:
-    v = d[k]
-    if v != m:
-        continue
-    l.append(k)
-
-for s in sorted(l):
+for s in sorted(k for k in d if d[k] == m):
     print(s)
 ```
 
