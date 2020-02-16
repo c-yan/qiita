@@ -38,24 +38,23 @@ print('APPROVED')
 ```python
 N = int(input())
 
-d1 = {}
+d = {}
 for _ in range(N):
     S = input()
-    if S in d1:
-        d1[S] += 1
+    if S in d:
+        d[S] += 1
     else:
-        d1[S] = 1
+        d[S] = 1
 
-d2 = {}
-for key in d1:
-    value = d1[key]
-    if value in d2:
-        d2[value].append(key)
-    else:
-        d2[value] = [key]
+m = max(d.values())
+l = []
+for k in d:
+    v = d[k]
+    if v != m:
+        continue
+    l.append(k)
 
-key = sorted(d2.keys(), reverse=True)[0]
-for s in sorted(d2[key]):
+for s in sorted(l):
     print(s)
 ```
 
