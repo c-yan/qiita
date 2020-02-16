@@ -58,6 +58,44 @@ for s in sorted(l):
     print(s)
 ```
 
+追記: C# で通している人、みんな自前の comparer を使ってソートしてたけど、標準の StringComparer.Ordinal (これは、実質的には C ランタイムの strcmp 関数の呼び出し)で通るなあ.
+
+```cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var N = int.Parse(Console.ReadLine());
+
+            var d = new Dictionary<string, int>();
+            for (var i = 0; i < N; i++)
+            {
+                var S = Console.ReadLine();
+                if (!d.ContainsKey(S)) d[S] = 0;
+                d[S]++;
+            }
+
+            var m = d.Values.Max();
+            var l = new List<string>();
+            foreach (var kv in d)
+            {
+                if (kv.Value != m) continue;
+                l.Add(kv.Key);
+            }
+
+            l.Sort(StringComparer.Ordinal);
+            Console.WriteLine(string.Join("\n", l));
+        }
+    }
+}
+```
+
 ## ABC155D - Pairs
 
 敗退. Eの方が解いてる人が多いので、Eに行った. にぶたんかなあと思った.
