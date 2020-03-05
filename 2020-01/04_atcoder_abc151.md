@@ -205,3 +205,46 @@ func fillInts(a []int, x int) {
 ## ABC151E - Max-Min Sums
 
 糸口すらつかめず敗退. 70分の間、順位が800番台から1300番台までずり落ちるのを眺める羽目になった.
+
+追記: 2ヶ月もせずに簡単じゃんと解くことになろうとは(笑).
+
+まず、max(X) と min(X) を別々にその合計を求めていいことに注意.
+max(X) の最小値はソートした A の A<sub>K</sub>、最大値は A<sub>N</sub> となることは分かる. max(X) が最大値 A<sub>N</sub> になる組み合わせは A<sub>N</sub> を1個確定として、残り N - 1 個から残り K - 1 個を選ぶので <sub>N - 1</sub>C<sub>K - 1</sub>、max(X) が最大値の次に大きい A<sub>N - 1</sub> になる組み合わせは最大値 A<sub>N</sub> は選ばないのを確定として、その次に大きい A<sub>N - 1</sub> を1個確定として残り K - 1 個を選ぶので <sub>N - 2</sub>C<sub>K - 1</sub>、そんな感じで最小値の A<sub>K</sub>まで数え上げればいい. min(X) も同様にやれば解ける.
+
+コンビネーションの計算は、事前に (N-1)! まで求めておけば、O(logn) で計算できるので、最終的にO(nlogn)で計算できる.
+
+Python は % の計算の結果が常に正の整数だが、言語によっては負の整数にもなりうるので、その場合は正の整数に戻す必要があるので注意.
+
+```python
+p = 1000000007
+
+N, K = map(int, input().split())
+A = list(map(int, input().split()))
+
+fac = [0] * (N + 1)
+fac[0] = 1
+for i in range(N):
+    fac[i + 1] = fac[i] * (i + 1) % p
+
+
+def mcomb(n, k):
+    if n == 0 and k == 0:
+        return 1
+    if n < k or k < 0:
+        return 0
+    return fac[n] * pow(fac[n - k], p - 2, p) * pow(fac[k], p - 2, p) % p
+
+
+A.sort(reverse=True)
+result = 0
+for i in range(N - K + 1):
+    result += A[i] * mcomb(N - (i + 1), K - 1)
+    result %= p
+
+A.reverse()
+for i in range(N - K + 1):
+    result -= A[i] * mcomb(N - (i + 1), K - 1)
+    result %= p
+
+print(result)
+```
