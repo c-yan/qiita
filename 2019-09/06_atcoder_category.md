@@ -40,6 +40,7 @@
 * [ABC129D - Lamp](https://atcoder.jp/contests/abc129/tasks/abc129_d)
 * [ABC038C - 単調増加](https://atcoder.jp/contests/abc038/tasks/abc038_c)
 * [ABC149E - Handshake](https://atcoder.jp/contests/abc149/tasks/abc149_e)
+* [ABC154D - Dice in Line](https://atcoder.jp/contests/abc154/tasks/abc154_d)
 
 <!--
 * [ABC089D - Practical Skill Test](https://atcoder.jp/contests/abc089/tasks/abc089_d)
@@ -72,6 +73,7 @@
 
 * [ABC037C - 総和](https://atcoder.jp/contests/abc037/tasks/abc037_c)
 * [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
+* [ABC154D - Dice in Line](https://atcoder.jp/contests/abc154/tasks/abc154_d)
 
 <!--
 038C? 解説PDFより
@@ -85,6 +87,7 @@
 * [ABC120D - Decayed Bridges](https://atcoder.jp/contests/abc120/tasks/abc120_d) (サイズ付き Union-Find 木)
 * [ABC126E - 1 or 2](https://atcoder.jp/contests/abc126/tasks/abc126_e)
 * [ABC040D - 道路の老朽化対策について](https://atcoder.jp/contests/abc040/tasks/abc040_d) (サイズ付き Union-Find 木)
+* [ABC157D - Friend Suggestions](https://atcoder.jp/contests/abc157/tasks/abc157_d) (サイズ付き Union-Find 木)
 
 <!--
 * [ABC087D - People on a Line](https://atcoder.jp/contests/abc087/tasks/arc090_b) (重み付き Union-Find 木)
@@ -122,6 +125,7 @@
 * [ABC144E - Gluttony](https://atcoder.jp/contests/abc144/tasks/abc144_e)
 * [ABC146C - Buy an Integer](https://atcoder.jp/contests/abc146/tasks/abc146_c)
 * [ABC149E - Handshake](https://atcoder.jp/contests/abc149/tasks/abc149_e)
+* [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f)
 
 <!--
 * [ABC063D - Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
@@ -170,8 +174,20 @@
 ## フェルマーの小定理
 
 * [ABC145D - Knight](https://atcoder.jp/contests/abc145/tasks/abc145_d)
+* [ABC151E - Max-Min Sums](https://atcoder.jp/contests/abc151/tasks/abc151_e)
 * [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e)
+* [ABC156D - Bouquet](https://atcoder.jp/contests/abc156/tasks/abc156_d)
 
 <!--
 * [ABC034B - ペア](https://atcoder.jp/contests/abc034/tasks/abc034_b)
 -->
+
+## セグメント木 (Segment tree)
+
+* [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c)
+* [ABC157E - Simple String Queries](https://atcoder.jp/contests/abc157/tasks/abc157_e)
+* [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f)
+
+## BIT (Binary indexed tree)
+
+* [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f)
