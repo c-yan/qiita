@@ -40,6 +40,22 @@ for i in range(2000):
 print(-1)
 ```
 
+追記: 解説 PDF で O(1) で解く課題が出てたので.
+
+```python
+A, B = map(int, input().split())
+
+x_low = (A * 100 + 7) // 8
+x_high = ((A + 1) * 100 + 7) // 8 - 1
+y_low = (B * 100 + 9) // 10
+y_high = ((B + 1) * 100 + 9) // 10 - 1
+
+result = max(x_low, y_low)
+if result > min(x_high, y_high):
+    result = -1
+print(result)
+```
+
 ## ABC158D - String Formation
 
 17分で突破. もちろん言われたとおりに文字列操作をしたら TLE まっしぐら. 右からも左からも足し込むので deque を使うのは見え見え. 後は反転をいちいちしていると TLE になるので、必要であれば最後に1回するだけにつじつまを合わせるだけ.
