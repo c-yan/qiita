@@ -9,6 +9,7 @@
 * [Educational DP Contest / DP まとめコンテスト](https://atcoder.jp/contests/dp)
 * [Typical DP Contest](https://atcoder.jp/contests/tdpc/)
 * [ABC040C - 柱柱柱柱柱](https://atcoder.jp/contests/abc040/tasks/abc040_c)
+* [ABC044C - 高橋君とカード](https://atcoder.jp/contests/abc044/tasks/arc060_a)
 * [ABC087C - Candies](https://atcoder.jp/contests/abc087/tasks/arc090_a)
 * [ABC099C - Strange Bank](https://atcoder.jp/contests/abc099/tasks/abc099_c)
 * [ABC129C - Typical Stairs](https://atcoder.jp/contests/abc129/tasks/abc129_c)
@@ -17,12 +18,12 @@
 * [ABC141E - Who Says a Pun?](https://atcoder.jp/contests/abc141/tasks/abc141_e)
 * [ABC142E - Get Everything](https://atcoder.jp/contests/abc142/tasks/abc142_e)
 * [ABC153E - Crested Ibis vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_e)
+* [ABC154E - Almost Everywhere Zero](https://atcoder.jp/contests/abc154/tasks/abc154_e) (桁DP / Digit DP)
 
 <!--
 * [ABC011C - 123引き算](https://atcoder.jp/contests/abc011/tasks/abc011_3)
 * [ABC122D - We Like AGC](https://atcoder.jp/contests/abc122/tasks/abc122_d)
 * [ABC118D - Match Matching](https://atcoder.jp/contests/abc118/tasks/abc118_d)
-* [ABC044C - 高橋君とカード / Tak and Cards](https://atcoder.jp/contests/abc044/tasks/arc060_a)
 -->
 
 ## 累積和 (Prefix Sum)
@@ -115,6 +116,7 @@
 * [ABC126D - Even Relation](https://atcoder.jp/contests/abc126/tasks/abc126_d)
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
 * [ABC151D - Maze Master](https://atcoder.jp/contests/abc151/tasks/abc151_d)
+* [ABC088D - Grid Repainting](https://atcoder.jp/contests/abc088/tasks/abc088_d)
 
 ## 二分探索 (Binary Search)
 
