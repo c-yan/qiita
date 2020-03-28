@@ -63,3 +63,31 @@ print(result)
 ## ABC154E - Almost Everywhere Zero
 
 敗退. 前に解けなくて放置したアレと同じ問題だなあと思ったが、そのときに解いておかなかったのが運の尽きだった…….
+
+追記: 桁DP すれば良いわけですが、リストの次数が上がるととたんに遅くなる Python なので、次元を上げずに変数を分けて書いてみました.
+
+```python
+N = input()
+K = int(input())
+
+a = 1
+b = [0] * (K + 1)
+b[0] = 1
+b[1] = int(N[0]) - 1
+
+for c in N[1:]:
+    t = int(c)
+    for i in range(K - 1, -1, -1):
+        b[i + 1] += b[i] * 9
+    if t != 0:
+        if a + 1 <= K:
+            b[a + 1] += t - 1
+        if a <= K:
+            b[a] += 1
+        a += 1
+
+if a == K:
+    print(b[K] + 1)
+else:
+    print(b[K])
+```
