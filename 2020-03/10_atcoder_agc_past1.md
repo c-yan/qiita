@@ -49,7 +49,7 @@ print(result)
 
 ## [AGC017A - Biscuits](https://atcoder.jp/contests/agc017/tasks/agc017_a)
 
-奇数個入っている袋は偶数個食べて、偶数個入っている袋は何袋でもいい. 奇数個入っている袋が a 袋、偶数個入っている袋が b 袋だとすると、答えは (<sub>a</sub>C<sub>0</sub> + <sub>a</sub>C<sub>2</sub> + ... + <sub>a</sub>C<sub>int(a / 2) * 2</sub>) * (<sub>b</sub>C<sub>0</sub> + <sub>b</sub>C<sub>1</sub> + ... + <sub>b</sub>C<sub>b</sub>) になる. ところで <sub>b</sub>C<sub>0</sub> + <sub>b</sub>C<sub>1</sub> + ... + <sub>b</sub>C<sub>b</sub> は 2<sup>b</sup> なので、後はループを回して奇数の袋の選び方の数を求めればよい.
+奇数個入っている袋は偶数個食べて、偶数個入っている袋は何袋でもいい. 奇数個入っている袋が a 袋、偶数個入っている袋が b 袋だとすると、答えは (<sub>a</sub>C<sub>0</sub> + <sub>a</sub>C<sub>2</sub> + ... + <sub>a</sub>C<sub>floor(a / 2) * 2</sub>) * (<sub>b</sub>C<sub>0</sub> + <sub>b</sub>C<sub>1</sub> + ... + <sub>b</sub>C<sub>b</sub>) になる. ところで <sub>b</sub>C<sub>0</sub> + <sub>b</sub>C<sub>1</sub> + ... + <sub>b</sub>C<sub>b</sub> は 2<sup>b</sup> なので、後はループを回して奇数の袋の選び方の数を求めればよい.
 
 ```python
 def comb(n, k):
