@@ -1,6 +1,6 @@
 # AtCoder Beginners Contest 過去問チャレンジ4
 
-## ABC126D - Even Relation
+## [ABC126D - Even Relation](https://atcoder.jp/contests/abc126/tasks/abc126_d)
 
 探索ですべての頂点について頂点1からの距離を求め、偶数距離のものは0を、奇数距離のものは1を出力すればいい.
 
@@ -27,11 +27,11 @@ for i in d:
     print(i % 2)
 ```
 
-## ABC126E - 1 or 2
+## [ABC126E - 1 or 2](https://atcoder.jp/contests/abc126/tasks/abc126_e)
 
 「A<sub>X<sub>i</sub></sub>+A<sub>Y<sub>i</sub></sub>+Z<sub>i</sub> は偶数である。」ということは、片方のAが分かればもう片方も分かるということである. もし「A<sub>X</sub>+A<sub>Y</sub>+Z<sub>i</sub>は偶数である。」で、「A<sub>X</sub>+A<sub>Z</sub>+Z<sub>j</sub>は偶数である。」場合は、3つのAのうち1つが分かれば残り2つも分かる.
 
-そうするとお互いに関係性を持たないAのグループがいくつあるかという問題になり、Union Find でグループ数を数えるだけの問題となる.
+そうするとお互いに関係性を持たないAのグループがいくつあるかという問題になり、Union Find でグループ数を数えるだけの問題に帰着できる.
 
 ```python
 from sys import setrecursionlimit
@@ -66,7 +66,7 @@ for _ in range(M):
 print(len([x for x in parent if x < 0]))
 ```
 
-## ABC052D - Walk and Teleport
+## [ABC052D - Walk and Teleport](https://atcoder.jp/contests/abc052/tasks/arc067_b)
 
 順番に徒歩とテレポート、疲労度の上昇値が少ない方で訪れるだけ. 簡単.
 
@@ -80,7 +80,7 @@ for i in range(N - 1):
 print(result)
 ```
 
-## ABC079D - Wall
+## [ABC079D - Wall](https://atcoder.jp/contests/abc079/tasks/abc079_d)
 
 -1 と 1 以外のすべての数字について、1に変えるのに必要な魔力を加算していくだけなのだが、直接1に変えるよりも、別の数字を経由したほうが必要な魔力が少ない場合があるので、各数字から1に変える最小魔力をワーシャルフロイド法で求めておく.
 
@@ -111,7 +111,7 @@ for _ in range(H):
 print(result)
 ```
 
-## ABC085D - Katana Thrower
+## [ABC085D - Katana Thrower](https://atcoder.jp/contests/abc085/tasks/abc085_d)
 
 振るのは最大ダメージの刀のみ. この振るダメージより投げつけるダメージが低い刀は不要. 投げつけるダメージが高い方から順に投げていって、振るの最大ダメージに辿り着く前にダメージが H を超えた場合は振る必要なし. 足りなければその分だけ振る. 振る刀が投げつける刀に入っていた場合は、振った後投げつけたことにすれば結果として回数は同じなので問題なし.
 
@@ -138,34 +138,4 @@ if H > 0:
     result += (H + (a_max - 1)) // a_max
 
 print(result)
-```
-
-## ABC132D - Blue and Red Balls
-
-「1回の操作で連続して並ぶ青いボールを何個でも回収することができる」というのは、要するに赤のボールで区切られた各グループは1回の操作ということなので、K 個の青いボールを i このグループに分けた場合の組み合わせが何通りかということになる.
-
-N個の区別がつかないボールをK個の区別がつくグループに分ける組み合わせ(グループに0個もありうる)は、N個のボールとK-1個の区切り棒を用意して並べた場合の並べ方の数となり、N+K-1のスロットから、区切り帽を置くスロットをK-1個選ぶ組み合わせの数となるので、<sub>N+K-1</sub>C<sub>K-1</sub>となる. N個の区別がつかないボールをK個の区別がつくグループに分ける組み合わせ(グループに必ず1個はある)は、最初にグループに1個づつ分を差し引いておけばいいので、並べ方の数は <sub>N+K-1-K</sub>C<sub>K-1</sub>=<sub>N-1</sub>C<sub>K-1</sub> となる.
-
-青いボールはiグループに1個はある並べ方の数になり <sub>K-1</sub>C<sub>i-1</sub> となり、赤いボールはi-1グループに1個あるのは保証するが、i+1グループの可能性もあるため、<sub>(N-K)+(i+1-1)-(i-1)</sub>C<sub>i</sub>=<sub>N-K+1</sub>C<sub>i</sub> となる.
-
-<sub>N</sub>C<sub>K</sub> を高速に求めるのはパスカルの三角形を用いれば良い.
-
-```python
-def main():
-    N, K = map(int, input().split())
-
-    c = [[0] * 4000 for _ in range(4000)]
-    c[0][0] = 1
-    for i in range(1, 4000):
-        ci = c[i]
-        ci1 = c[i - 1]
-        ci[0] = 1
-        for j in range(1, i + 1):
-            ci[j] = (ci1[j - 1] + ci1[j]) % 1000000007
-
-    for i in range(1, K + 1):
-        print(c[K-1][i-1] * c[N-K+1][i] % 1000000007)
-
-
-main()
 ```

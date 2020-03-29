@@ -1,6 +1,6 @@
 # AtCoder Beginners Contest 過去問チャレンジ3
 
-## ABC120D - Decayed Bridges
+## [ABC120D - Decayed Bridges](https://atcoder.jp/contests/abc120/tasks/abc120_d)
 
 木のサイズを持つ Union Find を実装したのに、サイズを使ってないのが残念なので類題調査で見つけてやった. Union Find には unite はあっても separate はないので、逆順にして、くっつけた時に不便さがどれだけ減るかを計算することによって解いた.
 
@@ -43,7 +43,7 @@ for a, b in AB[::-1]:
 print(*result[::-1])
 ```
 
-## ABC125D - Flipping Signs
+## [ABC125D - Flipping Signs](https://atcoder.jp/contests/abc125/tasks/abc125_d)
 
 負の数が偶数だったら全消しできるので絶対値の総和になる. 負の数が奇数の場合には、絶対値が一番小さい値を負にすればいいので、絶対値の総和から一番絶対値が小さい値の絶対値×2を引けばいい.
 
@@ -59,7 +59,7 @@ else:
 print(sum(abs(a) for a in A) - 2 * m)
 ```
 
-## ABC124D - Handstand
+## [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
 
 「逆立ちした人を連続で最大何人」なので、直立した人と逆立ちした人を同時にひっくり返すことには意味がなく、直立した人のブロックK個をひっくり返した 2K + 1 ブロックの最大長が答えになる. 最初にブロックを連長カウントして、あとはしゃくとり法で最大長を求めることによって解いた.
 
@@ -94,7 +94,7 @@ else:
     print(result)
 ```
 
-## ABC119D - Lazy Faith
+## [ABC119D - Lazy Faith](https://atcoder.jp/contests/abc119/tasks/abc119_d)
 
 ひたすら西に行くパターン、西に行って東に行くパターン、東に行って西に行くパターン、ひたすら東に行くパターンを、最初に神社に行ってから寺に行くパターン、最初に寺に行ってから神社に行くパターンについて、全パターン(つまり4×2で8パターン)計算し、最小値を答えとすることによって解いた. 位置は二分探索で見つける.
 
@@ -130,7 +130,7 @@ for i in range(Q):
     print(min(f(x, s, t), f(x, t, s)))
 ```
 
-## ABC123D - Cake 123
+## [ABC123D - Cake 123](https://atcoder.jp/contests/abc123/tasks/abc123_d)
 
 1, 2, 3 の美味しさをそれぞれソートして、まずそれぞれの一番美味しいのを取ったのを出力し、1だけ次に美味しいのに差し替えたもの、2だけ次に美味しいのに差し替えたもの、3だけ次に美味しいのに差し替えたもの3パターンを作って優先度付きキューに突っ込み、その3パターンで1番美味しいものを出力し、出力したものをベースにまた3パターンを作って優先度付きキューに突っ込みを繰り返すことによって解いた.
 

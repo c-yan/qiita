@@ -4,7 +4,7 @@ AtCoder Beginners Selection(以下 abs) を解いたので、AtCoder Beginners C
 
 あと abs を解くときに input() が動かなくてひどい目にあって raw_input() に差し替えたが、Python 3 は input() で大丈夫らしいので、Python 2 から 3 に切り替えた. print に括弧を付けるのがめんどくさいなと思っていたが、map や range が list じゃないことのほうがめんどくさいかもしれない.
 
-## ABC133D - Rain Flows into Dams
+## [ABC133D - Rain Flows into Dams](https://atcoder.jp/contests/abc133/tasks/abc133_d)
 
 山iに降った水の量をRiとすると
 
@@ -28,15 +28,17 @@ R1 = A1 - A2 + A3 - A4 + ... + AN
 `(Ri+Ri+1) / 2 = Ai` から `Ri+1 = 2 * Ai - Ri` なので、R1 一つ分かりさえすれば残りはドミノ倒し的に分かるので、後はこれを Python のコードに落とすだけ.
 
 ```python
-n = int(input())
-a = [int(e) for e in input().split()]
-result = [sum(a[::2])-sum(a[1::2])]
-for i in range(len(a) - 1):
-  result.append(2*a[i]-result[i])
-print(' '.join(map(str, result)))
+N = int(input())
+A = list(map(int, input().split()))
+
+result = [0] * N
+result[0] = sum(A[::2]) - sum(A[1::2])
+for i in range(1, N):
+    result[i] = 2 * A[i - 1] - result[i - 1]
+print(*result)
 ```
 
-## ABC132D - Blue and Red Balls
+## [ABC132D - Blue and Red Balls](https://atcoder.jp/contests/abc132/tasks/abc132_d)
 
 再帰的に定式化は出来たものの遅い. 再帰関数の切り札 memoize や、小さい数字の部分は一発で返るようにして高速化したものの、TLE は一つも減らずに敗退.
 
@@ -69,48 +71,74 @@ for i in range(1, k + 1):
   print(f(k - i, i) * f(n - k - i + 1, i + 1) % divisor)
 ```
 
-## ABC131D - Megalomania
+追記:
 
-締め切り時間でソートして、順番に制限時間を超過しないか確認していくだけ. かんたんすぎる感じで、D 問題って難易度に波があるなあという感想.
+「1回の操作で連続して並ぶ青いボールを何個でも回収することができる」というのは、要するに赤のボールで区切られた各グループは1回の操作ということなので、K 個の青いボールを i このグループに分けた場合の組み合わせが何通りかということになる.
+
+N個の区別がつかないボールをK個の区別がつくグループに分ける組み合わせ(グループに0個もありうる)は、N個のボールとK-1個の区切り棒を用意して並べた場合の並べ方の数となり、N+K-1のスロットから、区切り帽を置くスロットをK-1個選ぶ組み合わせの数となるので、<sub>N+K-1</sub>C<sub>K-1</sub>となる. N個の区別がつかないボールをK個の区別がつくグループに分ける組み合わせ(グループに必ず1個はある)は、最初にグループに1個づつ分を差し引いておけばいいので、並べ方の数は <sub>N+K-1-K</sub>C<sub>K-1</sub>=<sub>N-1</sub>C<sub>K-1</sub> となる.
+
+青いボールはiグループに1個はある並べ方の数になり <sub>K-1</sub>C<sub>i-1</sub> となり、赤いボールはi-1グループに1個あるのは保証するが、i+1グループの可能性もあるため、<sub>(N-K)+(i+1-1)-(i-1)</sub>C<sub>i</sub>=<sub>N-K+1</sub>C<sub>i</sub> となる.
+
+<sub>N</sub>C<sub>K</sub> を高速に求めるのはパスカルの三角形を用いれば良い.
 
 ```python
-import sys
-from functools import cmp_to_key
-n = int(input())
-data = [[int(j) for j in input().split()] for i in range(n)]
+N, K = map(int, input().split())
+
+c = [[0] * 2001 for _ in range(2000 + 1)]
+c[0][0] = 1
+for i in range(1, 2000 + 1):
+    ci = c[i]
+    ci1 = c[i - 1]
+    ci[0] = 1
+    for j in range(1, i + 1):
+        ci[j] = (ci1[j - 1] + ci1[j]) % 1000000007
+
+for i in range(1, K + 1):
+    print(c[K - 1][i - 1] * c[N - K + 1][i] % 1000000007)
+```
+
+## [ABC131D - Megalomania](https://atcoder.jp/contests/abc131/tasks/abc131_d)
+
+締め切り時間でソートして、順番に処理時間を加算しながら制限時間を超過しないか確認していくだけ. 簡単すぎて、D 問題って難易度に波があるなあという感想.
+
+```python
+M = int(input())
+AB = [list(map(int, input().split())) for _ in range(M)]
+
 t = 0
-data.sort(key = cmp_to_key(lambda x, y: x[1] - y[1]))
-for d in data:
-  t += d[0]
-  if t > d[1]:
-    print('No')
-    sys.exit()
+AB.sort(key=lambda x: x[1])
+for A, B in AB:
+    t += A
+    if t > B:
+        print('No')
+        exit()
 print('Yes')
 ```
-## ABC130D - Enough Array
+## [ABC130D - Enough Array](https://atcoder.jp/contests/abc130/tasks/abc130_d)
 
 素直に書き下ろしてみたが、予想通り TLE が出た. ウインドウをずらしながら計算するのって20年近く前に大学で習ったよなあと書き直したら通った. 要するに A[i..j] で初めて K を越えたなら A[i+1...j-1] は絶対 K 未満なので、この区間をチェックするだけ無駄なのだ. なので ai+1 を先頭とする部分列は、A[i+1..j] からチェックを開始すれば良い.
 
 ```python
-n, k = [int(e) for e in input().split()]
-data = [int(e) for e in input().split()]
+N, K = map(int, input().split())
+a = list(map(int, input().split()))
+
 result = 0
 i = 0
 j = 0
 v = 0
 while True:
-  v += data[j]
-  if v < k:
-    j += 1
-  else:
-    result += len(data) - j
-    v -= data[i]
-    if j > i:
-      v -= data[j]
-    i += 1
-    if j < i:
-      j += 1
-  if j == len(data):
-    print(result)
-    break
+    v += a[j]
+    if v < K:
+        j += 1
+    else:
+        result += N - j
+        v -= a[i]
+        if j > i:
+            v -= a[j]
+        i += 1
+        if j < i:
+            j += 1
+    if j == N:
+        print(result)
+        break
 ```

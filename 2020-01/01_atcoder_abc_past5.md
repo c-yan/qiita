@@ -1,6 +1,6 @@
 # AtCoder Beginners Contest 過去問チャレンジ5
 
-## ABC134D - Preparing Boxes
+## [ABC134D - Preparing Boxes](https://atcoder.jp/contests/abc134/tasks/abc134_d)
 
 i = N から i を減らしながら順に確定していけば、特に難しいことはない.
 
@@ -16,7 +16,7 @@ print(sum(t))
 print(*[i + 1 for i in range(N) if t[i] == 1])
 ```
 
-## ABC080D - Recording
+## [ABC080D - Recording](https://atcoder.jp/contests/abc080/tasks/abc080_d)
 
 ぱっと見では imos 法一発に見えるのだが、S - 0.5 があるので、何も考えずに imos 法をすると、同じチャンネルの連続する録画が 0.5 の間だけ2台になってしまう罠.
 
@@ -66,7 +66,7 @@ print(max(cs))
 
 ちなみに理論上はコケうるけど、そうそうヒットしないだろうとチャンネルをスルーしていたらしっかりとスナイプされました. 出題者、さすがやでえ…….
 
-## ABC121D - XOR World
+## [ABC121D - XOR World](https://atcoder.jp/contests/abc121/tasks/abc121_d)
 
 `f(A,B)` は `f(0,A-1) xor f(0,B)` と同じなので、`g(N)=f(0,N)` である、`g` が書ければ良い. 2進数の各桁ごとに1の数をカウントして、偶数か奇数かで処理ができる.
 
@@ -114,7 +114,7 @@ A, B = map(int, input().split())
 print(f(A, B))
 ```
 
-## ABC117D - XXOR
+## [ABC117D - XXOR](https://atcoder.jp/contests/abc117/tasks/abc117_d)
 
 Aの各ビット毎にビットの立っている数と立っていない数を集計し、立っている数のほうが多ければそのビットは0、立っていない数のほうが多ければそのビットは1のXを作ればいいだけ. ただ X には K 以下という条件がついているので、K を超えてしまったらビットを立てるのは諦める.
 
@@ -143,7 +143,7 @@ for i in range(N):
 print(result)
 ```
 
-## ABC094D - Binomial Coefficients
+## [ABC094D - Binomial Coefficients](https://atcoder.jp/contests/abc094/tasks/arc095_b)
 
 a<sub>i</sub> は最大の数. a<sub>j</sub> はその次に大きい数ではあるけど <sub>a<sub>i</sub></sub>C<sub>a<sub>j</sub></sub> == <sub>a<sub>i</sub></sub>C<sub>a<sub>i</sub>-a<sub>j</sub></sub> なことに注意して次数を探す.
 
@@ -158,7 +158,7 @@ b.sort()
 print(x, b[-1][1])
 ```
 
-## ABC098D - Xor Sum 2
+## [ABC098D - Xor Sum 2](https://atcoder.jp/contests/abc098/tasks/arc098_b)
 
 加算は単調増加だけど、XOR は 1 xor 1 が 0 なので単調増加ではない. ところで 0 xor N == 0 + N なので「XOR <= 加算」となる. つまり一度でも XOR の結果が加算の結果未満になると、そこからどれだけ r の数字を増やしても永久に同じになることはない. また、ある l < r が同じ値の場合、l + 1 と r の組み合わせでも同じ値になる. ここまで来るとしゃくとり法でいいことが分かる.
 
