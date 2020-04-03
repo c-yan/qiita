@@ -1,6 +1,6 @@
 # yukicoder contest 241 参戦記
 
-# A 1009 面積の求め方
+# [A 1009 面積の求め方](https://yukicoder.me/problems/no/1009)
 
 8分半で突破. ヒント通り区分求積法でスパッと解いてみた. 区間をどれくらいの数で割ればいいのかに悩んだが、適当にえいやで4096でやったら一発目で良さげな精度が出たので、提出してみたら無事 AC.
 
@@ -16,7 +16,7 @@ while x < b:
 print(result)
 ```
 
-# B	1010 折って重ねて
+# [B 1010 折って重ねて](https://yukicoder.me/problems/no/1010)
 
 41分で突破. 整数で処理するコードを書いて、なんで AC しないんだと延々と悩んでいた. アホすぎる. 縦と横で短い方を限界まで折ってから、長い方を限界まで折ればいい.
 
@@ -70,7 +70,7 @@ while x > h:
 print(result)
 ```
 
-# C	1011 Infinite Stairs
+# [C 1011 Infinite Stairs](https://yukicoder.me/problems/no/1011)
 
 敗退. 素直に DP すると O(N<sup>2</sup>d) なので TLE する. よくよく考えると、i 段目にたどり着くのは i-d .. i-1 段目、i + 1 段目にたどり着くのは i - d + 1 .. i と端の2箇所以外は同じである. であれば、O(d) ではなく O(1) で処理できるので O(N<sup>2</sup>) になり解けた.
 
