@@ -44,6 +44,18 @@ print(K - result)
 
 解かずにEに行ってしまったがこっちを解くべきだったろうか.
 
+追記: 明らかにこっちを解くべきだった. すごく簡単だった. やらかした. グラフの苦手意識なんとかしないとなあ. 直接行く場合と、X から Y にワープした場合の小さい方が最短距離なので、集計して表示するだけ.
+
+```python
+N, X, Y = map(int, input().split())
+
+t = [0] * (N - 1)
+for i in range(1, N):
+    for j in range(i + 1, N + 1):
+        t[min(j - i, abs(X - i) + 1 + abs(Y - j)) - 1] += 1
+print('\n'.join(map(str, t)))
+```
+
 ## [ABC160E - Red and Green Apples](https://atcoder.jp/contests/abc160/tasks/abc160_e)
 
 敗退. ソートして、累積和して、にぶたんすればいいかと思ったが、WA 5個が消せず. 無念.
