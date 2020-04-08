@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 139 参戦記
 
-## ABC139A - Tenki
+## [ABC139A - Tenki](https://atcoder.jp/contests/abc139/tasks/abc139_a)
 
 2分半で突破. 書くだけ.
 
@@ -10,7 +10,7 @@ t = input()
 print(sum(1 for i in range(3) if s[i] == t[i]))
 ```
 
-## ABC139B - Power Socket
+## [ABC139B - Power Socket](https://atcoder.jp/contests/abc139/tasks/abc139_b)
 
 9分半で突破. 時間かかりすぎな上に、WA1.
 最初は2行で書いてたんだけど、入出力例3でコケて、日和って while 文が登場しました.
@@ -33,7 +33,7 @@ a, b = map(int, input().split())
 print(((b - 1) + (a - 2)) // (a - 1))
 ```
 
-## ABC139C - Lower
+## [ABC139C - Lower](https://atcoder.jp/contests/abc139/tasks/abc139_c)
 
 4分半で突破. 書くだけ. 最近、C問題が簡単な気がする.
 
@@ -52,7 +52,7 @@ result = max(t, result)
 print(result)
 ```
 
-## ABC139D - ModSum
+## [ABC139D - ModSum](https://atcoder.jp/contests/abc139/tasks/abc139_d)
 
 5分で突破. n = 3 と n = 4 を手でやって、あまりの簡単さに困惑した. 前回のDも簡単だったけど、今回のは輪をかけて簡単でおかしい.
 
@@ -70,7 +70,7 @@ print(n * (n - 1) // 2)
 
 でいいのにそうなっていないのは、1～n の合計を `(n + 1) * n // 2` として覚えていて、1～n-1 の合計の式に自信がなかった日和である. (今回日和が多いですね)
 
-## ABC139E - League
+## [ABC139E - League](https://atcoder.jp/contests/abc139/tasks/abc139_e)
 
 TLE 1個を消せずに敗退.
 
@@ -237,6 +237,6 @@ func readInt() int {
 }
 ```
 
-## ABC139F - Engines
+## [ABC139F - Engines](https://atcoder.jp/contests/abc139/tasks/abc139_f)
 
 ナイーブに書いたら TLE 食らいまくって、計算量減らしたら後半半分くらい WA になって敗退.

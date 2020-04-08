@@ -1,6 +1,6 @@
 # 第一回日本最強プログラマー学生選手権-予選- 参戦記
 
-## A - Takahashi Calendar
+## [A - Takahashi Calendar](https://atcoder.jp/contests/jsc2019-qual/tasks/jsc2019_qual_a)
 
 8分で突破. 全組み合わせチェックするだけ. 一応0から始めずにループ量を減らしたけど、減らす必要はなかったと思う.
 
@@ -16,7 +16,7 @@ for i in range(4, m + 1):
 print(result)
 ```
 
-## B - Kleene Inversion
+## [B - Kleene Inversion](https://atcoder.jp/contests/jsc2019-qual/tasks/jsc2019_qual_b)
 
 30分で突破. 時間かけすぎて、順位ヤバそうと思ったけど、他の人も時間がかかってたようでセーフ. 入力例3を K=2 で手で解いてみてようやく1ループ目とそれ以降で違うことが認識されてスパッと解けた. 最後に一回だけ 10<sup>9</sup> + 7 の mod を取れば良いのは Python でちょっと得した感,
 
