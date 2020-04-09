@@ -1,6 +1,6 @@
 # AtCoder DISCO presents ディスカバリーチャンネル コードコンテスト2020 予選 参戦記
 
-## A - DDCC Finals
+## [A - DDCC Finals](https://atcoder.jp/contests/ddcc2020-qual/tasks/ddcc2020_qual_a)
 
 4分で突破. 書くだけ. ARC の A 問題ってこんなに簡単だっけ?
 
@@ -25,7 +25,7 @@ if X == 1 and Y == 1:
 print(result)
 ```
 
-## B - Iron Bar Cutting
+## [B - Iron Bar Cutting](https://atcoder.jp/contests/ddcc2020-qual/tasks/ddcc2020_qual_b)
 
 26分で突破. WA 1個.
 
@@ -45,7 +45,7 @@ print(min(abs(p + p - l) for p in a))
 
 最初全部計算せず、真ん中の2つを計算するように書いたせいで WA を食らった……. 計算量的に問題ないんだから素直に全部計算すればよかった.
 
-## C - Strawberry Cakes
+## [C - Strawberry Cakes](https://atcoder.jp/contests/ddcc2020-qual/tasks/ddcc2020_qual_c)
 
 突破できず. 終了12分半後にAC.
 

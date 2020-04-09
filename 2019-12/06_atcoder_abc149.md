@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 149 参戦記
 
-## ABC149A - Strings
+## [ABC149A - Strings](https://atcoder.jp/contests/abc149/tasks/abc149_a)
 
 1分で突破. 書くだけ
 
@@ -10,7 +10,7 @@ S, T = input().split()
 print(T + S)
 ```
 
-## ABC149B - Greedy Takahashi
+## [ABC149B - Greedy Takahashi](https://atcoder.jp/contests/abc149/tasks/abc149_b)
 
 6分で突破. 書くだけ. 最初文章の意味がわかってなくて、どっちもK枚減らすのかと思ったけど、入出力例を試して正しい意味に気づいた.
 
@@ -23,7 +23,7 @@ b = max(B - K, 0)
 print(*[a, b])
 ```
 
-## ABC149C - Next Prime
+## [ABC149C - Next Prime](https://atcoder.jp/contests/abc149/tasks/abc149_c)
 
 7分で突破. ABC084D - 2017-like Number で書いたエラトステネスの篩を持ってきて書くだけ.
 
@@ -51,7 +51,7 @@ for i in range(X, N + 1):
         break
 ```
 
-## ABC149D - Prediction and Restriction
+## [ABC149D - Prediction and Restriction](https://atcoder.jp/contests/abc149/tasks/abc149_d)
 
 44分で突破. WA1. 取り敢えず勝つ手を出す前提で話を進め、K個前の手と同じ手になってしまった場合はあいこにするという実装にしたら WA が出て、「DP しないといけないのかあ!? でも突破人数的にそれはないか(腐った推論)」とだいぶ長時間悩んで、負けの手のほうがいい可能性があることに気づいて AC. そのせいで順位が1400番台になってしまったので、unrated になって助かった感.
 
@@ -72,7 +72,7 @@ for i in range(len(T)):
 print(result)
 ```
 
-## ABC149E - Handshake
+## [ABC149E - Handshake](https://atcoder.jp/contests/abc149/tasks/abc149_e)
 
 突破できず. オーダーを切り下げる方法が思いつかず TLE いっぱいのまま終了.
 

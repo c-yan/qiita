@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 147 参戦記
 
-## ABC147A - Blackjack
+## [ABC147A - Blackjack](https://atcoder.jp/contests/abc147/tasks/abc147_a)
 
 2分半で突破. 書くだけ.
 
@@ -13,7 +13,7 @@ else:
   print('win')
 ```
 
-## ABC147B - Palindrome-philia
+## [ABC147B - Palindrome-philia](https://atcoder.jp/contests/abc147/tasks/abc147_b)
 
 2分で突破. 書くだけ.
 
@@ -27,7 +27,7 @@ for i in range(len(S) // 2):
 print(result)
 ```
 
-## ABC147D - Xor Sum 4
+## [ABC147D - Xor Sum 4](https://atcoder.jp/contests/abc147/tasks/abc147_d)
 
 46分くらい?で突破. Cを提出したら WA3 で諦めてこっちに取り掛かったのでよく分からず. ビットごとに累積 XOR をするだけ. だけって言ってもコーディングは中々大変. Python で書いたら TLE になったので、Go で書き直した. `% 1000000007` がある問題はできるだけ Python で書きたいのにね.
 
@@ -122,9 +122,9 @@ for bit in range(60):
 print(result)
 ```
 
-## ABC147C - HonestOrUnkind2
+## [ABC147C - HonestOrUnkind2](https://atcoder.jp/contests/abc147/tasks/abc147_c)
 
-35分くらい?で突破. N≤15 なので、全組み合わせやっても 2<sup>15</sup> でしかなく、やるだけ. だけって言ってもコーディングは中々大変. 最初 `for i in range(1, 2 ** N):` が `for i in range(1, 2 ** N - 1):` になってて WA3 だった. Dが終わった後見直していたら気づいた.
+35分くらい?で突破. N≤15 なので、全組み合わせやっても 2<sup>15</sup> でしかなく、やるだけ. だけって言ってもコーディングは中々大変. 最初 `for i in range(1, 2 ** N):` が `for i in range(1, 2 ** N - 1):` になってて WA3 だった. D問題が終わった後に見直していたら気づいた.
 
 N人の「正直者」、「不親切な人」のすべての組み合わせを生成し、正直者の証言が組み合わせに矛盾していないか確認する. 矛盾していない組み合わせの正直者の最大数が解答.
 組み合わせは bit で表現している. Nビット用意し、1が立っていると正直者、0だと不親切な人. この組み合わせ状況と正直者の証言が矛盾しないか確認する.
@@ -156,6 +156,6 @@ for i in range(1, 2 ** N):
 print(result)
 ```
 
-## ABC147E - Balanced Path
+## [ABC147E - Balanced Path](https://atcoder.jp/contests/abc147/tasks/abc147_e)
 
 突破できず. 貪欲法では駄目なのは分かるけど、じゃあどうすればいいというのが思いつかなかった. 3次元DPかー(解説を見て). 解説読んでもさっぱりわかりませんね.

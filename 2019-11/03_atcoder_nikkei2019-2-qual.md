@@ -1,6 +1,6 @@
 # AtCoder 第二回全国統一プログラミング王決定戦予選 参戦記
 
-## A - Sum of Two Integers
+## [A - Sum of Two Integers](https://atcoder.jp/contests/nikkei2019-2-qual/tasks/nikkei2019_2_qual_a)
 
 2分で突破. 書くだけ. ARC の A 問題ってこんなに簡単だっけかと混乱した.
 
@@ -10,7 +10,7 @@ N = int(input())
 print((N - 1) // 2)
 ```
 
-## B - Counting of Trees
+## [B - Counting of Trees](https://atcoder.jp/contests/nikkei2019-2-qual/tasks/nikkei2019_2_qual_b)
 
 68分半で突破. WA 6個. WA2個が中々消えずに WA を重ねてしまった. その2個は0が複数あるやつだった…….
 
@@ -138,6 +138,6 @@ func readInts(n int) []int {
 }
 ```
 
-## C - Swaps
+## [C - Swaps](https://atcoder.jp/contests/nikkei2019-2-qual/tasks/nikkei2019_2_qual_c)
 
 突破できず. 実現可能であれば、N-1回操作できれば必ず実現できることは分かったが、N-1回が必要かどうかを求める方法がさっぱり分からなかった. 終了後、解説に巡回置換とかサイクルとか知らない単語を見て、これは無理だったと悟る. 巡回置換でググると大学の数学っぽく、そりゃ無理だ(まて).

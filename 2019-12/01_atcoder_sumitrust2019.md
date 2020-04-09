@@ -1,6 +1,6 @@
 # AtCoder 三井住友信託銀行プログラミングコンテスト2019 参戦記
 
-## A - November 30
+## [A - November 30](https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_a)
 
 2分で突破. 書くだけ.
 
@@ -14,7 +14,7 @@ else:
     print(0)
 ```
 
-## B - Tax Rate
+## [B - Tax Rate](https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_b)
 
 4分半で突破. 整数にならなかった場合をどうすればいいかわからんなあと適当に出したのに AC だった. ふう.
 
@@ -30,7 +30,7 @@ else:
     print(':(')
 ```
 
-## C - 100 to 105
+## [C - 100 to 105](https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_c)
 
 7分半で突破. WA1. 最近の ABC のC問題より難しいなーと思いました. WA したのは難しいせいではなく単なるチョンボです.
 
@@ -47,7 +47,7 @@ for i in range(X):
 print(dp[X])
 ```
 
-## D - Lucky PIN
+## [D - Lucky PIN](https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_d)
 
 22分半で突破. 3文字なので、000～999で最大1000パターンしか無いので全パターン試すのは余裕だけど、N≤30000 だと TLE しそうなので、同じ文字が4つ以上連続した場合は3つに圧縮して探索した. どうせ3文字しか使わないので、4文字以上の並びは無意味.
 
@@ -91,20 +91,20 @@ S = input()
 
 result = 0
 for i in range(10):
-  a = S.find(str(i))
-  if a == -1:
-    continue
-  for j in range(10):
-    b = S.find(str(j), a + 1)
-    if b == -1:
-      continue
-    for k in range(10):
-      if S.find(str(k), b + 1) != -1:
-        result += 1
+    a = S.find(str(i))
+    if a == -1:
+        continue
+    for j in range(10):
+        b = S.find(str(j), a + 1)
+        if b == -1:
+            continue
+        for k in range(10):
+            if S.find(str(k), b + 1) != -1:
+                result += 1
 print(result)
 ```
 
-## E - Colorful Hats 2
+## [E - Colorful Hats 2](https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_e)
 
 28分で突破. WA1. A1 が 0 であると信用したのがいけなかった. 先頭からありえるパターンをかけ続けるだけ. E問題にしては簡単.
 
@@ -128,7 +128,7 @@ for i in range(N):
 print(result)
 ```
 
-## F - Interval Running
+## [F - Interval Running](https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_f)
 
 突破できず. でもF問題としてはものすごく簡単だよね. 初の全完行けそうだったのに、取りこぼして悔しい. 解説を見たら割り切れた時の処理が抜けていただけだった. マジくやしー.
 

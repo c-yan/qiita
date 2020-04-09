@@ -1,6 +1,6 @@
 # AtCoder Grand Contest 040 参戦記
 
-## AGC040A - Dividing a String
+## [AGC040A - Dividing a String](https://atcoder.jp/contests/agc040/tasks/agc040_a)s
 
 25分で突破したが、WA1なので30分扱い.
 
@@ -20,6 +20,6 @@ for i in range(N - 2, -1, -1):
 print(sum(t))
 ```
 
-## AGC040B - Two Contests
+## [AGC040B - Two Contests](https://atcoder.jp/contests/agc040/tasks/agc040_b)
 
 全く手付かずで敗退.
