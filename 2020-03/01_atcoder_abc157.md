@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 157 参戦記
 
-## ABC157A - Duplex Printing
+## [ABC157A - Duplex Printing](https://atcoder.jp/contests/abc157/tasks/abc157_a)
 
 1分で突破. 書くだけ.
 
@@ -10,7 +10,7 @@ N = int(input())
 print((N + 1) // 2)
 ```
 
-## ABC157B - Bingo
+## [ABC157B - Bingo](https://atcoder.jp/contests/abc157/tasks/abc157_b)
 
 7分半で突破. 書くだけ……ではあるけど、エレガントに書こうと思えばどう書けばいいんですかね……. 特にビンゴ判定のところ.
 
@@ -62,7 +62,7 @@ if f:
 print('No')
 ```
 
-## ABC157C - Guess The Number
+## [ABC157C - Guess The Number](https://atcoder.jp/contests/abc157/tasks/abc157_c)
 
 20分で突破. WA4. やー、これは酷い. N = 1 のときは先頭桁が0を取れることを見落としてボッコボコになった. それを除けば解くのは難しくなく、配列で決まった桁を管理し、決まらなかった桁には最小になる数字を割り付ければいいだけである.
 
@@ -96,7 +96,7 @@ else:
 print(''.join(map(str, t)))
 ```
 
-## ABC157D - Friend Suggestions
+## [ABC157D - Friend Suggestions](https://atcoder.jp/contests/abc157/tasks/abc157_d)
 
 25分くらいで突破? Eに寄り道したので正確には分からず. 友達候補は友達の友達クラスタの大きさから以下を引いたもの.
 
@@ -158,7 +158,7 @@ for i in range(N):
 print(*result)
 ```
 
-## ABC157E - Simple String Queries
+## [ABC157E - Simple String Queries](https://atcoder.jp/contests/abc157/tasks/abc157_e)
 
 敗退. セグ木とsetで行けるかなあと思ったけど TLE. 遅延セグ木で行けるかなあと思って、ちゃんと調べてる暇がなかったので Dirty 管理すればいいのかなと適当に書いたけど、性能改善しても TLE 消えず. PyPy は更に性能改善してくれたけどやっぱり足りず.
 

@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 158 参戦記
 
-## ABC158A - Station and Bus
+## [ABC158A - Station and Bus](https://atcoder.jp/contests/abc158/tasks/abc158_a)
 
 2分で突破. 書くだけ. 1種類か、2種類か、それだけ.
 
@@ -13,7 +13,7 @@ else:
     print('Yes')
 ```
 
-## ABC158B - Count Balls
+## [ABC158B - Count Balls](https://atcoder.jp/contests/abc158/tasks/abc158_b)
 
 3分半で突破. N が操作何回分を含むかを計算. n 回であれば n * A 個青いボールがある. 途中かけになった分については、A個以内であればその個数が、そうでなければA個青いボールがある.
 
@@ -26,7 +26,7 @@ result += min(N % (A + B), A)
 print(result)
 ```
 
-## ABC158C - Tax Increase
+## [ABC158C - Tax Increase](https://atcoder.jp/contests/abc158/tasks/abc158_c)
 
 4分半で突破. A≤B≤100 ってことは、たかだか1000くらいが答えになるので総当りで OK! もっとクレバーにやることもできるだろうけど、ここ2回くらいそれで WA を食らって懲りたのである. クレバーより愚直に安全.
 
@@ -56,7 +56,7 @@ if result > min(x_high, y_high):
 print(result)
 ```
 
-## ABC158D - String Formation
+## [ABC158D - String Formation](https://atcoder.jp/contests/abc158/tasks/abc158_d)
 
 17分で突破. もちろん言われたとおりに文字列操作をしたら TLE まっしぐら. 右からも左からも足し込むので deque を使うのは見え見え. 後は反転をいちいちしていると TLE になるので、必要であれば最後に1回するだけにつじつまを合わせるだけ.
 
@@ -90,6 +90,6 @@ if reverse:
 print(result)
 ```
 
-## ABC158E - Divisible Substring
+## [ABC158E - Divisible Substring](https://atcoder.jp/contests/abc158/tasks/abc158_e)
 
 敗退. O(N<sup>2</sup>) から削る手段が全く思いつかず. と、コンテスト中に書いたが、終了5分前に桁ごとに余りとその組み合わせ数を引き回して1桁づつ進めれば DP で解けるんじゃないかと気づいたが時すでに遅かった.
