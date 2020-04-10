@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 151 参戦記
 
-## ABC151A - Next Alphabet
+## [ABC151A - Next Alphabet](https://atcoder.jp/contests/abc151/tasks/abc151_a)
 
 1分半で突破. 書くだけ.
 
@@ -10,7 +10,7 @@ C = input()
 print(chr(ord(C[0]) + 1))
 ```
 
-## ABC151B - Achieve the Goal
+## [ABC151B - Achieve the Goal](https://atcoder.jp/contests/abc151/tasks/abc151_b)
 
 4分で突破. 書くだけ.
 
@@ -25,7 +25,7 @@ else:
     print(max(N * M - t, 0))
 ```
 
-## ABC151C - Count Order
+## [ABC151C - Count Order](https://atcoder.jp/contests/abc151/tasks/abc151_c)
 
 7分半で突破. AC 後の WA は無視しないといけないところだけを気にすればよい.
 
@@ -52,7 +52,7 @@ for i in range(N):
 print(*[a, b])
 ```
 
-## ABC151D - Maze Master
+## [ABC151D - Maze Master](https://atcoder.jp/contests/abc151/tasks/abc151_d)
 
 17分で突破. 見た瞬間に AtCoder Typical Contest 002A - 幅優先探索 を思い出したので、全箇所から幅優先探索して、最長をかき集める方向性で解いた.
 
@@ -202,7 +202,7 @@ func fillInts(a []int, x int) {
 }
 ```
 
-## ABC151E - Max-Min Sums
+## [ABC151E - Max-Min Sums](https://atcoder.jp/contests/abc151/tasks/abc151_e)
 
 糸口すらつかめず敗退. 70分の間、順位が800番台から1300番台までずり落ちるのを眺める羽目になった.
 

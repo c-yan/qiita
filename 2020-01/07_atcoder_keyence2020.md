@@ -1,6 +1,6 @@
 # AtCoder キーエンス プログラミング コンテスト 2020 参戦記
 
-## A - Painting
+## [A - Painting](https://atcoder.jp/contests/keyence2020/tasks/keyence2020_a)
 
 9分半で突破. 縦、横長い方で何回塗ったら超えるか、それだけ. 最初勘違いして交互に塗っていくと思ったせいで時間がかかってしまって順位どん底に…….
 
@@ -13,7 +13,7 @@ t = max(H, W)
 print((N + t - 1) // t)
 ```
 
-## C - Subarray Sum
+## [C - Subarray Sum](https://atcoder.jp/contests/keyence2020/tasks/keyence2020_c)
 
 13分?で突破. S を K 個、どう足しても S にならないものを N - K 個並べればいいだけ. 回答の数列の各値は 1～10<sup>9</sup> であることには注意.
 
@@ -26,7 +26,7 @@ for i in range(K):
 print(*result)
 ```
 
-## B - Robot Arms
+## [B - Robot Arms](https://atcoder.jp/contests/keyence2020/tasks/keyence2020_b)
 
 敗退.
 

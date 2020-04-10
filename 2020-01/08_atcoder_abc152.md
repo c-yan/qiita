@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 152 参戦記
 
-## ABC152A - AC or WA
+## [ABC152A - AC or WA](https://atcoder.jp/contests/abc152/tasks/abc152_a)
 
 1分半で突破. 書くだけ.
 
@@ -13,7 +13,7 @@ else:
     print('No')
 ```
 
-## ABC152B - Comparing Strings
+## [ABC152B - Comparing Strings](https://atcoder.jp/contests/abc152/tasks/abc152_b)
 
 2分で突破. 書くだけ.
 
@@ -26,7 +26,7 @@ else:
     print(str(b) * a)
 ```
 
-## ABC152C - Low Elements
+## [ABC152C - Low Elements](https://atcoder.jp/contests/abc152/tasks/abc152_c)
 
 5分で突破. 流石に二重ループは TLE なので、現時点の最小値を持ち回す必要あり. 題意を理解するのに少し時間を使った.
 
@@ -43,7 +43,7 @@ for i in range(N):
 print(result)
 ```
 
-## ABC152D - Handstand 2
+## [ABC152D - Handstand 2](https://atcoder.jp/contests/abc152/tasks/abc152_d)
 
 26分で突破. N回ループ回しても大丈夫だと見切れればさして難しくはない. 先頭と末尾の組み合わせで個数を集計すれば一発.
 
@@ -62,7 +62,7 @@ for i in range(1, 10):
 print(result)
 ```
 
-## ABC152E - Flatten
+## [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e)
 
 敗退. 最小公倍数を求めて集計するナイーブな実装では TLE だった.
 
