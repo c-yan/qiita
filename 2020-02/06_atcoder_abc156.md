@@ -41,21 +41,9 @@ print(sum((x - P) * (x - P) for x in X))
 
 ## [ABC156D - Bouquet](https://atcoder.jp/contests/abc156/tasks/abc156_d)
 
-70分半で突破. まず <sub>n</sub>C<sub>0</sub>+<sub>n</sub>C<sub>1</sub>+...+<sub>n</sub>C<sub>n</sub> = 2<sup>n</sup> を知っていないといけない. 私は知りませんでした orz. パスカルの三角形の Wikipedia 見てたら書いてあって知りました. これで過去に書いた mpow と mcomb を貼って終わりかと思ったら n! を求める部分があって 2≤n≤10<sup>9</sup> に殺される. a, b はたかだか 10<sup>5</sup> であることに気づき、<sub>n</sub>C<sub>k</sub> を求める別の式に組み替えてようやく解けた. 良問!
+70分半で突破. まず <sub>n</sub>C<sub>0</sub>+<sub>n</sub>C<sub>1</sub>+...+<sub>n</sub>C<sub>n</sub> = 2<sup>n</sup> を知っていないといけない. 私は知りませんでした orz. パスカルの三角形の Wikipedia 見てたら書いてあって知りました. これで過去に書いた mcomb を貼って終わりかと思ったら n! を求める部分があって 2≤n≤10<sup>9</sup> に殺される. a, b はたかだか 10<sup>5</sup> であることに気づき、<sub>n</sub>C<sub>k</sub> を求める別の式に組み替えてようやく解けた. 良問!
 
 ```python
-def mpow(x, n):
-    result = 1
-    while n != 0:
-        if n & 1 == 1:
-            result *= x
-            result %= 1000000007
-        x *= x
-        x %= 1000000007
-        n >>= 1
-    return result
-
-
 def mcomb(n, k):
     a = 1
     b = 1
@@ -64,12 +52,12 @@ def mcomb(n, k):
         a %= 1000000007
         b *= i + 1
         b %= 1000000007
-    return a * mpow(b, 1000000005) % 1000000007
+    return a * pow(b, 1000000005, 1000000007) % 1000000007
 
 
 n, a, b = map(int, input().split())
 
-result = mpow(2, n) - 1
+result = pow(2, n, 1000000007) - 1
 result -= mcomb(n, a)
 result + 1000000007
 result %= 1000000007
