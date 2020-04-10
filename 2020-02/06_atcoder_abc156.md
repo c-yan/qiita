@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 156 参戦記
 
-## ABC156A - Beginner
+## [ABC156A - Beginner](https://atcoder.jp/contests/abc156/tasks/abc156_a)
 
 4分で突破. 書くだけ.
 
@@ -13,7 +13,7 @@ else:
     print(R - 100 * (10 - N))
 ```
 
-## ABC156B - Digits
+## [ABC156B - Digits](https://atcoder.jp/contests/abc156/tasks/abc156_b)
 
 2分で突破. 書くだけ. K進数の 10 は K で、100 は K<sup>2</sup> だと分かっていれば、K で何回割れるか調べるだけと分かるはず.
 
@@ -27,7 +27,7 @@ while N != 0:
 print(result)
 ```
 
-## ABC156C - Rally
+## [ABC156C - Rally](https://atcoder.jp/contests/abc156/tasks/abc156_c)
 
 3分半で突破. 書くだけ……なのは、この計算をしなれてるからなんですが. (X<sub>i</sub>−P)<sup>2</sup> が最小になる P は重心. 減色の K-means で3次元のこの計算をしてます…….
 
@@ -39,7 +39,7 @@ P = int(sum(X) / N + 0.5)
 print(sum((x - P) * (x - P) for x in X))
 ```
 
-## ABC156D - Bouquet
+## [ABC156D - Bouquet](https://atcoder.jp/contests/abc156/tasks/abc156_d)
 
 70分半で突破. まず <sub>n</sub>C<sub>0</sub>+<sub>n</sub>C<sub>1</sub>+...+<sub>n</sub>C<sub>n</sub> = 2<sup>n</sup> を知っていないといけない. 私は知りませんでした orz. パスカルの三角形の Wikipedia 見てたら書いてあって知りました. これで過去に書いた mpow と mcomb を貼って終わりかと思ったら n! を求める部分があって 2≤n≤10<sup>9</sup> に殺される. a, b はたかだか 10<sup>5</sup> であることに気づき、<sub>n</sub>C<sub>k</sub> を求める別の式に組み替えてようやく解けた. 良問!
 

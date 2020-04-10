@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 155 参戦記
 
-## ABC155A - Poor
+## [ABC155A - Poor](https://atcoder.jp/contests/abc155/tasks/abc155_a)
 
 2分で突破. 書くだけ. 前回に引き続き、set での重複判定.
 
@@ -13,7 +13,7 @@ else:
     print('No')
 ```
 
-## ABC155B - Papers, Please
+## [ABC155B - Papers, Please](https://atcoder.jp/contests/abc155/tasks/abc155_b)
 
 2分半で突破. 書くだけ.
 
@@ -31,7 +31,7 @@ for a in A:
 print('APPROVED')
 ```
 
-## ABC155C - Poll
+## [ABC155C - Poll](https://atcoder.jp/contests/abc155/tasks/abc155_c)
 
 8分半で突破. 書くだけ……といいつつそれなりに時間がかかったけど(汗). C# 使いが壊滅状態と聞いて、AC した人のコードを眺めると 全員 string 配列のソートに自前の comparer を使っていたので、Mono は string の比較がヤバイのかなと思った.
 
@@ -89,11 +89,11 @@ namespace ConsoleApp1
 }
 ```
 
-## ABC155D - Pairs
+## [ABC155D - Pairs](https://atcoder.jp/contests/abc155/tasks/abc155_d)
 
 敗退. Eの方が解いてる人が多いので、Eに行った. にぶたんかなあと思った.
 
-## ABC155E - Payment
+## [ABC155E - Payment](https://atcoder.jp/contests/abc155/tasks/abc155_e)
 
 敗退. 入力例1, 入力例2 は突破したものの、入力例3が243ではなく、249になってしまって、自分のロジックでうまく行かないパターンを考えていたけど思いつかなかった.
 

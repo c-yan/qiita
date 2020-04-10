@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 154 参戦記
 
-## ABC154A - Remaining Balls
+## [ABC154A - Remaining Balls](https://atcoder.jp/contests/abc154/tasks/abc154_a)
 
 2分半で突破. 変数が5つもあることに一瞬戸惑ったけど、書くだけだった.
 
@@ -16,7 +16,7 @@ else:
 print(A, B)
 ```
 
-## ABC154B - I miss you...
+## [ABC154B - I miss you...](https://atcoder.jp/contests/abc154/tasks/abc154_b)
 
 1分で突破. 書くだけ.
 
@@ -26,7 +26,7 @@ S = input()
 print('x' * len(S))
 ```
 
-## ABC154C - Distinct or Not
+## [ABC154C - Distinct or Not](https://atcoder.jp/contests/abc154/tasks/abc154_c)
 
 2分で突破. 書くだけ. ABC063B - Varied を思い出した.
 
@@ -40,7 +40,7 @@ else:
     print('NO')
 ```
 
-## ABC154D - Dice in Line
+## [ABC154D - Dice in Line](https://atcoder.jp/contests/abc154/tasks/abc154_d)
 
 10分で突破. リスト p から、平均値のリスト m を作って、幅 K の Sliding Window で最大値を求めるだけ.
 
@@ -60,7 +60,7 @@ for i in range(N - K):
 print(result)
 ```
 
-## ABC154E - Almost Everywhere Zero
+## [ABC154E - Almost Everywhere Zero](https://atcoder.jp/contests/abc154/tasks/abc154_e)
 
 敗退. 前に解けなくて放置したアレと同じ問題だなあと思ったが、そのときに解いておかなかったのが運の尽きだった…….
 
