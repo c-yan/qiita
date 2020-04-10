@@ -70,13 +70,12 @@ else:
 ```python
 # PyPy なら通る
 def is_ok(x):
-    result = 0
+    trainings = 0
     for i in range(N):
-        a = A[i]
-        t = x // F[i]
-        if t < a:
-            result += a - t
-    return result <= K
+        t = A[i] - x // F[i]
+        if t > 0:
+            trainings += t
+    return trainings <= K
 
 
 N, K = map(int, input().split())
@@ -86,15 +85,15 @@ F = list(map(int, input().split()))
 A.sort()
 F.sort(reverse=True)
 
-l = -1
-r = A[-1] * F[0]
-while r > l+1:
-    m = l + (r - l) // 2
+ng = -1
+ok = A[-1] * F[0]
+while ok - ng > 1:
+    m = ng + (ok - ng) // 2
     if is_ok(m):
-        r = m
+        ok = m
     else:
-        l = m
-print(r)
+        ng = m
+print(ok)
 ```
 
 ```go
@@ -117,27 +116,28 @@ func main() {
 	sort.Ints(A)
 	sort.Sort(sort.Reverse(sort.IntSlice(F)))
 
-	l := -1            // ng
-	r := A[N-1] * F[0] // ok
-	for r > l+1 {
-		m := l + (r-l)/2
-		isOk := func(x int) bool {
-			result := 0
-			for i := 0; i < N; i++ {
-				t := A[i] - x/F[i]
-				if t > 0 {
-					result += t
-				}
+	isOk := func(x int) bool {
+		trainings := 0
+		for i := 0; i < N; i++ {
+			t := A[i] - x/F[i]
+			if t > 0 {
+				trainings += t
 			}
-			return result <= K
 		}
+		return trainings <= K
+	}
+
+	ng := -1
+	ok := A[N-1] * F[0]
+	for ok-ng > 1 {
+		m := ng + (ok-ng)/2
 		if isOk(m) {
-			r = m
+			ok = m
 		} else {
-			l = m
+			ng = m
 		}
 	}
-	fmt.Println(r)
+	fmt.Println(ok)
 }
 
 const (
