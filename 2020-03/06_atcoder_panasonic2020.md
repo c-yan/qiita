@@ -33,6 +33,15 @@ else:
 
 敗退. 整数で計算しないと駄目なんだろうとは分かっていても、整数の式に落とせなかった. 二回二乗すればいいじゃんと言われればあああーってすぐ分かるやつ. 何故かコンテスト中は分からない orz. 数学問題嫌いだー.
 
+```python
+a, b, c = map(int, input().split())
+
+if c - a - b > 0 and (c - a - b) * (c - a - b) > 4 * a * b:
+    print('Yes')
+else:
+    print('No')
+```
+
 ## [panasonic2020D - String Equivalence](https://atcoder.jp/contests/panasonic2020/tasks/panasonic2020_d)
 
 32分半で突破. 1WA. 何回読んでも、何回読んでも定義が頭に入ってこなくて困った. で、完全に定義を誤解して出して WA を食らい、その後に N = 4 くらいまで手で全部書いてようやく分かって AC. 要するに N - 1 までの文字列に、aからそれまでに出ている文字の一番辞書順で大きいやつの次のやつまでを追加したのが答え.
