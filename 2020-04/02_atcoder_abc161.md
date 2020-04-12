@@ -101,72 +101,23 @@ while True:
 
 追記: 30分くらい追加して解けた. トータル1時間くらい? N≤10<sup>12</sup> なので素直にループを回すと TLE 必至. N が1になるとき、N = K<sup>a</sup> * (b * K + 1) (a,b≥0) となる. K * K > N の領域では、K = N, N - 1 を除けば N = a * K + 1 (a≥2) のパターンしか無い. 候補は、2以上 sqrt(N) 以下の K と、N - 1 が K で割り切れる時の (N - 1) / K. 候補をすべてチェックするのはたかだか 2 * 10<sup>6</sup> なので間に合う.
 
-```go
-package main
+```python
+N = int(input())
 
-import (
-	"bufio"
-	"fmt"
-	"math"
-	"os"
-	"strconv"
-)
+if N == 2:
+    # K = 2
+    print(1)
+    exit()
 
-func main() {
-	N := readInt()
+result = 2  # K = N - 1, N
+for K in range(2, int(N ** 0.5 + 1)):
+    t = N
+    while t >= K and t % K == 0:
+        t //= K
+    if t % K == 1:
+        result += 1
 
-	if N == 2 {
-		// K = 2
-		fmt.Println(1)
-		return
-	}
-
-	result := 2 // K = N - 1, N
-	for K := 2; K <= int(math.Sqrt(float64(N))); K++ {
-		t := N
-		for t >= K && t%K == 0 {
-			t /= K
-		}
-		if t%K == 1 {
-			result++
-		}
-
-		if (N-1)%K == 0 && (N-1)/K > K {
-			result++
-		}
-	}
-	fmt.Println(result)
-}
-
-const (
-	ioBufferSize = 1 * 1024 * 1024 // 1 MB
-)
-
-var stdinScanner = func() *bufio.Scanner {
-	result := bufio.NewScanner(os.Stdin)
-	result.Buffer(make([]byte, ioBufferSize), ioBufferSize)
-	result.Split(bufio.ScanWords)
-	return result
-}()
-
-func readString() string {
-	stdinScanner.Scan()
-	return stdinScanner.Text()
-}
-
-func readInt() int {
-	result, err := strconv.Atoi(readString())
-	if err != nil {
-		panic(err)
-	}
-	return result
-}
-
-func readInts(n int) []int {
-	result := make([]int, n)
-	for i := 0; i < n; i++ {
-		result[i] = readInt()
-	}
-	return result
-}
+    if (N-1) % K == 0 and (N-1) // K > K:
+        result += 1
+print(result)
 ```
