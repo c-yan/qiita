@@ -314,15 +314,16 @@ while s:
             s.append(c)
     else:
         right[-n] = i
-        i += 1
 
 Q = int(input())
+result = []
 for _ in range(Q):
     a, b = map(int, input().split())
-    if left[b] <= left[a] <= right[b]:
-        print('Yes')
+    if left[b] < left[a] < right[b]:
+        result.append('Yes')
     else:
-        print('No')
+        result.append('No')
+print('\n'.join(result))
 ```
 
 ダブリングでも解いてみました.
