@@ -29,8 +29,8 @@ namespace ConsoleApp1
                 { "redirect_uri", Config.OAuth.RedirectUri }
             };
             var url = $"https://login.microsoftonline.com/{Config.OAuth.TenantID}/oauth2/v2.0/token";
-            var resnponse = await HttpClient.PostAsync(url, new FormUrlEncodedContent(body));
-            return JsonHelper.ToObject<AadResponse>(await resnponse.Content.ReadAsStringAsync()).AccessToken;
+            var response = await HttpClient.PostAsync(url, new FormUrlEncodedContent(body));
+            return JsonHelper.ToObject<AadResponse>(await response.Content.ReadAsStringAsync()).AccessToken;
         }
 
         static void Main(string[] args)
