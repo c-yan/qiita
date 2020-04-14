@@ -129,3 +129,31 @@ main()
 ## [ABC162E - Sum of gcd of Tuples (Hard)](https://atcoder.jp/contests/abc162/tasks/abc162_e)
 
 突破できず. 解けると思ったんだけどなあ. 悔しい.
+
+追記: f(k, n) を 1 以上 k 以下の整数からなる長さ n の数列 {A<sub>1</sub>,...,A<sub>n</sub>} で gcd(A<sub>1</sub>,...,A<sub>n</sub>) が 1 の個数とすると求める答えは ∑ <sub>i = 1..K</sub> f(floor(K / i), N) * i となる.
+
+```python
+N, K = map(int, input().split())
+
+MOD = 10 ** 9 + 7
+
+cache = {}
+def f(k, n):
+    if k == 1:
+        return 1
+    if k in cache:
+        return cache[k]
+    result = pow(k, n, MOD)
+    for i in range(2, k + 1):
+        result -= f(k // i, n)
+        result %= MOD
+    cache[k] = result
+    return result
+
+
+result = 0
+for i in range(1, K + 1):
+    result += f(K // i, N) * i
+    result %= MOD
+print(result)
+```
