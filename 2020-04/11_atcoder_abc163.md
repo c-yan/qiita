@@ -77,3 +77,19 @@ print('\n'.join(map(str, result)))
 ## [ABC163D - Sum of Large Numbers](https://atcoder.jp/contests/abc163/tasks/abc163_d)
 
 まさかの敗退. 0 が邪魔すぎた.
+
+追記: なんで私はコンビネーション計算して0が邪魔でダブるって悩んでたんですかね. ほんと馬鹿すぎて困る.
+
+```python
+N, K = map(int, input().split())
+
+result = 0
+for i in range(K, N + 2):
+    # max: N, N -1, ..., N - i + 1
+    a = (N + (N - i + 1)) * i // 2
+    # min: 0, 1, .., i - 1
+    b = (0 + (i - 1)) * i // 2
+    result += a - b + 1
+    result %= 1000000007
+print(result)
+```
