@@ -28,7 +28,15 @@ if a > N:
     print(-1)
 else:
     print(N - a)
+```
 
+追記: これでよかったな.
+
+```python
+N, M = map(int, input().split())
+A = list(map(int, input().split()))
+
+print(max(N - sum(A), -1))
 ```
 
 ## [ABC163C - management](https://atcoder.jp/contests/abc163/tasks/abc163_c)
@@ -52,6 +60,18 @@ for i in range(1, N + 1):
         print(len(d[i]))
     else:
         print(0)
+```
+
+追記: これでよかった.
+
+```python
+N = int(input())
+A = list(map(int, input().split()))
+
+result = [0] * N
+for a in A:
+    result[a - 1] += 1
+print('\n'.join(map(str, result)))
 ```
 
 ## [ABC163D - Sum of Large Numbers](https://atcoder.jp/contests/abc163/tasks/abc163_d)
