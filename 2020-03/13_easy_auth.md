@@ -7,9 +7,14 @@ Visual Studio 2019 の新しいプロジェクトの作成で「ASP.NET Core Web
 次に Startup.cs を開き、先頭に `using System.Security.Principal;` を追加して、`Configure` メソッドの `app.UseAuthorization();` と `app.UseEndpoints(endpoints =>` の間に
 
 ```csharp
-app.Use(async (context, next) => {
-    var identity = new GenericIdentity(context.Request.Headers["X-MS-CLIENT-PRINCIPAL-NAME"][0]);
-    context.User = new GenericPrincipal(identity, null);
+app.Use(async (context, next) =>
+{
+    if (context.Request.Headers.ContainsKey("X-MS-CLIENT-PRINCIPAL-NAME"))
+    {
+        var azureAppServicePrincipalNameHeader = context.Request.Headers["X-MS-CLIENT-PRINCIPAL-NAME"][0];
+        var identity = new GenericIdentity(azureAppServicePrincipalNameHeader);
+        context.User = new GenericPrincipal(identity, null);
+    }
     await next.Invoke();
 });
 ```
