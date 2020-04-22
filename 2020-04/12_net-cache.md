@@ -36,3 +36,5 @@ namespace ConsoleApp1
     }
 }
 ```
+
+なお、System.Runtime.Caching 使用時には Install-Package System.Runtime.Caching で nuget からインストールする必要がある、念の為.
