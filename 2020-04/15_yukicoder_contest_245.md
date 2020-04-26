@@ -303,3 +303,39 @@ func println(args ...interface{}) (int, error) {
 	return fmt.Fprintln(stdoutWriter, args...)
 }
 ```
+
+## [C 1035 Color Box](https://yukicoder.me/problems/no/1035)
+
+i種類のペンキを使って色を塗る塗り方の総数を f(i) とすると、f(i) = <sub>M</sub>C<sub>i</sub> * i<sup>N</sup> - f(i - 1) となる. また、f(0) = 0 である.
+
+と簡潔に書いていますが、これにたどり着くのに5時間以上かかりました orz. ★2個とか嘘やろ.
+
+```python
+from sys import setrecursionlimit
+
+setrecursionlimit(1000000)
+
+N, M = map(int, input().split())
+
+fac = [0] * (N + 1)
+fac[0] = 1
+for i in range(N):
+    fac[i + 1] = fac[i] * (i + 1) % 1000000007
+
+
+def mcomb(n, k):
+    if n == 0 and k == 0:
+        return 1
+    if n < k or k < 0:
+        return 0
+    return fac[n] * pow(fac[n - k], 1000000005, 1000000007) * pow(fac[k], 1000000005, 1000000007) % 1000000007
+
+
+def f(i):
+    if i == 0:
+        return 0
+    return (mcomb(M, i) * pow(i, N, 1000000007) - f(i - 1)) % 1000000007
+
+
+print(f(M))
+```
