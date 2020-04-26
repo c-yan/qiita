@@ -317,9 +317,9 @@ setrecursionlimit(1000000)
 
 N, M = map(int, input().split())
 
-fac = [0] * (N + 1)
+fac = [0] * (M + 1)
 fac[0] = 1
-for i in range(N):
+for i in range(M):
     fac[i + 1] = fac[i] * (i + 1) % 1000000007
 
 
