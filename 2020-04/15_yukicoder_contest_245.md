@@ -160,7 +160,7 @@ func println(args ...interface{}) (int, error) {
 }
 ```
 
-## [B 1034 テスターのふっぴーさん ](https://yukicoder.me/problems/no/1034)
+## [B 1034 テスターのふっぴーさん](https://yukicoder.me/problems/no/1034)
 
 時計回りに渦を巻きながら進んでいくわけだが、(I, J) が何巻目かをまず考える. I, J, N - 1 - I, N - 1 - J の最小値だと分かる. この最小値を l すると、l 巻目に入るまでに移動した回数は、全移動回数 N * N から、l 巻以降の移動回数 (N - 2 * l) * (N - 2 * l) を引いたものだと分かる. 後は一巻きだけ進めてかかった移動を確認し、l巻き目に入るまで移動した回数と合算すれば回答できる.
 
@@ -182,7 +182,6 @@ for i in range(Q):
         result += 3 * (N - 1) + (N - 1) - I
     print(result)
 ```
-
 
 ## [E 1037 exhausted ](https://yukicoder.me/problems/no/1037)
 
