@@ -17,6 +17,18 @@ for i in range(A, B + 1):
 print('NG')
 ```
 
+追記: O(1) でも書いてみた.
+
+```python
+K = int(input())
+A, B = map(int, input().split())
+
+if (B // K) * K >= A:
+    print('OK')
+else:
+    print('NG')
+```
+
 ## [ABC165B - 1%](https://atcoder.jp/contests/abc165/tasks/abc165_b)
 
 4分で突破. X≤10<sup>18</sup> を見て、B問題なのに TLE ありうる!? と思ったけど、コードテストで 10<sup>18</sup> を食わせても全然平気だったので、なーんだと思いつつ AC.
@@ -70,6 +82,24 @@ for s in V:
 print(result)
 ```
 
+追記: 頑張って自力で全組生成する必要なかった模様. Python は偉大.
+
+```python
+from itertools import combinations_with_replacement
+
+N, M, Q = map(int, input().split())
+abcd = [list(map(int, input().split())) for _ in range(Q)]
+
+result = 0
+for A in combinations_with_replacement(range(1, M + 1), N):
+    t = 0
+    for a, b, c, d in abcd:
+        if A[b - 1] - A[a - 1] == c:
+            t += d
+    result = max(result, t)
+print(result)
+```
+
 ## [ABC165D - Floor Function](https://atcoder.jp/contests/abc165/tasks/abc165_d)
 
 20分で突破. Ax/B が増えるタイミングに最大値があるはずと思ったので、Ax/B = n の式を解くと x = Bn/A となるので、n を1づつインクリメントした x を N になるまで回してみた. ただこれは A < B のときにアレなので、その場合用に A まで回してみた. というちゃらんぽらんな合体で出してみたら AC が来て自分でもびっくりした. つまり、問題をあまり理解してないのに解けてしまった…….
@@ -98,6 +128,17 @@ if B > A:
         result = max(result, f(x))
 
 print(result)
+```
+
+追記: 我ながらよく通ったなあ(汗). しかし、D問題とC問題の難易度が完全に入れ替わっている.
+
+```python
+from math import floor
+
+A, B, N = map(int, input().split())
+
+x = min(B - 1, N)
+print(floor(A * x / B) - A * floor(x / B))
 ```
 
 ## [ABC165E - Rotation Matching](https://atcoder.jp/contests/abc165/tasks/abc165_e)
