@@ -330,6 +330,35 @@ while k != -1:
 print(*result)
 ```
 
+追記: 解説通り優先度付きキューで解いてみた. キューの中にすでに通り過ぎたところの値が残っているので、それが最小になったときどうするのだろうと思ったが、そうか、捨てれば良いのか…….
+
+```python
+from heapq import heappush, heappop
+
+N, K, D = map(int, input().split())
+A = list(map(int, input().split()))
+
+if 1 + (K - 1) * D > N:
+    print(-1)
+    exit()
+
+result = []
+q = []
+i = 0
+l = 0
+for k in range(K - 1, -1, -1):
+    for j in range(l, N - k * D):
+        heappush(q, (A[j], j))
+    l = N - k * D
+    while True:
+        a, j = heappop(q)
+        if j >= i:
+            break
+    result.append(a)
+    i = j + D
+print(*result)
+```
+
 ## [past202004K - 括弧](https://atcoder.jp/contests/past202004-open/tasks/past202004_k)
 
 突破できず. TLE するけど、正しい答えが出るナイーブな実装すら書けず.
