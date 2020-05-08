@@ -93,3 +93,29 @@ print(result)
 ## [ABC158E - Divisible Substring](https://atcoder.jp/contests/abc158/tasks/abc158_e)
 
 敗退. O(N<sup>2</sup>) から削る手段が全く思いつかず. と、コンテスト中に書いたが、終了5分前に桁ごとに余りとその組み合わせ数を引き回して1桁づつ進めれば DP で解けるんじゃないかと気づいたが時すでに遅かった.
+
+追記: P が2と5のときは簡単で、一番下の桁が2の倍数、5の倍数のときに割りきれるので、後は左に伸ばせる数を積算すれば求まる. その他の P については、例えば S<sub>6</sub>S<sub>5</sub>S<sub>4</sub>S<sub>3</sub>S<sub>2</sub>S<sub>1</sub>S<sub>0</sub> の S<sub>6</sub>S<sub>5</sub>S<sub>4</sub>S<sub>3</sub> が P で割り切れたとすると、S<sub>6</sub>S<sub>5</sub>S<sub>4</sub>S<sub>3</sub>S<sub>2</sub>S<sub>1</sub>S<sub>0</sub> ≡ S<sub>2</sub>S<sub>1</sub>S<sub>0</sub> (mod P) なので、余りを記録しながら左に伸ばして、同じ余りのものの個数を積算すれば求まる.
+
+```python
+N, P = map(int, input().split())
+S = input()
+
+S = S[::-1]
+result = 0
+if P == 2 or P == 5:
+    for i in range(N):
+        if int(S[i]) % P == 0:
+            result += N - i
+else:
+    t = [0] * P
+    m = 1
+    n = 0
+    for i in range(len(S)):
+        t[n] += 1
+        n += int(S[i]) * m
+        n %= P
+        result += t[n]
+        m *= 10
+        m %= P
+print(result)
+```
