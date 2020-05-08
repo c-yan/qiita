@@ -1,5 +1,7 @@
 # ASP.NET Core で全アクション共通で実行するロジックを実行する
 
+\# 以下の記事が書かれた時の版数は .NET Core 3.1 (3.1.201), ASP.NET Core 3.1 (3.1.3) となります.
+
 例えば `_Layout.cshtml` 内で本日のドル円レートを表示するとして、全てのコントローラの、全てのアクションに `ViewData` への代入を書いて回るのは流石にエレファント. そういう場合はどうすればいいかという話です.
 
 プロジェクトに `Filters` フォルダを掘って、`MyFilter.cs` を作ります. 以下のように `IActionFilter` を継承したクラスを作ります. 非同期の場合は `IAsyncActionFilter` を継承します. `OnActionExecuting` はアクション実行前、`OnActionExecuted` はアクション実行後に発火します. `context.Controller` を `Controller` にキャストすると `ViewData` にアクセスできます.

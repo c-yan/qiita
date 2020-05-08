@@ -1,5 +1,7 @@
 # Azure AD からリフレッシュトークンを使用してアクセストークンを取得する (C#)
 
+\# 以下の記事が書かれた時の版数は .NET Core 3.1 (3.1.201) となります.
+
 [Microsoft.Extensions.Configuration を使って、INI ファイルに書いた設定を読み込む](https://qiita.com/c-yan/items/3e0b2503d26693140457) と [JSON をクラスにバインドする (C#)](https://qiita.com/c-yan/items/9a6a5c1f59526c1a1ff2) で書いたコードを使っているので、その部分についてはそちらを参照してください.
 
 ```csharp

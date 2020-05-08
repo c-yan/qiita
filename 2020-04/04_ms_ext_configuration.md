@@ -1,5 +1,7 @@
 # Microsoft.Extensions.Configuration を使って、INI ファイルに書いた設定を読み込む
 
+\# 以下の記事が書かれた時の版数は .NET Core 3.1 (3.1.201), Microsoft.Extensions.Configuration.Binder 3.1.3, Microsoft.Extensions.Configuration.Ini 3.1.3 となります.
+
 exe.config はずっと微妙だなあと思っていたのですが、Microsoft 謹製の INI ファイルから設定を読む手段が提供されたので、それを使ってみる. 例として以下の INI ファイルを読むコードを作成する. 書いたコードは [GitHub](https://github.com/c-yan/MsExtConfigurationExample) にも上げてある.
 
 ```ini:config.ini
