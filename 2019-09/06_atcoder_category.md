@@ -42,6 +42,7 @@
 * [ABC038C - 単調増加](https://atcoder.jp/contests/abc038/tasks/abc038_c)
 * [ABC149E - Handshake](https://atcoder.jp/contests/abc149/tasks/abc149_e)
 * [ABC154D - Dice in Line](https://atcoder.jp/contests/abc154/tasks/abc154_d)
+* [ABC162D - RGB Triplets](https://atcoder.jp/contests/abc162/tasks/abc162_d)
 
 <!--
 * [ABC089D - Practical Skill Test](https://atcoder.jp/contests/abc089/tasks/abc089_d)
@@ -129,6 +130,7 @@
 * [ABC146C - Buy an Integer](https://atcoder.jp/contests/abc146/tasks/abc146_c)
 * [ABC149E - Handshake](https://atcoder.jp/contests/abc149/tasks/abc149_e)
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f)
+* [ABC134E - Sequence Decomposing](https://atcoder.jp/contests/abc134/tasks/abc134_e)
 
 <!--
 * [ABC063D - Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
@@ -176,6 +178,7 @@
 
 ## フェルマーの小定理
 
+* [ABC132D - Blue and Red Balls](https://atcoder.jp/contests/abc132/tasks/abc132_d)
 * [ABC145D - Knight](https://atcoder.jp/contests/abc145/tasks/abc145_d)
 * [ABC151E - Max-Min Sums](https://atcoder.jp/contests/abc151/tasks/abc151_e)
 * [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e)
@@ -187,10 +190,18 @@
 
 ## セグメント木 (Segment tree)
 
-* [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c)
-* [ABC157E - Simple String Queries](https://atcoder.jp/contests/abc157/tasks/abc157_e)
-* [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f)
+* [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (GCD)
+* [ABC157E - Simple String Queries](https://atcoder.jp/contests/abc157/tasks/abc157_e) (ビット or)
+* [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f) (Sum)
 
 ## BIT (Binary indexed tree)
 
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f)
+
+## 平衡二分探索木
+
+* [ABC134E - Sequence Decomposing](https://atcoder.jp/contests/abc134/tasks/abc134_e)
+
+## パスカルの三角形
+
+* [ABC132D - Blue and Red Balls](https://atcoder.jp/contests/abc132/tasks/abc132_d)
