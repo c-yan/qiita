@@ -84,17 +84,44 @@ N個の区別がつかないボールをK個の区別がつくグループに分
 ```python
 N, K = map(int, input().split())
 
-c = [[0] * 2001 for _ in range(2000 + 1)]
+n = max(K, N - K + 1)
+c = [[0] * (n + 1) for _ in range(n + 1)]
 c[0][0] = 1
-for i in range(1, 2000 + 1):
-    ci = c[i]
-    ci1 = c[i - 1]
-    ci[0] = 1
+for i in range(1, n + 1):
+    c[i][0] = 1
     for j in range(1, i + 1):
-        ci[j] = (ci1[j - 1] + ci1[j]) % 1000000007
+        c[i][j] = (c[i - 1][j - 1] + c[i - 1][j]) % 1000000007
 
+result = []
 for i in range(1, K + 1):
-    print(c[K - 1][i - 1] * c[N - K + 1][i] % 1000000007)
+    result.append(c[K - 1][i - 1] * c[N - K + 1][i] % 1000000007)
+print('\n'.join(str(i) for i in result))
+```
+
+フェルマーの小定理を使うと以下になる.
+
+```python
+N, K = map(int, input().split())
+
+n = max(K, N - K + 1)
+fac = [0] * (n + 1)
+fac[0] = 1
+for i in range(n):
+    fac[i + 1] = fac[i] * (i + 1) % 1000000007
+
+
+def mcomb(n, k):
+    if n == 0 and k == 0:
+        return 1
+    if n < k or k < 0:
+        return 0
+    return fac[n] * pow(fac[n - k], 1000000005, 1000000007) * pow(fac[k], 1000000005, 1000000007) % 1000000007
+
+
+result = []
+for i in range(1, K + 1):
+    result.append(mcomb(K - 1, i - 1) * mcomb(N - K + 1, i) % 1000000007)
+print('\n'.join(str(i) for i in result))
 ```
 
 ## [ABC131D - Megalomania](https://atcoder.jp/contests/abc131/tasks/abc131_d)
@@ -114,9 +141,10 @@ for A, B in AB:
         exit()
 print('Yes')
 ```
+
 ## [ABC130D - Enough Array](https://atcoder.jp/contests/abc130/tasks/abc130_d)
 
-素直に書き下ろしてみたが、予想通り TLE が出た. ウインドウをずらしながら計算するのって20年近く前に大学で習ったよなあと書き直したら通った. 要するに A[i..j] で初めて K を越えたなら A[i+1...j-1] は絶対 K 未満なので、この区間をチェックするだけ無駄なのだ. なので ai+1 を先頭とする部分列は、A[i+1..j] からチェックを開始すれば良い.
+素直に書き下ろしてみたが、予想通り TLE が出た. ウインドウをずらしながら計算するのって20年近く前に大学で習ったよなあと書き直したら通った. 要するに A[i..j] で初めて K を越えたなら A[i+1...j-1] は絶対 K 未満なので、この区間をチェックするだけ無駄なのだ. なので a<sub>i+1</sub> を先頭とする部分列は、A[i+1..j] からチェックを開始すれば良い.
 
 ```python
 N, K = map(int, input().split())
