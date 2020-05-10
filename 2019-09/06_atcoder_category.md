@@ -140,6 +140,7 @@
 
 * [ABC080C - Shopping Street](https://atcoder.jp/contests/abc080/tasks/abc080_c)
 * [ABC147C - HonestOrUnkind2](https://atcoder.jp/contests/abc147/tasks/abc147_c)
+* [ABC167C - Skill Up](https://atcoder.jp/contests/abc167/tasks/abc167_c)
 
 ## ワーシャルフロイド
 
@@ -183,6 +184,7 @@
 * [ABC151E - Max-Min Sums](https://atcoder.jp/contests/abc151/tasks/abc151_e)
 * [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e)
 * [ABC156D - Bouquet](https://atcoder.jp/contests/abc156/tasks/abc156_d)
+* [ABC167E - Colorful Blocks](https://atcoder.jp/contests/abc167/tasks/abc167_e)
 
 <!--
 * [ABC034B - ペア](https://atcoder.jp/contests/abc034/tasks/abc034_b)
