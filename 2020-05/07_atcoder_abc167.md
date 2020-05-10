@@ -48,7 +48,7 @@ for i in range(N):
     C.append(t[0])
     A.append(t[1:])
 
-result = float('inf')
+result = -1
 for i in range(1 << N):
     t = [0] * M
     c = 0
@@ -56,11 +56,13 @@ for i in range(1 << N):
         if (i >> j) & 1 == 0:
             continue
         c += C[j]
-        a = A[j]
         for k in range(M):
-            t[k] += a[k]
+            t[k] += A[j][k]
     if all(x >= X for x in t):
-        result = min(result, c)
+        if result == -1:
+            result = c
+        else:
+            result = min(result, c)
 print(result)
 ```
 
