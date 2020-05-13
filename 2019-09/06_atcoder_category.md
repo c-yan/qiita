@@ -36,6 +36,7 @@
 * [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (累積GCD)
 * [ABC134C - Exception Handling](https://atcoder.jp/contests/abc134/tasks/abc134_c) (累積Max)
 * [ABC084D - 2017-like Number](https://atcoder.jp/contests/abc084/tasks/abc084_d)
+* [ABC089D - Practical Skill Test](https://atcoder.jp/contests/abc089/tasks/abc089_d)
 * [AGC015B - Evilator](https://atcoder.jp/contests/agc015/tasks/agc015_b)
 * [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
 * [ABC129D - Lamp](https://atcoder.jp/contests/abc129/tasks/abc129_d)
@@ -45,7 +46,6 @@
 * [ABC162D - RGB Triplets](https://atcoder.jp/contests/abc162/tasks/abc162_d)
 
 <!--
-* [ABC089D - Practical Skill Test](https://atcoder.jp/contests/abc089/tasks/abc089_d)
 * [ABC018C - 菱型カウント](https://atcoder.jp/contests/abc018/tasks/abc018_3)
 -->
 
