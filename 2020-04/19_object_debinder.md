@@ -23,7 +23,7 @@ RowId,Id,StartDate,StopDate,CustomerId
 
 みたいな、CSV にデバインドしたいという話です. CSV 変換は今回は話題にしたくないので、`string.Join(",", v)` で片付くということにしましょう.
 
-以下みたいなコードを書くと、`Save(fstream, contracts);` でデバインドできます.
+以下みたいなコードを書くと、`Save(stream, contracts);` でデバインドできます.
 
 ```csharp
 public static string[] Debind<T>(Dictionary<string, int> headerMap, T obj)
