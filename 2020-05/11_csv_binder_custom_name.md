@@ -77,3 +77,5 @@ public static IEnumerable<T> Load<T>(Stream stream, Encoding encoding = null)
     }
 }
 ```
+
+関連記事: [クラスを CSV にデバインドする カラム名自由編 (C#)](https://qiita.com/c-yan/items/753c16198dff01c27f18)
