@@ -37,6 +37,7 @@
 * [ABC134C - Exception Handling](https://atcoder.jp/contests/abc134/tasks/abc134_c) (累積Max)
 * [ABC084D - 2017-like Number](https://atcoder.jp/contests/abc084/tasks/abc084_d)
 * [ABC089D - Practical Skill Test](https://atcoder.jp/contests/abc089/tasks/abc089_d)
+* [ABC106D - AtCoder Express 2](https://atcoder.jp/contests/abc106/tasks/abc106_d) (1次元、2次元)
 * [AGC015B - Evilator](https://atcoder.jp/contests/agc015/tasks/agc015_b)
 * [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
 * [ABC129D - Lamp](https://atcoder.jp/contests/abc129/tasks/abc129_d)
@@ -114,10 +115,11 @@
 
 * [ABC007C - 幅優先探索](https://atcoder.jp/contests/abc007/tasks/abc007_3)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
+* [ABC088D - Grid Repainting](https://atcoder.jp/contests/abc088/tasks/abc088_d)
 * [ABC126D - Even Relation](https://atcoder.jp/contests/abc126/tasks/abc126_d)
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
 * [ABC151D - Maze Master](https://atcoder.jp/contests/abc151/tasks/abc151_d)
-* [ABC088D - Grid Repainting](https://atcoder.jp/contests/abc088/tasks/abc088_d)
+* [ABC168D - .. (Double Dots)](https://atcoder.jp/contests/abc168/tasks/abc168_d)
 
 ## 二分探索 (Binary Search)
 
@@ -168,12 +170,14 @@
 ## 素因数分解
 
 * [ABC052C - Factors of Factorial](https://atcoder.jp/contests/abc052/tasks/arc067_a)
+* [ABC114D - 756](https://atcoder.jp/contests/abc114/tasks/abc114_d)
 * [ABC142D - Disjoint Set of Common Divisors](https://atcoder.jp/contests/abc142/tasks/abc142_d)
 * [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e)
 
 ## エラトステネスの篩
 
 * [ABC084D - 2017-like Number](https://atcoder.jp/contests/abc084/tasks/abc084_d)
+* [ABC114D - 756](https://atcoder.jp/contests/abc114/tasks/abc114_d)
 * [ABC149C - Next Prime](https://atcoder.jp/contests/abc149/tasks/abc149_c)
 * [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e)
 
