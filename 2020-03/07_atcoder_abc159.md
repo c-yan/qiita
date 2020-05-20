@@ -75,4 +75,4 @@ for i in range(N):
 
 ## [ABC159E - Dividing Chocolate](https://atcoder.jp/contests/abc159/tasks/abc159_e)
 
-敗退. 累積和でホワイトチョコの数え上げを O(HW) から O(H) に軽減して、再帰関数で総当りしたが、TLE & WA でした. 総当たりなのに WA なのでどこか実装がバグってますね…….
+敗退. 累積和でホワイトチョコの数え上げを *O*(*HW*) から *O*(*H*) に軽減して、再帰関数で総当りしたが、TLE & WA でした. 総当たりなのに WA なのでどこか実装がバグってますね…….

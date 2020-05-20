@@ -114,7 +114,7 @@ print "-1 -1 -1"
 ```
 ## ABC049C - 白昼夢 / Daydream
 
-1時間くらいで完了. 最初は再帰関数で書いて RE を食らい、あー `maximum recursion depth exceeded` かーと言いながらループ版に書き直し. これが TLE を食らいマジどーしよとなったけど、`s.find(t + w) == 0` って `O(n^2)` じゃねと思い、`O(n)` な `s.startswith(t + w)` ならどうだろうと試してみたら通った.
+1時間くらいで完了. 最初は再帰関数で書いて RE を食らい、あー `maximum recursion depth exceeded` かーと言いながらループ版に書き直し. これが TLE を食らいマジどーしよとなったけど、`s.find(t + w) == 0` って *O*(*n*<sup>2</sup>) じゃねと思い、*O*(*n*) な `s.startswith(t + w)` ならどうだろうと試してみたら通った.
 
 ```python
 import sys

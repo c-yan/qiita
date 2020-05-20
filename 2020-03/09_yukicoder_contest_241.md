@@ -72,7 +72,7 @@ print(result)
 
 ## [C 1011 Infinite Stairs](https://yukicoder.me/problems/no/1011)
 
-敗退. 素直に DP すると O(N<sup>2</sup>d) なので TLE する. よくよく考えると、i 段目にたどり着くのは i-d .. i-1 段目、i + 1 段目にたどり着くのは i - d + 1 .. i と端の2箇所以外は同じである. であれば、O(d) ではなく O(1) で処理できるので O(N<sup>2</sup>) になり解けた.
+敗退. 素直に DP すると *O*(*N*<sup>2</sup>d) なので TLE する. よくよく考えると、i 段目にたどり着くのは i-d .. i-1 段目、i + 1 段目にたどり着くのは i - d + 1 .. i と端の2箇所以外は同じである. であれば、*O*(*d*) ではなく *O*(1) で処理できるので *O*(*N*<sup>2</sup>) になり解けた.
 
 ```go
 package main

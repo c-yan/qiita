@@ -52,7 +52,7 @@ print(result)
 
 ## [ABC166D - I hate Factorization](https://atcoder.jp/contests/abc166/tasks/abc166_d)
 
-6分半で突破. Aを負にするとBが負のパターンが両方正とだぶるので、Aは0以上でいいはず. 後は 10<sup>3</sup> もあれば、10<sup>15</sup> までカバーできるし、O(2 * 10<sup>6</sup>) だから TLE にもならんだろうで AC. 最初100で出して WA1 orz.
+6分半で突破. Aを負にするとBが負のパターンが両方正とだぶるので、Aは0以上でいいはず. 後は 10<sup>3</sup> もあれば、10<sup>15</sup> までカバーできるし、*O*(2×10<sup>6</sup>) だから TLE にもならんだろうで AC. 最初100で出して WA1 orz.
 
 ```python
 X = int(input())

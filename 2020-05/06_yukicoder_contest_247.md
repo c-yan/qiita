@@ -30,7 +30,7 @@ print(-1)
 
 ## [C 1048 Zero (Advanced) ](https://yukicoder.me/problems/no/1048)
 
-K回の操作後の N は L * K <= N <= R * K になる. R * K 以下の最大の M の倍数が A 以上であれば N = 0 となるような操作列が存在することになる. A が L * K、B が R * K のときの [ABC165A - We Love Golf](https://atcoder.jp/contests/abc165/tasks/abc165_a) を O(1) で解く問題です(笑).
+K回の操作後の N は L * K <= N <= R * K になる. R * K 以下の最大の M の倍数が A 以上であれば N = 0 となるような操作列が存在することになる. A が L * K、B が R * K のときの [ABC165A - We Love Golf](https://atcoder.jp/contests/abc165/tasks/abc165_a) を *O*(1) で解く問題です(笑).
 
 
 ```python

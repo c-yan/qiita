@@ -263,7 +263,7 @@ print(f(S))
 
 ## [past202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l)
 
-素直に書くと O(N<sup>2</sup>) になって TLE なので計算量の軽減を考える. 選択可能な範囲から最小値の左端を取る貪欲法なので、区間最小値を Segment Tree で求めれば O(NlogN) になって解けました.
+素直に書くと *O*(*N*<sup>2</sup>) になって TLE なので計算量の軽減を考える. 選択可能な範囲から最小値の左端を取る貪欲法なので、区間最小値を Segment Tree で求めれば *O*(*N*log*N*) になって解けました.
 
 ```python
 class SegmentTree():
@@ -355,7 +355,7 @@ for k in range(K - 1, -1, -1):
 print(*result)
 ```
 
-Sparse Table でも解いてみた. 今回の問題だと SegmentTree が O(N + (N / D)logN) に対し、O(NlogN + N / D) なのでちょっと遅い.
+Sparse Table でも解いてみた. 今回の問題だと SegmentTree が *O*(*N* + (*N* / *D*)log*N*) に対し、*O*(*N*log*N* + *N* / *D*) なのでちょっと遅い.
 
 ```python
 class SparseTable():
