@@ -31,6 +31,7 @@
 * [ABC037C - 総和](https://atcoder.jp/contests/abc037/tasks/abc037_c)
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC087C - Candies](https://atcoder.jp/contests/abc087/tasks/arc090_a)
+* [ABC095D - Static Sushi](https://atcoder.jp/contests/abc095/tasks/arc096_b) (累積最大値)
 * [ABC098C - Attention](https://atcoder.jp/contests/abc098/tasks/arc098_a)
 * [ABC122C - GeT AC](https://atcoder.jp/contests/abc122/tasks/abc122_c)
 * [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (累積GCD)
@@ -101,6 +102,7 @@
 
 * [ATC001A - 深さ優先探索](https://atcoder.jp/contests/atc001/tasks/dfs_a)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
+* [ABC070D - Transit Tree Path](https://atcoder.jp/contests/abc070/tasks/abc070_d)
 * [ABC126D - Even Relation](https://atcoder.jp/contests/abc126/tasks/abc126_d)
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
 * [ABC146D - Coloring Edges on Tree](https://atcoder.jp/contests/abc146/tasks/abc146_d)
@@ -115,11 +117,16 @@
 
 * [ABC007C - 幅優先探索](https://atcoder.jp/contests/abc007/tasks/abc007_3)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
+* [ABC070D - Transit Tree Path](https://atcoder.jp/contests/abc070/tasks/abc070_d)
 * [ABC088D - Grid Repainting](https://atcoder.jp/contests/abc088/tasks/abc088_d)
 * [ABC126D - Even Relation](https://atcoder.jp/contests/abc126/tasks/abc126_d)
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
 * [ABC151D - Maze Master](https://atcoder.jp/contests/abc151/tasks/abc151_d)
 * [ABC168D - .. (Double Dots)](https://atcoder.jp/contests/abc168/tasks/abc168_d)
+
+## ダイクストラ法
+
+* [ABC070D - Transit Tree Path](https://atcoder.jp/contests/abc070/tasks/abc070_d)
 
 ## 二分探索 (Binary Search)
 
@@ -138,7 +145,7 @@
 * [ABC063D - Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
 -->
 
-## bit 全探索
+## ビット全探索
 
 * [ABC080C - Shopping Street](https://atcoder.jp/contests/abc080/tasks/abc080_c)
 * [ABC147C - HonestOrUnkind2](https://atcoder.jp/contests/abc147/tasks/abc147_c)
@@ -183,6 +190,7 @@
 
 ## フェルマーの小定理
 
+* [ABC034C - 経路](https://atcoder.jp/contests/abc034/tasks/abc034_c)
 * [ABC132D - Blue and Red Balls](https://atcoder.jp/contests/abc132/tasks/abc132_d)
 * [ABC145D - Knight](https://atcoder.jp/contests/abc145/tasks/abc145_d)
 * [ABC151E - Max-Min Sums](https://atcoder.jp/contests/abc151/tasks/abc151_e)
@@ -190,17 +198,13 @@
 * [ABC156D - Bouquet](https://atcoder.jp/contests/abc156/tasks/abc156_d)
 * [ABC167E - Colorful Blocks](https://atcoder.jp/contests/abc167/tasks/abc167_e)
 
-<!--
-* [ABC034B - ペア](https://atcoder.jp/contests/abc034/tasks/abc034_b)
--->
-
 ## セグメント木 (Segment tree)
 
 * [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (GCD)
 * [ABC157E - Simple String Queries](https://atcoder.jp/contests/abc157/tasks/abc157_e) (ビット or)
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f) (Sum)
 
-## BIT (Binary indexed tree)
+## BIT (Binary indexed tree) / Fenwick Tree
 
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f)
 
