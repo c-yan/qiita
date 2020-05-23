@@ -17,6 +17,7 @@
 * [ABC135D - Digits Parade](https://atcoder.jp/contests/abc135/tasks/abc135_d)
 * [ABC141E - Who Says a Pun?](https://atcoder.jp/contests/abc141/tasks/abc141_e)
 * [ABC142E - Get Everything](https://atcoder.jp/contests/abc142/tasks/abc142_e)
+* [ABC145E - All-you-can-eat](https://atcoder.jp/contests/abc145/tasks/abc145_e)
 * [ABC153E - Crested Ibis vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_e)
 * [ABC154E - Almost Everywhere Zero](https://atcoder.jp/contests/abc154/tasks/abc154_e) (桁DP / Digit DP)
 
