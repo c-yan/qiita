@@ -155,3 +155,62 @@ func readInt() int {
 	return result
 }
 ```
+
+追記: Python で書き直した.
+
+```python
+p = 1000000007
+
+X, Y = map(int, input().split())
+
+if (X + Y) % 3 != 0:
+    print(0)
+    exit()
+
+a = (2 * Y - X) // 3
+b = (2 * X - Y) // 3
+
+if a < 0 or b < 0:
+    print(0)
+    exit()
+
+n = a + b
+fac = [0] * (n + 1)
+fac[0] = 1
+for i in range(n):
+    fac[i + 1] = fac[i] * (i + 1) % p
+
+
+def mcomb(n, k):
+    if n == 0 and k == 0:
+        return 1
+    if n < k or k < 0:
+        return 0
+    return fac[n] * pow(fac[n - k], p - 2, p) * pow(fac[k], p - 2, p) % p
+
+
+print(mcomb(n, a))
+```
+
+## [ABC145E - All-you-can-eat](https://atcoder.jp/contests/abc145/tasks/abc145_e)
+
+着手すらできず. ナップサックではあるんだけど、一発だけはみ出すことが出来るという. ルールを守った組み合わせは、一番時間がかかるやつを最後のものと入れ替えてもルール通りのままだが、逆は必ずしもそうではないので、食べるのに時間がかかるのを後に回したほうがたくさん食べれる. よって食べるのにかかる時間順にソートしてDPすればよい. 個人的にはD問題より簡単な気がする.
+
+```python
+def main():
+    N, T = map(int, input().split())
+    AB = [list(map(int, input().split())) for _ in range(N)]
+
+    dp = [-1] * (T + 3000)
+    dp[0] = 0
+    for a, b in sorted(AB):
+        for i in range(T - 1, -1, -1):
+            if dp[i] == -1:
+                continue
+            if dp[i + a] < dp[i] + b:
+                dp[i + a] = dp[i] + b
+    print(max(dp))
+
+
+main()
+```
