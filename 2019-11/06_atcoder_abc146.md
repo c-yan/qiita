@@ -36,7 +36,7 @@ print(''.join(chr((ord(c) - ord('A') + N) % 26 + ord('A')) for c in S))
 
 ## [ABC146C - Buy an Integer](https://atcoder.jp/contests/abc146/tasks/abc146_c)
 
-16分で突破. 一目にぶたんで、最近やったなーと ABC144E のソースコードをコピってきて、is_ok を書き直して、調整してポイ. 調整に手間取ったのでまだめぐる式が手についてないなあという感想.
+16分で突破. 一目にぶたんで、最近やったなーと [ABC144E - Gluttony](https://atcoder.jp/contests/abc144/tasks/abc144_e) のソースコードをコピってきて、is_ok を書き直して、調整してポイ. 調整に手間取ったのでまだめぐる式が手についてないなあという感想.
 
 ```python
 A, B, X = map(int, input().split())

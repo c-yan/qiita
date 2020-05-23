@@ -28,7 +28,7 @@ print('x' * len(S))
 
 ## [ABC154C - Distinct or Not](https://atcoder.jp/contests/abc154/tasks/abc154_c)
 
-2分で突破. 書くだけ. ABC063B - Varied を思い出した.
+2分で突破. 書くだけ. [ABC063B - Varied](https://atcoder.jp/contests/abc063/tasks/abc063_b) を思い出した.
 
 ```python
 N = int(input())

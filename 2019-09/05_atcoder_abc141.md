@@ -44,7 +44,7 @@ for i in range(1, N + 1):
 
 ## [ABC141D - Powerful Discount Tickets](https://atcoder.jp/contests/abc141/tasks/abc141_d)
 
-13分半で突破. ABC137D からそんなに経ってないのにまた優先度付きキューですかーと思いながら実装. D問題だから素直にM回一番大きいやつを割るのではなく、まとめ割がいるかなあと思ったけどそんなことはなかった.
+13分半で突破. [ABC137D - Summer Vacation](https://atcoder.jp/contests/abc137/tasks/abc137_d) からそんなに経ってないのにまた優先度付きキューですかーと思いながら実装. D問題だから素直にM回一番大きいやつを割るのではなく、まとめ割がいるかなあと思ったけどそんなことはなかった.
 
 ```python
 from heapq import heapify, heappop, heappush
