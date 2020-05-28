@@ -89,21 +89,19 @@
 * [ATC001B - Union Find](https://atcoder.jp/contests/atc001/tasks/unionfind_a)
 * [ABC075C - Bridge](https://atcoder.jp/contests/abc075/tasks/abc075_c)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
+* [ABC087D - People on a Line](https://atcoder.jp/contests/abc087/tasks/arc090_b) (重み付き Union-Find 木)
 * [ABC097D - Equals](https://atcoder.jp/contests/abc097/tasks/arc097_b)
 * [ABC120D - Decayed Bridges](https://atcoder.jp/contests/abc120/tasks/abc120_d) (サイズ付き Union-Find 木)
 * [ABC126E - 1 or 2](https://atcoder.jp/contests/abc126/tasks/abc126_e)
 * [ABC040D - 道路の老朽化対策について](https://atcoder.jp/contests/abc040/tasks/abc040_d) (サイズ付き Union-Find 木)
 * [ABC157D - Friend Suggestions](https://atcoder.jp/contests/abc157/tasks/abc157_d) (サイズ付き Union-Find 木)
 
-<!--
-* [ABC087D - People on a Line](https://atcoder.jp/contests/abc087/tasks/arc090_b) (重み付き Union-Find 木)
--->
-
 ## DFS (深さ優先探索)
 
 * [ATC001A - 深さ優先探索](https://atcoder.jp/contests/atc001/tasks/dfs_a)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
 * [ABC070D - Transit Tree Path](https://atcoder.jp/contests/abc070/tasks/abc070_d)
+* [ABC087D - People on a Line](https://atcoder.jp/contests/abc087/tasks/arc090_b)
 * [ABC126D - Even Relation](https://atcoder.jp/contests/abc126/tasks/abc126_d)
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
 * [ABC146D - Coloring Edges on Tree](https://atcoder.jp/contests/abc146/tasks/abc146_d)
