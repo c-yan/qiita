@@ -13,7 +13,7 @@ else:
     print(min(A, B) * 2)
 ```
 
-## [B 1058 素敵な数 ](https://yukicoder.me/problems/no/1058)
+## [B 1058 素敵な数](https://yukicoder.me/problems/no/1058)
 
 求める数が、 素数ではなく2以上10<sup>5</sup>以下の約数を持たないということなので、要するに10<sup>5</sup>より大きい素数2つの積の小さい順となる.
 
