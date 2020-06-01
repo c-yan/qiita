@@ -179,6 +179,7 @@
 * [ABC114D - 756](https://atcoder.jp/contests/abc114/tasks/abc114_d)
 * [ABC142D - Disjoint Set of Common Divisors](https://atcoder.jp/contests/abc142/tasks/abc142_d)
 * [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e)
+* [ABC169D - Div Game](https://atcoder.jp/contests/abc169/tasks/abc169_d)
 
 ## エラトステネスの篩
 
