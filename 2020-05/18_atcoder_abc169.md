@@ -31,7 +31,7 @@ print(result)
 
 ## [ABC169C - Multiplication 3](https://atcoder.jp/contests/abc169/tasks/abc169_c)
 
-3分で突破. A<sub>i</sub>≤10<sup>18</sup> を見た瞬間に double だとヤバいと理解したので、decimal に逃げた.
+3分で突破. A≤10<sup>15</sup> を見た瞬間に double だとヤバいと理解したので、decimal に逃げた.
 
 ```python
 from decimal import Decimal
