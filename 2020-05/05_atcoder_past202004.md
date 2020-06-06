@@ -34,7 +34,7 @@ for c in S:
 print(sorted(((d[k], k) for k in d), reverse=True)[0][1])
 ```
 
-## [past202004 	C - 山崩し](https://atcoder.jp/contests/past202004-open/tasks/past202004_c)
+## [past202004C - 山崩し](https://atcoder.jp/contests/past202004-open/tasks/past202004_c)
 
 12分で突破. 問題文のとおりに書くだけ.
 
@@ -100,7 +100,7 @@ for i in range(N):
 print(*result)
 ```
 
-## [past202004 	F - タスクの消化](https://atcoder.jp/contests/past202004-open/tasks/past202004_f)
+## [past202004F - タスクの消化](https://atcoder.jp/contests/past202004-open/tasks/past202004_f)
 
 7分半で突破. [ABC137D - Summer Vacation](https://atcoder.jp/contests/abc137/tasks/abc137_d) を思い出した. 実行可能日が来たタスクを優先度付きキューに突っ込んで、優先度付きキューから一番ポイントが高いタスクを取り出して消化するを繰り返すだけ.
 
@@ -199,7 +199,6 @@ for _ in range(Q):
                 D -= X
         print(sum(v * v for v in d.values()))
 ```
-
 
 ## [past202004I - トーナメント](https://atcoder.jp/contests/past202004-open/tasks/past202004_i)
 
