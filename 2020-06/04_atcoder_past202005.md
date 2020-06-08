@@ -5,7 +5,7 @@
 * [AtCoder 第二回 アルゴリズム実技検定 バーチャル参戦記](https://qiita.com/c-yan/items/8b1ddcb4e8fa4d3443ed)
 * [AtCoder 第一回 アルゴリズム実技検定 バーチャル参戦記](https://qiita.com/c-yan/items/578f3234de4113cb3a6b)
 
-## [past202005A - ケース・センシティブ](https://atcoder.jp/contests/past202005-2/tasks/past202005_a)
+## [past202005A - ケース・センシティブ](https://atcoder.jp/contests/past202005-open/tasks/past202005_a)
 
 2分で突破. 書くだけですね.
 
@@ -21,7 +21,7 @@ else:
     print('different')
 ```
 
-## [past202005B - ダイナミック・スコアリング](https://atcoder.jp/contests/past202005-2/tasks/past202005_b)
+## [past202005B - ダイナミック・スコアリング](https://atcoder.jp/contests/past202005-open/tasks/past202005_b)
 
 10分半で突破. B問題なのにもう結構難しい!? 最初、yukicoder 式の早く解いた人が得点が高いタイプだと勘違いしたせいで無駄に時間がかかっている.
 
@@ -43,7 +43,7 @@ for _ in range(Q):
         answered[s[1]][s[2]] = True
 ```
 
-## [past202005C - 等比数列](https://atcoder.jp/contests/past202005-2/tasks/past202005_c)
+## [past202005C - 等比数列](https://atcoder.jp/contests/past202005-open/tasks/past202005_c)
 
 13分半で突破. TLE2、WA1. C問題なのにナイーブに書くと TLE!? 慌てて Go 言語用の O(log<i>N</i>) 実装の modpow を持ってきて、Python に書き直したらバグらせて WA を喰らいつつも AC.
 
@@ -67,7 +67,7 @@ else:
     print(result)
 ```
 
-## [past202005D - 電光掲示板](https://atcoder.jp/contests/past202005-2/tasks/past202005_d)
+## [past202005D - 電光掲示板](https://atcoder.jp/contests/past202005-open/tasks/past202005_d)
 
 9分半で突破. 一文字づつ切り出して、マッチングするだけだからさほど難しくなかった.
 
@@ -96,7 +96,7 @@ for i in range(N):
 print(''.join(str(i) for i in result))
 ```
 
-## [past202005E - スプリンクラー](https://atcoder.jp/contests/past202005-2/tasks/past202005_e)
+## [past202005E - スプリンクラー](https://atcoder.jp/contests/past202005-open/tasks/past202005_e)
 
 8分半で突破. 問題文を読んでも起動中のスプリンクラーの色を変えた場合周りの色が変わるのか分からんなあと思いつつ、WA になったら変えればいいかと考えて提出して AC. 後から考えると、起動中のスプリンクラーが隣接した場合に困るから、実際は起動して停止して次のクエリってことなんだろうな. links はもう書くの何度目だって感じで、悩むところは何もなし.
 
@@ -123,7 +123,7 @@ for _ in range(Q):
         c[x] = y
 ```
 
-## [past202005G - グリッド金移動](https://atcoder.jp/contests/past202005-2/tasks/past202005_g)
+## [past202005G - グリッド金移動](https://atcoder.jp/contests/past202005-open/tasks/past202005_g)
 
 40分半?で突破. WA2. 到達不能のときに -1 を出力するのを忘れて無限大を出力していた. 他にも6種類ある移動のうち上下左右の4種類しか実装してなくて、入力例が通らずに悩んで時間を無駄に使った. まあ、これも書くのが何度目だろうっていう感じの幅優先探索なので、それほど難しくはない. −200≤x<sub>i</sub>,y<sub>i</sub>,X,Y≤200 だからといって、それを空間にしてしまうと、端にある障害物の隣を本来すり抜けることが可能なのに通行不能になってしまうので、上下左右に1つづつ広げてやらないといけないことには注意.
 
@@ -169,7 +169,7 @@ else:
     print(d[Y + 201][X + 201])
 ```
 
-## [past202005F - 回文行列](https://atcoder.jp/contests/past202005-2/tasks/past202005_f)
+## [past202005F - 回文行列](https://atcoder.jp/contests/past202005-open/tasks/past202005_f)
 
 40分半?で突破. WA4. 行列の各行から文字を取って回文を作る問題なのに、行列内の全ての文字を使って回文を作る問題だと勘違いして大惨事. set の積集合が分かっていれば解けると思います.
 
@@ -191,7 +191,7 @@ else:
     print(t + a[N // 2][0] + t[::-1])
 ```
 
-## [past202005J - 回転寿司](https://atcoder.jp/contests/past202005-2/tasks/past202005_j)
+## [past202005J - 回転寿司](https://atcoder.jp/contests/past202005-open/tasks/past202005_j)
 
 27分半?で突破. [ABC134E - Sequence Decomposing](https://atcoder.jp/contests/abc134/tasks/abc134_e) を思い出した. 広義単調減少列になるので食べる子供を二分探索できる.
 
@@ -218,7 +218,7 @@ for i in range(1, M):
 print('\n'.join(str(i) for i in eater))
 ```
 
-## [past202005I - 行列操作](https://atcoder.jp/contests/past202005-2/tasks/past202005_i)
+## [past202005I - 行列操作](https://atcoder.jp/contests/past202005-open/tasks/past202005_i)
 
 68分で突破. WA2、TLE2、RE2. N≤10<sup>5</sup> なのを見ずに N×N のリストを作るアホ発生. 列の入れ替えやら、転置やらを実際にやると大惨事なので、読み替えテーブルで O(1) で処理するわけだが、行の入れ替えと列の入れ替えが転置のときに入れ替わるのを忘れてて無駄に時間を食った. 今回クエリ問題多くない?(3問目).
 
@@ -268,7 +268,7 @@ for _ in range(Q):
 print('\n'.join(str(i) for i in result))
 ```
 
-## [past202005H - ハードル走](https://atcoder.jp/contests/past202005-2/tasks/past202005_h)
+## [past202005H - ハードル走](https://atcoder.jp/contests/past202005-open/tasks/past202005_h)
 
 63分半?で突破. WA2、RE1. 今回最大のやらかし. 配る DP 一発の簡単な問題だと思ったら WA. なんでか本当に分からず、なんかしょうもないミスしてるんだろうから、Go 言語で書き直したら回避するかなと思って書いている途中で `T1 / 2` と書いた瞬間に「アレ、なんで `T1 * 0.5` とか書いてるんだ. 浮動小数点数になってるやんけ!!!」と気づいて AC.
 
@@ -305,10 +305,10 @@ result = min(result, dp[L - 3] + T1 // 2 + 5 * T2 // 2)
 print(result)
 ```
 
-## [past202005K - コンテナの移動](https://atcoder.jp/contests/past202005-2/tasks/past202005_k)
+## [past202005K - コンテナの移動](https://atcoder.jp/contests/past202005-open/tasks/past202005_k)
 
 残り20分だったので諦め. どうせ後2問解かないと上級にはならないしね. 下が何かだけを記録しておけば、O(1) で移動できるけど、今のどの机に載っているかが O(*N*) だよなあ、どうすればいいんだろうくらいは考えた. しかし、今回はクエリ問題が多いなあ(4問目).
 
-## [past202005L - スーパーマーケット](https://atcoder.jp/contests/past202005-2/tasks/past202005_l)
+## [past202005L - スーパーマーケット](https://atcoder.jp/contests/past202005-open/tasks/past202005_l)
 
 残り20分だったので諦め. どうせ後2問解かないと上級にはならないしね. 1≤a<sub>i</sub>≤2 だから優先度付きキューを2つ持てば出来るか? いや移すのが O(*N*) だから無理か、平衡二分探索木かなくらいは考えた.
