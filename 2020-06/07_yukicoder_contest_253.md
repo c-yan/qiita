@@ -31,6 +31,28 @@ for i in range(N):
 print(result)
 ```
 
+追記: パスカルの三角形版.
+
+```python
+N = int(input())
+A = list(map(int, input().split()))
+
+m = 1000000007
+
+c = [[0] * N for _ in range(N)]
+c[0][0] = 1
+for i in range(1, N):
+    c[i][0] = 1
+    for j in range(1, i + 1):
+        c[i][j] = (c[i - 1][j - 1] + c[i - 1][j]) % m
+
+result = 0
+for i in range(N):
+    result += c[N - 1][i] * A[i]
+    result %= m
+print(result)
+```
+
 ## [B 1082 XORのXOR](https://yukicoder.me/problems/no/1082)
 
 並べ替えた A<sub>i</sub> を元にすると、X = A<sub>1</sub> xor A<sub>2</sub> xor A<sub>2</sub> xor A<sub>3</sub> xor ... xor A<sub>N - 1</sub> xor A<sub>N - 1</sub> xor A<sub>N</sub> となる. A<sub>1</sub> xor A<sub>1</sub> = 1 なので、X = A<sub>1</sub> xor A<sub>N</sub> となる. 結果として任意の i != j の i, j について A<sub>i</sub> xor A<sub>j</sub> の最大値が答えとなる.
@@ -101,4 +123,39 @@ for r in range(N):
     result *= b
     result %= m
 print(result)
+```
+
+## [E 1085 桁和の桁和](https://yukicoder.me/problems/no/1085)
+
+まったく着手できず.
+
+桁和の桁和が0になるのは全ての桁が0のときだけ. 9で余りを取ってしまうと0が発生してしまうが、9を超えたら9を引くようにすればその問題が回避できる. あとは一桁づつ DP で処理すればいい.
+
+```python
+T = input()
+D = int(input())
+
+m = 1000000007
+
+
+def update(t, nt, v):
+    for i in range(10):
+        ni = i + v
+        if ni > 9:
+            ni -= 9
+        nt[ni] += t[i]
+        nt[ni] %= m
+
+
+t = [0] * 10
+t[0] = 1
+for c in T:
+    nt = [0] * 10
+    if c != '?':
+        update(t, nt, int(c))
+    else:
+        for i in range(10):
+            update(t, nt, i)
+    t = nt
+print(t[D])
 ```
