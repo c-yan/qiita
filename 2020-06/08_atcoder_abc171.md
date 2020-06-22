@@ -44,7 +44,7 @@ print(''.join(t[::-1]))
 
 ## [ABC171D - Replacing](https://atcoder.jp/contests/abc171/tasks/abc171_d)
 
-6分で突破. 先週の [ABC170E - Count Median](https://atcoder.jp/contests/abc170/tasks/abc170_e) を思い出した. 現在値を引いて、新値を足すという操作をループするのが似てる. 合計値をループごとに計算すると *O*(*N*<sup>2</sup>) になってしまうが、引いて足すというつじつま合わせをすることによって計算量が *O*(*N*) になって解ける.
+6分で突破. 先週の [ABC170E - Count Median](https://atcoder.jp/contests/abc170/tasks/abc170_e) を思い出した. 現在値を引いて、新値を足すという操作をループするのが似てる. 合計値をループごとに計算すると *O*(*NQ*) になってしまうが、引いて足すというつじつま合わせをすることによって計算量が *O*(*N*+*Q*) になって解ける.
 
 ```python
 from sys import stdin
@@ -86,3 +86,37 @@ print(*[e ^ t for e in a])
 ## [ABC171F - Strivore](https://atcoder.jp/contests/abc171/tasks/abc171_f)
 
 全然わかりません. 本当にありがとうございました. 入力例の oof に o を一つ挿入するのでも、3つダブるのだが、このダブリをどう除去するのかが全然思いつかない.
+
+追記: 解説動画通りに実装しました. 何も考えずに投稿して TLE になって、あるぇ? ってなりましたが、10<sup>12</sup> のテーブルを作ってたので当然でした. というか、ギリギリとはいえ PyPy よく通すな、これ……. しかし、abc でも aaa でも実は一緒なのですという解説を聞いた瞬間の mjd 感はすごかった. この問題から得た経験値は高かったと思う.
+
+```python
+K = int(input())
+S = input()
+
+m = 1000000007
+
+
+def make_factorial_table(n):
+    result = [0] * (n + 1)
+    result[0] = 1
+    for i in range(1, n + 1):
+        result[i] = result[i - 1] * i % m
+    return result
+
+
+def mcomb(n, k):
+    if n == 0 and k == 0:
+        return 1
+    if n < k or k < 0:
+        return 0
+    return fac[n] * pow(fac[n - k], m - 2, m) * pow(fac[k], m - 2, m) % m
+
+
+fac = make_factorial_table(len(S) - 1 + K)
+
+result = 0
+for i in range(K + 1):
+    result += pow(26, i, m) * mcomb(len(S) - 1 + K - i, len(S) - 1) * pow(25, K - i, m)
+    result %= m
+print(result)
+```
