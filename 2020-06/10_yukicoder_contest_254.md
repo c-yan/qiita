@@ -228,14 +228,14 @@ func main() {
 		a := lt.Min()
 		b := rt.Min()
 		if a <= A[i] && b <= A[i] {
-			//printf("凸 %d %d %d\n", a, A[i], b)
+			// printf("凸 %d %d %d\n", a, A[i], b)
 			result = min(result, a+A[i]+b)
 		}
 
 		c := lt.GEMin(A[i])
 		d := rt.GEMin(A[i])
 		if c != math.MaxInt64 && d != math.MaxInt64 && c >= A[i] && d >= A[i] {
-			//printf("凹 %d %d %d\n", c, A[i], d)
+			// printf("凹 %d %d %d\n", c, A[i], d)
 			result = min(result, c+A[i]+d)
 		}
 
@@ -377,7 +377,7 @@ while True:
 b.append(r)
 c.append(X)
 loop_start = b.index(b[-1])
-loop_len = len(b) - loop_start
+loop_len = len(b) - loop_start - 1
 
 Q = int(readline())
 for _ in range(Q):
@@ -389,5 +389,5 @@ for _ in range(Q):
         a = K // loop_len
         K %= loop_len
         K += loop_start
-        print(b[K] + K * (c[-1] - c[loop_start]))
+        print(c[K] + a * (c[-1] - c[loop_start]))
 ```
