@@ -296,6 +296,42 @@ func println(args ...interface{}) (int, error) {
 }
 ```
 
+追記: 左右からの累積 Min を使えば、*O*(*N*) で解けるし、指定値以上の最小値の検索とかいう小難しいものの実装もいらなかった…….
+
+```python
+from itertools import accumulate
+
+INF = float('inf')
+
+N, *A = map(int, open(0).read().split())
+
+l = list(accumulate(A, min))
+r = list(accumulate(A[::-1], min))[::-1]
+
+result = INF
+
+# 凸 タイプの門松列の場合
+for i in range(1, N - 1):
+    a = l[i - 1]
+    b = A[i]
+    c = r[i + 1]
+    if a <= b and c <= b:
+        result = min(result, a + b + c)
+
+# 凹 タイプの門松列の場合
+for i in range(1, N - 1):
+    a = l[i - 1]
+    b = A[i]
+    c = r[i + 1]
+    if b <= a and b <= c:
+        result = min(result, a + b + c)
+
+if result == INF:
+    print(-1)
+else:
+    print(result)
+```
+
 ## [B 1096 Range Sums](https://yukicoder.me/problems/no/1096)
 
 ナイーブに書くと *O*(*N*<sup>3</sup>) になってしまう. 累積和しても *O*(*N*<sup>2</sup>). 更に SegmentTree を投入することにより、*O*(<i>N</i>log<i>N</i>) になって解けた.
