@@ -387,6 +387,18 @@ for i in range(1, N):
 print(result)
 ```
 
+追記: A<sub>i</sub> が答えに足し込まれるのは l = 1, .., i かつ r = i, ..., N のときなので、答えに足し込まれる回数は (i + 1) × (N - i) 回となると考えれば簡単だった. *O*(*N*).
+
+```python
+N, *A = map(int, open(0).read().split())
+
+result = 0
+for i in range(N):
+    # l = 0 .. i, r = i .. N - 1
+    result += A[i] * (i + 1) * (N - i)
+print(result)
+```
+
 ## [C 1097 Remainder Operation](https://yukicoder.me/problems/no/1097)
 
 終了2分前に解けて嬉しかった. 余りは N 回以内に同じ余りが出てきてループする. ループ検出して、1周期の長さと1ループ中の増分を求めればクエリに *O*(1) で回答できるようになるので *O*(*N* + *Q*) で解けた. [ABC167D - Teleporter](https://atcoder.jp/contests/abc167/tasks/abc167_d) を思い出した.
