@@ -296,7 +296,7 @@ func println(args ...interface{}) (int, error) {
 }
 ```
 
-追記: 左右からの累積 Min を使えば、*O*(*N*) で解けるし、指定値以上の最小値の検索とかいう小難しいものの実装もいらなかった…….
+追記: 以下でも通る. 左右からの累積 Min を使っている. 指定値以上の最小値の検索が出来ていないので A<sub>i</sub> を B としたときの 凹 タイプの門松列が作成できる場合でも、作成できないとしてしまうことがある. 嘘解法じゃないかと思いつつ、反例を考えているが思いつかない. *O*(*N*).
 
 ```python
 from itertools import accumulate
@@ -334,7 +334,7 @@ else:
 
 ## [B 1096 Range Sums](https://yukicoder.me/problems/no/1096)
 
-ナイーブに書くと *O*(*N*<sup>3</sup>) になってしまう. 累積和しても *O*(*N*<sup>2</sup>). 更に SegmentTree を投入することにより、*O*(<i>N</i>log<i>N</i>) になって解けた.
+ナイーブに書くと *O*(*N*<sup>3</sup>) になってしまう. 累積和しても *O*(*N*<sup>2</sup>). 更に Segment Tree を投入することにより、*O*(<i>N</i>log<i>N</i>) になって解けた.
 
 ```python
 from itertools import accumulate
@@ -398,6 +398,8 @@ for i in range(N):
     result += A[i] * (i + 1) * (N - i)
 print(result)
 ```
+
+追々記: Segment Tree ではなく Sparse Table で解いたと言う人がいたのだが、Disjoint Sparse Table の間違え? Sparse Table は演算に冪等性が必要だが、Min とは違い Sum にはそれはないので. Disjoint Sparse Table の実装を持ってないので試せなかった.
 
 ## [C 1097 Remainder Operation](https://yukicoder.me/problems/no/1097)
 
