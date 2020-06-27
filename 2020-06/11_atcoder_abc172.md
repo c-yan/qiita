@@ -58,6 +58,35 @@ for i in range(N + 1):
 print(result)
 ```
 
+追記: 解説は累積和は使って、二分探索は使わないコードだったが、累積和を使わなくても書ける.
+
+```python
+N, M, K = map(int, input().split())
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+
+b_sum = sum(B)
+for i in range(M - 1, -1, -1):
+    if b_sum <= K:
+        j = i
+        break
+    b_sum -= B[i]
+else:
+    j = -1
+result = j + 1
+
+a_sum = 0
+for i in range(N):
+    a_sum += A[i]
+    if a_sum > K:
+        break
+    while a_sum + b_sum > K:
+        b_sum -= B[j]
+        j -= 1
+    result = max(result, (i + 1) + (j + 1))
+print(result)
+```
+
 ## [ABC172D - Sum of Divisors](https://atcoder.jp/contests/abc172/tasks/abc172_d)
 
 14分で突破. 半分くらいは [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e) のコードと同じ. エラトステネスの篩で素因数分解して、各素数の個数 + 1 を積算すると素数の数が出る. それを使って f(X) を書いて、後は問題文通りに∑<sup>N</sup><sub>K=1</sub>K×f(K) を求めるだけ. PyPy で2.8秒なので割と制限ギリギリだった.
