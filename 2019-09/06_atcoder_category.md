@@ -4,7 +4,7 @@
 
 この記事は随時更新されます.
 
-## DP (Dynamic Programming / 動的計画法)
+## DP (Dynamic programming / 動的計画法)
 
 * [Educational DP Contest / DP まとめコンテスト](https://atcoder.jp/contests/dp)
 * [Typical DP Contest](https://atcoder.jp/contests/tdpc/)
@@ -28,7 +28,7 @@
 * [ABC118D - Match Matching](https://atcoder.jp/contests/abc118/tasks/abc118_d)
 -->
 
-## 累積和 (Prefix Sum)
+## 累積和 (Prefix sum)
 
 * [ABC037C - 総和](https://atcoder.jp/contests/abc037/tasks/abc037_c)
 * [ABC038C - 単調増加](https://atcoder.jp/contests/abc038/tasks/abc038_c)
@@ -54,7 +54,7 @@
 * [ABC018C - 菱型カウント](https://atcoder.jp/contests/abc018/tasks/abc018_3)
 -->
 
-## imos 法
+## imos 法 (imos method)
 
 * [ABC014C - AtColor](https://atcoder.jp/contests/abc014/tasks/abc014_3)
 * [ABC017C - ハイスコア](https://atcoder.jp/contests/abc017/tasks/abc017_3)
@@ -64,11 +64,12 @@
 * [ABC127C - Prison](https://atcoder.jp/contests/abc127/tasks/abc127_c)
 * [ABC141C - Attack Survival](https://atcoder.jp/contests/abc141/tasks/abc141_c)
 
-## しゃくとり法 (Two Pointer)
+## しゃくとり法 (Two pointer)
 
 * [ABC032C - 列](https://atcoder.jp/contests/abc032/tasks/abc032_c)
 * [ABC098D - Xor Sum 2](https://atcoder.jp/contests/abc098/tasks/arc098_b)
 * [ABC130D - Enough Array](https://atcoder.jp/contests/abc130/tasks/abc130_d)
+* [ABC172C - Tsundoku](https://atcoder.jp/contests/abc172/tasks/abc172_c)
 
 <!--
 * [ABC033C - 数式の書き換え](https://atcoder.jp/contests/abc033/tasks/abc033_c)
@@ -76,7 +77,7 @@
 * [ABC017D - サプリメント](https://atcoder.jp/contests/abc017/tasks/abc017_4)
 -->
 
-## Sliding Window
+## Sliding window
 
 * [ABC037C - 総和](https://atcoder.jp/contests/abc037/tasks/abc037_c)
 * [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
@@ -86,7 +87,7 @@
 038C? 解説PDFより
 -->
 
-## Union Find 木
+## Union-find Forest / Disjoint-set data structure
 
 * [ATC001B - Union Find](https://atcoder.jp/contests/atc001/tasks/unionfind_a)
 * [ABC040D - 道路の老朽化対策について](https://atcoder.jp/contests/abc040/tasks/abc040_d) (サイズ付き Union-Find 木)
@@ -125,11 +126,11 @@
 * [ABC151D - Maze Master](https://atcoder.jp/contests/abc151/tasks/abc151_d)
 * [ABC168D - .. (Double Dots)](https://atcoder.jp/contests/abc168/tasks/abc168_d)
 
-## ダイクストラ法
+## ダイクストラ法 (Dijkstra's algorithm)
 
 * [ABC070D - Transit Tree Path](https://atcoder.jp/contests/abc070/tasks/abc070_d)
 
-## 二分探索 (Binary Search)
+## 二分探索 (Binary search)
 
 * [ABC030C - 飛行機乗り](https://atcoder.jp/contests/abc030/tasks/abc030_c)
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
@@ -170,7 +171,7 @@
 * [ABC021 - 多重ループ](https://atcoder.jp/contests/abc143/tasks/abc143_e)
 -->
 
-## 優先度付きキュー
+## 優先度付きキュー (Priority queue)
 
 * [ABC123D - Cake 123](https://atcoder.jp/contests/abc123/tasks/abc123_d)
 * [ABC137D - Summer Vacation](https://atcoder.jp/contests/abc137/tasks/abc137_d)
@@ -214,7 +215,7 @@
 
 * [ABC132D - Blue and Red Balls](https://atcoder.jp/contests/abc132/tasks/abc132_d)
 
-## セグメント木 (Segment tree)
+## 区分木 (Segment tree)
 
 * [ABC103D - Islands War](https://atcoder.jp/contests/abc103/tasks/abc103_d) (Sum)
 * [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (GCD)
@@ -227,7 +228,12 @@
 * [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (GCD)
 * [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l) (Min)
 
-## BIT (Binary indexed tree) / Fenwick Tree
+## Disjoint sparse table
+
+* [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (GCD)
+* [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l) (Min)
+
+## BIT (Binary indexed tree) / Fenwick tree
 
 * [ABC103D - Islands War](https://atcoder.jp/contests/abc103/tasks/abc103_d)
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f)
