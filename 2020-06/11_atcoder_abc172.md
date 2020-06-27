@@ -14,7 +14,7 @@ print(a + a * a + a * a * a)
 
 ## [ABC172B - Minor Change](https://atcoder.jp/contests/abc172/tasks/abc172_b)
 
-2分くらい?で突破. 書くだけ. 違うところの数ですね.
+2分くらい?で突破. 書くだけ. 違うところの数ですね. ハミング距離.
 
 ```python
 S = input()
@@ -32,9 +32,11 @@ print(result)
 
 9分半で突破. 累積和+二分探索で *O*(<i>N</i>log<i>N</i>). 二分探索で境界値バグを出さないように気を揉んだので、解説の *O*(*N*+*M*) 解はスマートだなあって思いました.
 
+追記: bisect_left ではなく bisect_right を使えば境界値バグに気を使う必要などなかった.
+
 ```python
 from itertools import accumulate
-from bisect import bisect_left
+from bisect import bisect_right
 
 N, M, K = map(int, input().split())
 A = list(map(int, input().split()))
@@ -45,16 +47,10 @@ b = [0] + list(accumulate(B))
 
 result = 0
 for i in range(N + 1):
-    t = K - a[i]
-    if t < 0:
+    if a[i] > K:
         break
-    j = bisect_left(b, t)
-    if j == M + 1:
-        result = max(result, i + M)
-    elif b[j] == t:
-        result = max(result, i + j)
-    else:
-        result = max(result, i + j - 1)
+    j = bisect_right(b, K - a[i])
+    result = max(result, i + j - 1)
 print(result)
 ```
 
