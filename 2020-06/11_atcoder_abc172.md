@@ -1,6 +1,6 @@
 # AtCoder Beginner Contest 172 参戦記
 
-前回はE問題まで20分で行ってF問題を100分考えて駄目だったけど、今回は30分でD問題まで行ってE問題を90分考えたけど駄目だった. そもそもC問題で制限を見ながら計算量の緩和をすることが珍しいのに、2重で緩和しないといけないのってやっぱり ABC にしては難しいような. 実際前回の阿鼻叫喚の EXCEL 列名C問題でも半分弱解いているのに、今回のC問題は3割弱しか解けていない時点で難しいんだよなあ.
+前回はE問題まで20分で行ってF問題を100分考えて駄目だったけど、今回は30分でD問題まで行ってE問題を90分考えたけど駄目だった. そもそもC問題で制限を見ながら計算量の緩和をすることが珍しいのに、2重で緩和しないといけないのってやっぱり ABC C問題にしては難しいような. 前回の阿鼻叫喚の EXCEL 列名C問題でも半分弱解いているのに、今回のC問題は3割弱しか解けていない時点で難しいことは確かなんだけど.
 
 ## [ABC172A - Calc](https://atcoder.jp/contests/abc172/tasks/abc172_a)
 
@@ -40,28 +40,21 @@ N, M, K = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
-a = list(accumulate(A))
-b = list(accumulate(B))
+a = [0] + list(accumulate(A))
+b = [0] + list(accumulate(B))
 
 result = 0
-j = bisect_left(b, K)
-if j == M:
-  result = M
-elif b[j] == K:
-    result = j + 1
-else:
-    result = j
-for i in range(N):
+for i in range(N + 1):
     t = K - a[i]
     if t < 0:
         break
     j = bisect_left(b, t)
-    if j == M:
-        result = max(result, i + 1 + M)
+    if j == M + 1:
+        result = max(result, i + M)
     elif b[j] == t:
-        result = max(result, i + 1 + j + 1)
+        result = max(result, i + j)
     else:
-        result = max(result, i + 1 + j)
+        result = max(result, i + j - 1)
 print(result)
 ```
 
@@ -70,7 +63,6 @@ print(result)
 14分で突破. 半分くらいは [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e) のコードと同じ. エラトステネスの篩で素因数分解して、各素数の個数 + 1 を積算すると素数の数が出る. それを使って f(X) を書いて、後は問題文通りに∑<sup>N</sup><sub>K=1</sub>K×f(K) を求めるだけ. PyPy で2.8秒なので割と制限ギリギリだった.
 
 ```python
-# エラトステネスの篩
 N = int(input())
 
 sieve = [0] * (N + 1)
