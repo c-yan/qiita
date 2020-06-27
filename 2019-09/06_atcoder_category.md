@@ -20,6 +20,7 @@
 * [ABC145E - All-you-can-eat](https://atcoder.jp/contests/abc145/tasks/abc145_e)
 * [ABC153E - Crested Ibis vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_e)
 * [ABC154E - Almost Everywhere Zero](https://atcoder.jp/contests/abc154/tasks/abc154_e) (桁DP / Digit DP)
+* [ABC103D - Islands War](https://atcoder.jp/contests/abc103/tasks/abc103_d)
 
 <!--
 * [ABC011C - 123引き算](https://atcoder.jp/contests/abc011/tasks/abc011_3)
@@ -32,11 +33,11 @@
 * [ABC037C - 総和](https://atcoder.jp/contests/abc037/tasks/abc037_c)
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC087C - Candies](https://atcoder.jp/contests/abc087/tasks/arc090_a)
-* [ABC095D - Static Sushi](https://atcoder.jp/contests/abc095/tasks/arc096_b) (累積最大値)
+* [ABC095D - Static Sushi](https://atcoder.jp/contests/abc095/tasks/arc096_b) (累積 Max)
 * [ABC098C - Attention](https://atcoder.jp/contests/abc098/tasks/arc098_a)
 * [ABC122C - GeT AC](https://atcoder.jp/contests/abc122/tasks/abc122_c)
-* [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (累積GCD)
-* [ABC134C - Exception Handling](https://atcoder.jp/contests/abc134/tasks/abc134_c) (累積Max)
+* [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (累積 GCD)
+* [ABC134C - Exception Handling](https://atcoder.jp/contests/abc134/tasks/abc134_c) (累積 Max)
 * [ABC084D - 2017-like Number](https://atcoder.jp/contests/abc084/tasks/abc084_d)
 * [ABC089D - Practical Skill Test](https://atcoder.jp/contests/abc089/tasks/abc089_d)
 * [ABC106D - AtCoder Express 2](https://atcoder.jp/contests/abc106/tasks/abc106_d) (1次元、2次元)
@@ -172,6 +173,12 @@
 * [ABC141D - Powerful Discount Tickets](https://atcoder.jp/contests/abc141/tasks/abc141_d)
 * [ABC137D - Summer Vacation](https://atcoder.jp/contests/abc137/tasks/abc137_d)
 * [ABC123D - Cake 123](https://atcoder.jp/contests/abc123/tasks/abc123_d)
+* [PAST202004F - タスクの消化](https://atcoder.jp/contests/past202004-open/tasks/past202004_f)
+* [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l)
+
+<!--
+* [ABC170E - Smart Infants](https://atcoder.jp/contests/abc170/tasks/abc170_e)
+-->
 
 ## 素因数分解
 
@@ -197,12 +204,19 @@
 * [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e)
 * [ABC156D - Bouquet](https://atcoder.jp/contests/abc156/tasks/abc156_d)
 * [ABC167E - Colorful Blocks](https://atcoder.jp/contests/abc167/tasks/abc167_e)
+* [ABC171F - Strivore](https://atcoder.jp/contests/abc171/tasks/abc171_f)
 
 ## セグメント木 (Segment tree)
 
+* [ABC103D - Islands War](https://atcoder.jp/contests/abc103/tasks/abc103_d) (Sum)
 * [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (GCD)
-* [ABC157E - Simple String Queries](https://atcoder.jp/contests/abc157/tasks/abc157_e) (ビット or)
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f) (Sum)
+* [ABC157E - Simple String Queries](https://atcoder.jp/contests/abc157/tasks/abc157_e) (ビット Or)
+* [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l) (Min)
+
+## Sparse table
+
+* [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l) (Min)
 
 ## BIT (Binary indexed tree) / Fenwick Tree
 
@@ -211,6 +225,7 @@
 ## 平衡二分探索木
 
 * [ABC134E - Sequence Decomposing](https://atcoder.jp/contests/abc134/tasks/abc134_e)
+* [ABC170E - Smart Infants](https://atcoder.jp/contests/abc170/tasks/abc170_e)
 
 ## パスカルの三角形
 
