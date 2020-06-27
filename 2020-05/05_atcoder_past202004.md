@@ -61,7 +61,7 @@ for l in T:
 
 ## [past202004D - パターンマッチ](https://atcoder.jp/contests/past202004-open/tasks/past202004_d)
 
-11分で突破. "." が任意の文字というのは正規表現なので、マッチするかは正規表現一発. 後はパターンを全生成をするだけですが、Python は itertools.product 一発でした.
+11分で突破. "." が任意の文字というのは正規表現なので、マッチするかは正規表現一発. 後はパターンを全生成をするだけですが、Python は `itertools.product` 一発でした.
 
 ```python
 from itertools import product
