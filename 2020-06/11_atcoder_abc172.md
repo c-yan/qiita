@@ -85,7 +85,7 @@ print(result)
 
 ## [ABC172D - Sum of Divisors](https://atcoder.jp/contests/abc172/tasks/abc172_d)
 
-14分で突破. 半分くらいは [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e) のコードと同じ. エラトステネスの篩で素因数分解して、各素数の個数 + 1 を積算すると素数の数が出る. それを使って f(X) を書いて、後は問題文通りに∑<sup>N</sup><sub>K=1</sub>K×f(K) を求めるだけ. PyPy で2.8秒なので割と制限ギリギリだった.
+14分で突破. 半分くらいは [ABC152E - Flatten](https://atcoder.jp/contests/abc152/tasks/abc152_e) のコードと同じ. エラトステネスの篩で素因数分解して、各素数の個数 + 1 を積算すると素数の数が出る. それを使って f(X) を書いて、後は問題文通りに∑<sup>N</sup><sub>K=1</sub>K×f(K) を求めるだけ. PyPy で2.8秒なので割と制限ギリギリだったというか、結果を見て2秒制限じゃなかったのかってなった(笑).
 
 ```python
 N = int(input())
