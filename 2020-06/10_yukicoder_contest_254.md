@@ -2,7 +2,7 @@
 
 ## [A 1095 Smallest Kadomatsu Subsequence](https://yukicoder.me/problems/no/1095)
 
-ナイーブに書くと *O*(*N*<sup>2</sup>) になってしまう. 最初は SegmentTree かなあと思ったけど、指定値以上の最小値の検索が出来る気がしなかったので、平衡二分探索木となりました. 中心の門松より左側と右側の平衡二分探索木をメンテしつつ、凸の場合は最小値、凹の場合は真ん中の大きさ以上の最小値を求めて、門松列の大きさの最小値を求めればいいだけ. *O*(<i>N</i>log<i>N</i>).
+ナイーブに書くと *O*(*N*<sup>2</sup>) になってしまう. 最初はセグ木かなあと思ったけど、指定値以上の最小値の検索が出来る気がしなかったので、平衡二分探索木となりました. 中心の門松より左側と右側の平衡二分探索木をメンテしつつ、凸の場合は最小値、凹の場合は真ん中の大きさ以上の最小値を求めて、門松列の大きさの最小値を求めればいいだけ. *O*(<i>N</i>log<i>N</i>).
 
 ```go
 package main
@@ -334,42 +334,50 @@ else:
 
 ## [B 1096 Range Sums](https://yukicoder.me/problems/no/1096)
 
-ナイーブに書くと *O*(*N*<sup>3</sup>) になってしまう. 累積和しても *O*(*N*<sup>2</sup>). 更に Segment Tree を投入することにより、*O*(<i>N</i>log<i>N</i>) になって解けた.
+ナイーブに書くと *O*(*N*<sup>3</sup>) になってしまう. 累積和しても *O*(*N*<sup>2</sup>). 更にセグ木を投入することにより、*O*(<i>N</i>log<i>N</i>) になって解けた.
 
 ```python
+from operator import add
 from itertools import accumulate
 
 
-class SegmentTree():
-    _data = []
-    _offset = 0
-    _size = 0
+class SegmentTree:
+    _f = None
+    _size = None
+    _offset = None
+    _data = None
 
-    def __init__(self, size):
-        _size = size
+    def __init__(self, size, f):
+        self._f = f
+        self._size = size
         t = 1
         while t < size:
             t *= 2
         self._offset = t - 1
-        self._data = [0 for _ in range(t * 2 - 1)]
+        self._data = [0] * (t * 2 - 1)
 
-    def update_all(self, iterable):
+    def build(self, iterable):
+        f = self._f
         data = self._data
         data[self._offset:self._offset + self._size] = iterable
         for i in range(self._offset - 1, -1, -1):
-            data[i] = data[i * 2 + 1] + data[i * 2 + 2]
+            data[i] = f(data[i * 2 + 1], data[i * 2 + 2])
 
     def query(self, start, stop):
-        result = 0
-        l = start + self._offset
-        r = stop + self._offset
-        while l < r:
-            if l & 1 == 0:
-                result = result + self._data[l]
-            if r & 1 == 0:
-                result = result + self._data[r - 1]
-            l = l // 2
-            r = (r - 1) // 2
+        def iter_segments(data, l, r):
+            while l < r:
+                if l & 1 == 0:
+                    yield data[l]
+                if r & 1 == 0:
+                    yield data[r - 1]
+                l = l // 2
+                r = (r - 1) // 2
+        f = self._f
+        it = iter_segments(self._data, start + self._offset,
+                           stop + self._offset)
+        result = next(it)
+        for e in it:
+            result = f(result, e)
         return result
 
 
@@ -377,8 +385,8 @@ N, *A = map(int, open(0).read().split())
 
 a = list(accumulate(A))
 
-st = SegmentTree(N)
-st.update_all(a)
+st = SegmentTree(N, add)
+st.build(a)
 
 result = 0
 result += st.query(0, N)
@@ -399,7 +407,7 @@ for i in range(N):
 print(result)
 ```
 
-追々記: Segment Tree ではなく Sparse Table で解いたと言う人がいたのだが、Disjoint Sparse Table の間違え? Sparse Table は演算に冪等性が必要だが、Min とは違い Sum にはそれはないので. Disjoint Sparse Table の実装を持ってないので試せなかった.
+追々記: セグ木ではなく Sparse table で解いたと言う人がいたのだが、Disjoint sparse table の間違え? Sparse table は演算に冪等性が必要だが、Min とは違い Sum にはそれはないので. Disjoint sparse table の実装を持ってないので試せなかった.
 
 ## [C 1097 Remainder Operation](https://yukicoder.me/problems/no/1097)
 

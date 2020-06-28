@@ -12,7 +12,7 @@ print(N / 2)
 
 ## [D 1036 Make One With GCD 2](https://yukicoder.me/problems/no/1036)
 
-SegmentTree の GCD 版を持っていたので瞬殺だった(笑). 基本は尺取法. GCD が1になったらそこから先はどれだけ進めても1なので、GCD(A<sub>i</sub>, A<sub>i+1</sub>, ..., A<sub>j</sub>) で初めて1になったのであれば、A<sub>i</sub>を左端とする部分列で GCD が1になる部分列の数は N - j + 1 となる. 次は A<sub>i+1</sub> を左端とする部分列を考えるのだが、当然右端は j 以上の数となる. ここで GCD(A<sub>i+1</sub>, ..., A<sub>j</sub>) を高速に計算するために SegmentTree を使った. なお、j が N になっても GCD が1にならなかったら、それより右側の部分列では GCD は1にならないので、そこで計算を打ち切って良い.
+セグ木の GCD 版を持っていたので瞬殺だった(笑). 基本は尺取法. GCD が1になったらそこから先はどれだけ進めても1なので、GCD(A<sub>i</sub>, A<sub>i+1</sub>, ..., A<sub>j</sub>) で初めて1になったのであれば、A<sub>i</sub>を左端とする部分列で GCD が1になる部分列の数は N - j + 1 となる. 次は A<sub>i+1</sub> を左端とする部分列を考えるのだが、当然右端は j 以上の数となる. ここで GCD(A<sub>i+1</sub>, ..., A<sub>j</sub>) を高速に計算するためにセグ木を使った. なお、j が N になっても GCD が1にならなかったら、それより右側の部分列では GCD は1にならないので、そこで計算を打ち切って良い.
 
 ```go
 package main

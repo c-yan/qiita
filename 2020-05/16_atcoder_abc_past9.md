@@ -139,7 +139,7 @@ print(result)
 
 ## [ABC103D - Islands War](https://atcoder.jp/contests/abc103/tasks/abc103_d)
 
-bでソートすればいいというのは、[キーエンス プログラミング コンテスト 2020 B - Robot Arms](https://atcoder.jp/contests/keyence2020/tasks/keyence2020_b) のときに痛い目にあったので直感した. 区間スケジューリング問題というやつである. 後は右端の橋を必要なだけ取り除いていけばいいのだが、最初は Segment Tree で取り除いた橋を記録して解いてしまった. まあ、*O*(<i>N</i>log<i>N</i>) で解けるのだが、実際には最後に取り除いたものだけ覚えていれば大丈夫だったことに解説 PDF を見て気づいた.
+bでソートすればいいというのは、[キーエンス プログラミング コンテスト 2020 B - Robot Arms](https://atcoder.jp/contests/keyence2020/tasks/keyence2020_b) のときに痛い目にあったので直感した. 区間スケジューリング問題というやつである. 後は右端の橋を必要なだけ取り除いていけばいいのだが、最初はセグ木で取り除いた橋を記録して解いてしまった. まあ、*O*(<i>N</i>log<i>N</i>) で解けるのだが、実際には最後に取り除いたものだけ覚えていれば大丈夫だったことに解説 PDF を見て気づいた.
 
 ```python
 N, M = map(int, input().split())
