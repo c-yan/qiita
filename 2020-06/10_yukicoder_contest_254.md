@@ -409,6 +409,65 @@ print(result)
 
 追々記: セグ木ではなく Sparse table で解いたと言う人がいたのだが、Disjoint sparse table の間違え? Sparse table は演算に冪等性が必要だが、Min とは違い Sum にはそれはないので. Disjoint sparse table の実装を持ってないので試せなかった.
 
+追々々記: Disjoint sparse table を実装した.
+
+```python
+from itertools import accumulate
+from operator import add
+
+
+class DisjointSparseTable:
+    _f = None
+    _data = None
+    _lookup = None
+
+    def __init__(self, a, f):
+        self._f = f
+        b = 0
+        while (1 << b) <= len(a):
+            b += 1
+        _data = [[0] * len(a) for _ in range(b)]
+        _data[0] = a[:]
+        for i in range(1, b):
+            shift = 1 << i
+            for j in range(0, len(a), shift << 1):
+                t = min(j + shift, len(a))
+                _data[i][t - 1] = a[t - 1]
+                for k in range(t - 2, j - 1, -1):
+                    _data[i][k] = f(a[k], _data[i][k + 1])
+                if t >= len(a):
+                    break
+                _data[i][t] = a[t]
+                r = min(t + shift, len(a))
+                for k in range(t + 1, r):
+                    _data[i][k] = f(_data[i][k - 1], a[k])
+        self._data = _data
+        _lookup = [0] * (1 << b)
+        for i in range(2, len(_lookup)):
+            _lookup[i] = _lookup[i >> 1] + 1
+        self._lookup = _lookup
+
+    def query(self, start, stop):
+        stop -= 1
+        if start >= stop:
+            return self._data[0][start]
+        p = self._lookup[start ^ stop]
+        return self._f(self._data[p][start], self._data[p][stop])
+
+
+N, *A = map(int, open(0).read().split())
+
+a = list(accumulate(A))
+
+st = DisjointSparseTable(a, add)
+
+result = 0
+result += st.query(0, N)
+for i in range(1, N):
+    result += st.query(i, N) - a[i - 1] * (N - i)
+print(result)
+```
+
 ## [C 1097 Remainder Operation](https://yukicoder.me/problems/no/1097)
 
 終了2分前に解けて嬉しかった. 余りは N 回以内に同じ余りが出てきてループする. ループ検出して、1周期の長さと1ループ中の増分を求めればクエリに *O*(1) で回答できるようになるので *O*(*N* + *Q*) で解けた. [ABC167D - Teleporter](https://atcoder.jp/contests/abc167/tasks/abc167_d) を思い出した.
