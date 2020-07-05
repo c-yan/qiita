@@ -153,6 +153,7 @@
 * [ABC080C - Shopping Street](https://atcoder.jp/contests/abc080/tasks/abc080_c)
 * [ABC147C - HonestOrUnkind2](https://atcoder.jp/contests/abc147/tasks/abc147_c)
 * [ABC167C - Skill Up](https://atcoder.jp/contests/abc167/tasks/abc167_c)
+* [ABC173C - H and V](https://atcoder.jp/contests/abc173/tasks/abc173_c) (2次元)
 
 ## ワーシャルフロイド
 
@@ -194,6 +195,7 @@
 
 ## エラトステネスの篩
 
+* [ABC052C - Factors of Factorial](https://atcoder.jp/contests/abc052/tasks/arc067_a)
 * [ABC084D - 2017-like Number](https://atcoder.jp/contests/abc084/tasks/abc084_d)
 * [ABC114D - 756](https://atcoder.jp/contests/abc114/tasks/abc114_d)
 * [ABC149C - Next Prime](https://atcoder.jp/contests/abc149/tasks/abc149_c)
