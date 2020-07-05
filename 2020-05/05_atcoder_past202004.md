@@ -36,7 +36,7 @@ print(sorted(((d[k], k) for k in d), reverse=True)[0][1])
 
 ## [past202004C - 山崩し](https://atcoder.jp/contests/past202004-open/tasks/past202004_c)
 
-12分で突破. 問題文のとおりに書くだけ.
+12分で突破. 問題文の通りに書くだけ.
 
 ```python
 N = int(input())
