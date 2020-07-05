@@ -149,6 +149,25 @@ for _ in range(3 ** N):
 print(result)
 ```
 
+追記: `itertools.product` を使うと楽だった.
+
+```python
+from itertools import product
+
+N = int(input())
+a = [list(map(int, input().split())) for _ in range(N - 1)]
+
+result = -float('inf')
+for g in product(range(3), repeat=N):
+    t = 0
+    for i in range(N):
+        for j in range(i + 1, N):
+            if g[i] == g[j]:
+                t += a[i][j - i - 1]
+    result = max(result, t)
+print(result)
+```
+
 ## [past201912H - まとめ売り](https://atcoder.jp/contests/past201912-open/tasks/past201912_h)
 
 44分半で突破. 制約を見るからにセット販売も全種類販売も素直に配列に反映すると TLE 必至なので、それぞれ用の累積変数を作って、辻褄合わせをする方針で通した. 全種類販売のときの `odd_min -= a` が漏れて気づくまでに結構時間がかかってしまった.
