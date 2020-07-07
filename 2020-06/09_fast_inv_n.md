@@ -24,3 +24,5 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> timeit(lambda: [pow(i, -1, m) for i in range(1, 10000)], number=100)
 1.2788116000592709
 ```
+
+追記: なぜ速いのかなと思って CPython のソースコードを眺めてみた. [longobject.c](https://github.com/python/cpython/blob/master/Objects/longobject.c) の `long_pow` が実装なのだが、第二引数が負で第三引数が `None` でない場合は `long_invmod` という関数を呼んでいた. `long_invmod` は拡張ユークリッドの互除法で逆元を求めていた.
