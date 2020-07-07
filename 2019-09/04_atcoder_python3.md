@@ -67,18 +67,12 @@ ss = [stdin.readline()[:-1] for _ in range(n)]
 
 ## 出力
 
-概ね以下4種類のどれかになる.
+概ね以下3種類のどれかになる.
 
-### 整数を一つ出力
-
-```python
-print(1)
-```
-
-### 文字列を一つ出力
+### 一つ出力
 
 ```python
-print('Yes')
+print(x)
 ```
 
 ### 空白区切りで複数出力
@@ -194,7 +188,7 @@ for x in range(i, j):
 a[i:j] = [y] * (j - i)
 ```
 
-ABC129D でしか役に立たなそうだけど(笑).
+[ABC129D - Lamp](https://atcoder.jp/contests/abc129/tasks/abc129_d) でしか役に立たなそうだけど(笑).
 
 ### 無限大
 
