@@ -31,6 +31,14 @@ for i in range(N):
 print(result)
 ```
 
+追記: 偶数番目なんてスライスで飛ばせばよかったんや…….
+
+```python
+N, *a = map(int, open(0).read().split())
+
+print(sum(1 for e in a[::2] if e % 2 == 1))
+```
+
 ## [aising2020C - XYZ Triplets](https://atcoder.jp/contests/aising2020/tasks/aising2020_c)
 
 6分半で突破. N≤10<sup>4</sup> だから3重ループでも通ると思った. 実際、通った.
