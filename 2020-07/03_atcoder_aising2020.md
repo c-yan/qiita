@@ -16,6 +16,14 @@ for i in range(L, R + 1):
 print(result)
 ```
 
+追記: *O*(1)
+
+```python
+L, R, d = map(int, input().split())
+
+print(R // d - (L - 1) // d)
+```
+
 ## [aising2020B - An Odd Problem](https://atcoder.jp/contests/aising2020/tasks/aising2020_b)
 
 2分で突破. 問題の条件の通り書くだけ.
