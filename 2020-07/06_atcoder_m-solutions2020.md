@@ -66,7 +66,7 @@ print(*result, sep='\n')
 
 ## [m-solutions2020D - Road to Millionaire](https://atcoder.jp/contests/m-solutions2020/tasks/m_solutions2020_d)
 
-18分半で突破. DP だろうけど、どう DP 回せばいいんだろうなとそこそこ悩んだ.
+18分半で突破. DP だろうけど、どう DP 回せばいいんだろうなとそこそこ悩んだ. N≤80 なので *O*(<i>N</i><sup>2</sup>) でも大丈夫なので、全ての売り買いパターンの最大値を取ればいいだけだった.
 
 ```python
 N = int(input())
@@ -84,4 +84,4 @@ print(t[N])
 
 ## [m-solutions2020E - M's Solution](https://atcoder.jp/contests/m-solutions2020/tasks/m_solutions2020_e)
 
-突破できず. 順位表を見て F の方が簡単なことに途中で気づいたが手遅れ. 正しい答えが出るナイーブなコードは書けたが、そこから計算量を減らせず.
+突破できず. 途中で順位表を見て F の方が簡単なことに途中で気づいたが、気づいた時点では時間的に手遅れ. 正しい答えが出るナイーブなコードは書けたが、そこから計算量を減らせず.
