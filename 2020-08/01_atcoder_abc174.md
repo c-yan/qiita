@@ -32,7 +32,7 @@ print(result)
 
 ## [ABC174D - Alter Altar](https://atcoder.jp/contests/abc174/tasks/abc174_d)
 
-20分くらい?で突破. RE×1, WA×4. 一番左にある W を一番右にある R とスワップすれば良い. 言うのは簡単なのに、実装でハマりました…….
+20分くらい?で突破. RE×1, WA×4. 一番左にある白い石を一番右にある赤い石とスワップするを繰り返して、白い石の右側に赤い石がない状態にすれば良い. 言うのは簡単なのに、実装でハマりました…….
 
 ```python
 N = int(input())
@@ -67,10 +67,13 @@ t = 7
 for i in range(K):
     if t % K == 0:
         print(i + 1)
+        break
     t = (t * 10 + 7) % K
 else:
     print(-1)
 ```
+
+追記: K で割った余りの0以外は K - 1 種類なので、最大値は K - 1 に決まっていた. 途中で同じ値がでてくるとループなので0になることはない.
 
 ## [ABC174E - Logs](https://atcoder.jp/contests/abc174/tasks/abc174_e)
 
