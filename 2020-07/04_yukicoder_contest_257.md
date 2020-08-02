@@ -81,6 +81,43 @@ int main() {
 }
 ```
 
+追記: テストが追加されて、C++ 嘘解法版がリジャッジで死んでいたので、通るコードを書いた(笑).
+
+```C++
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+
+ll isqrt(ll n) {
+    ll ok = 0;
+    ll ng = 3037000500;
+    while (ng - ok > 1) {
+        ll m = ok + (ng - ok) / 2;
+        if (m * m <= n) {
+            ok = m;
+        } else {
+            ng = m;
+        }
+    }
+    return ok;
+}
+
+int main() {
+    ll A, B;
+    cin >> A >> B;
+
+    ll X = gcd(A, B);
+
+    if (isqrt(X) * isqrt(X) == X) {
+        cout << "Odd" << endl;
+    } else {
+        cout << "Even" << endl;
+    }
+
+    return 0;
+}
+```
+
 ## [B 1114 足し算盆に返らず](https://yukicoder.me/problems/no/1114)
 
 奇数の和は偶数なので、奇数だけ出せば勝てます.
