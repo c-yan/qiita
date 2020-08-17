@@ -58,6 +58,7 @@
 
 * [ABC014C - AtColor](https://atcoder.jp/contests/abc014/tasks/abc014_3)
 * [ABC017C - ハイスコア](https://atcoder.jp/contests/abc017/tasks/abc017_3)
+* [ABC024B - 自動ドア](https://atcoder.jp/contests/abc024/tasks/abc024_b)
 * [ABC035C - オセロ](https://atcoder.jp/contests/abc035/tasks/abc035_c)
 * [ABC072C - Together](https://atcoder.jp/contests/abc072/tasks/arc082_a)
 * [ABC080D - Recording](https://atcoder.jp/contests/abc080/tasks/abc080_d)
