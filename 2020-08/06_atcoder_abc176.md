@@ -238,3 +238,30 @@ func println(args ...interface{}) (int, error) {
 ## [ABC176E - Bomber](https://atcoder.jp/contests/abc176/tasks/abc176_e)
 
 突破できず. あと10分早くD問題が解けていたら……. というか、Dを飛ばしてこっちに手を付けていたら…….
+
+追記: D問題より明らかにこっちのほうが簡単. 一番爆破対象の多い縦と横をそれぞれ選ぶ(複数候補がある可能性があることに注意). 爆弾設置位置に爆破対象がある場合はダブルカウントになるので1引く必要がある. 爆弾設置位置に爆破対象があるかを単純な二次元配列で覚えようとすると 6×10<sup>10</sup> ビット= 7.5GB の記憶容量が必要になるので、辞書で記憶する.
+
+```python
+H, W, M = map(int, input().split())
+
+hc = [0] * H
+wc = [0] * W
+d = {}
+for _ in range(M):
+    h, w = map(lambda x: int(x) - 1,input().split())
+    hc[h] += 1
+    wc[w] += 1
+    d[(h, w)] = 1
+
+maxh = max(hc)
+maxw = max(wc)
+
+result = maxh + maxw - 1
+wi = [i for i in range(W) if wc[i] == maxw]
+for h in [i for i in range(H) if hc[i] == maxh]:
+    for w in wi:
+        if (h, w) not in d:
+            result = maxh + maxw
+            break
+print(result)
+```
