@@ -106,29 +106,30 @@ func main() {
 		}
 	}
 
-	t[Ch][Cw] = 0
+	warpCount := 0
+	t[Ch][Cw] = warpCount
 	q := make([][2]int, 0, 1024)
 	q = append(q, [2]int{Ch, Cw})
 
+	warpq := make([][2]int, 0, 1024)
 	for len(q) != 0 {
-		warpq := make([][2]int, 0, 1024)
 		for len(q) != 0 {
+			warpq = append(warpq, q[0])
 			h, w := q[0][0], q[0][1]
-			warpq = append(warpq, [2]int{h, w})
 			q = q[1:]
-			if h-1 >= 0 && t[h-1][w] > t[h][w] {
+			if h-1 >= 0 && t[h-1][w] > warpCount {
 				q = append(q, [2]int{h - 1, w})
 				t[h-1][w] = t[h][w]
 			}
-			if h+1 < H && t[h+1][w] > t[h][w] {
+			if h+1 < H && t[h+1][w] > warpCount {
 				q = append(q, [2]int{h + 1, w})
 				t[h+1][w] = t[h][w]
 			}
-			if w-1 >= 0 && t[h][w-1] > t[h][w] {
+			if w-1 >= 0 && t[h][w-1] > warpCount {
 				q = append(q, [2]int{h, w - 1})
 				t[h][w-1] = t[h][w]
 			}
-			if w+1 < W && t[h][w+1] > t[h][w] {
+			if w+1 < W && t[h][w+1] > warpCount {
 				q = append(q, [2]int{h, w + 1})
 				t[h][w+1] = t[h][w]
 			}
@@ -138,18 +139,20 @@ func main() {
 			break
 		}
 
+		warpCount++
 		for i := 0; i < len(warpq); i++ {
 			h, w := warpq[i][0], warpq[i][1]
 			for i := max(0, h-2); i <= min(H-1, h+2); i++ {
 				for j := max(0, w-2); j <= min(W-1, w+2); j++ {
-					if t[i][j] <= t[h][w]+1 {
+					if t[i][j] <= warpCount {
 						continue
 					}
-					t[i][j] = t[h][w] + 1
+					t[i][j] = warpCount
 					q = append(q, [2]int{i, j})
 				}
 			}
 		}
+		warpq = warpq[:0]
 	}
 
 	if t[Dh][Dw] == math.MaxInt64 {
@@ -223,36 +226,37 @@ def main():
 
     t[Ch][Cw] = 0
     q = deque([(Ch, Cw)])
-    a = 0
+    warp_count = 0
+    warpq = []
     while q:
-        warpq = []
         while q:
+            warpq.append(q[0])
             h, w = q.popleft()
-            warpq.append((h, w))
-            if h - 1 >= 0 and t[h - 1][w] > a:
+            if h - 1 >= 0 and t[h - 1][w] > warp_count:
                 q.append((h - 1, w))
-                t[h - 1][w] = a
-            if h + 1 < H and t[h + 1][w] > a:
+                t[h - 1][w] = warp_count
+            if h + 1 < H and t[h + 1][w] > warp_count:
                 q.append((h + 1, w))
-                t[h + 1][w] = a
-            if w - 1 >= 0 and t[h][w - 1] > a:
+                t[h + 1][w] = warp_count
+            if w - 1 >= 0 and t[h][w - 1] > warp_count:
                 q.append((h, w - 1))
-                t[h][w - 1] = a
-            if w + 1 < W and t[h][w + 1] > a:
+                t[h][w - 1] = warp_count
+            if w + 1 < W and t[h][w + 1] > warp_count:
                 q.append((h, w + 1))
-                t[h][w + 1] = a
+                t[h][w + 1] = warp_count
 
         if t[Dh][Dw] != INF:
             break
 
-        a += 1
+        warp_count += 1
         for h, w in warpq:
             for i in range(max(0, h - 2), min(H, h + 3)):
                 ti = t[i]
                 for j in range(max(0, w - 2), min(W, w + 3)):
-                    if ti[j] > a:
-                        ti[j] = a
+                    if ti[j] > warp_count:
+                        ti[j] = warp_count
                         q.append((i, j))
+        warpq.clear()
 
     if t[Dh][Dw] == INF:
         print(-1)
