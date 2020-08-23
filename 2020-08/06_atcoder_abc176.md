@@ -66,14 +66,6 @@ import (
 	"strconv"
 )
 
-// S
-var (
-	S []string
-	t [][]int
-	H int
-	W int
-)
-
 func min(x, y int) int {
 	if x < y {
 		return x
@@ -88,91 +80,69 @@ func max(x, y int) int {
 	return y
 }
 
-func printIntln(v ...int) {
-	if len(v) == 0 {
-		return
-	}
-	b := make([]byte, 0, 4096)
-	for i := 0; i < len(v)-1; i++ {
-		b = append(b, strconv.Itoa(v[i])...)
-		b = append(b, " "...)
-	}
-	b = append(b, strconv.Itoa(v[len(v)-1])...)
-	fmt.Println(string(b))
-}
-
-func dfs(q [][2]int) [][2]int {
-	nq := make([][2]int, 0)
-	for len(q) != 0 {
-		h, w := q[0][0], q[0][1]
-		nq = append(nq, [2]int{h, w})
-		q = q[1:]
-		if h-1 >= 0 && S[h-1][w] != '#' && t[h-1][w] == math.MaxInt64 {
-			q = append(q, [2]int{h - 1, w})
-			nq = append(nq, [2]int{h - 1, w})
-			t[h-1][w] = t[h][w]
-		}
-		if h+1 < H && S[h+1][w] != '#' && t[h+1][w] == math.MaxInt64 {
-			q = append(q, [2]int{h + 1, w})
-			nq = append(nq, [2]int{h + 1, w})
-			t[h+1][w] = t[h][w]
-		}
-		if w-1 >= 0 && S[h][w-1] != '#' && t[h][w-1] == math.MaxInt64 {
-			q = append(q, [2]int{h, w - 1})
-			nq = append(nq, [2]int{h, w - 1})
-			t[h][w-1] = t[h][w]
-		}
-		if w+1 < W && S[h][w+1] != '#' && t[h][w+1] == math.MaxInt64 {
-			q = append(q, [2]int{h, w + 1})
-			nq = append(nq, [2]int{h, w + 1})
-			t[h][w+1] = t[h][w]
-		}
-	}
-	return nq
-}
-
 func main() {
 	defer flush()
 
-	H = readInt()
-	W = readInt()
+	H := readInt()
+	W := readInt()
 	Ch := readInt() - 1
 	Cw := readInt() - 1
 	Dh := readInt() - 1
 	Dw := readInt() - 1
-	S = make([]string, H)
+	S := make([]string, H)
 	for i := 0; i < H; i++ {
 		S[i] = readString()
 	}
 
-	t = make([][]int, H)
+	t := make([][]int, H)
 	for i := 0; i < H; i++ {
 		t[i] = make([]int, W)
 		for j := 0; j < W; j++ {
-			t[i][j] = math.MaxInt64
+			if S[i][j] == '#' {
+				t[i][j] = -1
+			} else {
+				t[i][j] = math.MaxInt64
+			}
 		}
 	}
 
 	t[Ch][Cw] = 0
-	q := make([][2]int, 0)
+	q := make([][2]int, 0, 1024)
 	q = append(q, [2]int{Ch, Cw})
-	nq := dfs(q)
-	if t[Dh][Dw] != math.MaxInt64 {
-		println(t[Dh][Dw])
-		return
-	}
 
-	for {
-		q := make([][2]int, 0)
-		for len(nq) != 0 {
-			h, w := nq[0][0], nq[0][1]
-			nq = nq[1:]
+	for len(q) != 0 {
+		warpq := make([][2]int, 0, 1024)
+		for len(q) != 0 {
+			h, w := q[0][0], q[0][1]
+			warpq = append(warpq, [2]int{h, w})
+			q = q[1:]
+			if h-1 >= 0 && t[h-1][w] > t[h][w] {
+				q = append(q, [2]int{h - 1, w})
+				t[h-1][w] = t[h][w]
+			}
+			if h+1 < H && t[h+1][w] > t[h][w] {
+				q = append(q, [2]int{h + 1, w})
+				t[h+1][w] = t[h][w]
+			}
+			if w-1 >= 0 && t[h][w-1] > t[h][w] {
+				q = append(q, [2]int{h, w - 1})
+				t[h][w-1] = t[h][w]
+			}
+			if w+1 < W && t[h][w+1] > t[h][w] {
+				q = append(q, [2]int{h, w + 1})
+				t[h][w+1] = t[h][w]
+			}
+		}
+
+		if t[Dh][Dw] != math.MaxInt64 {
+			break
+		}
+
+		for i := 0; i < len(warpq); i++ {
+			h, w := warpq[i][0], warpq[i][1]
 			for i := max(0, h-2); i <= min(H-1, h+2); i++ {
 				for j := max(0, w-2); j <= min(W-1, w+2); j++ {
-					if S[i][j] == '#' {
-						continue
-					}
-					if t[i][j] != math.MaxInt64 {
+					if t[i][j] <= t[h][w]+1 {
 						continue
 					}
 					t[i][j] = t[h][w] + 1
@@ -180,17 +150,6 @@ func main() {
 				}
 			}
 		}
-		if len(q) == 0 {
-			break
-		}
-		nq = dfs(q)
-		if t[Dh][Dw] != math.MaxInt64 {
-			break
-		}
-	}
-
-	for h := 0; h < H; h++ {
-		//printIntln(t[h]...)
 	}
 
 	if t[Dh][Dw] == math.MaxInt64 {
@@ -235,33 +194,113 @@ func println(args ...interface{}) (int, error) {
 }
 ```
 
+カリカリにチューンする羽目になったが、Python でもなんとか通せた.
+
+```python
+from collections import deque
+
+
+def main():
+    from sys import stdin
+    readline = stdin.readline
+
+    from builtins import max, min, range
+
+    INF = 10 ** 6
+
+    H, W = map(int, readline().split())
+    Ch, Cw = map(lambda x: int(x) - 1, readline().split())
+    Dh, Dw = map(lambda x: int(x) - 1, readline().split())
+    S = [readline()[:-1] for _ in range(H)]
+
+    t = [[INF] * W for _ in range(H)]
+    for h in range(H):
+        th = t[h]
+        Sh = S[h]
+        for w in range(W):
+            if Sh[w] == '#':
+                th[w] = -1
+
+    t[Ch][Cw] = 0
+    q = deque([(Ch, Cw)])
+    a = 0
+    while q:
+        warpq = []
+        while q:
+            h, w = q.popleft()
+            warpq.append((h, w))
+            if h - 1 >= 0 and t[h - 1][w] > a:
+                q.append((h - 1, w))
+                t[h - 1][w] = a
+            if h + 1 < H and t[h + 1][w] > a:
+                q.append((h + 1, w))
+                t[h + 1][w] = a
+            if w - 1 >= 0 and t[h][w - 1] > a:
+                q.append((h, w - 1))
+                t[h][w - 1] = a
+            if w + 1 < W and t[h][w + 1] > a:
+                q.append((h, w + 1))
+                t[h][w + 1] = a
+
+        if t[Dh][Dw] != INF:
+            break
+
+        a += 1
+        for h, w in warpq:
+            for i in range(max(0, h - 2), min(H, h + 3)):
+                ti = t[i]
+                for j in range(max(0, w - 2), min(W, w + 3)):
+                    if ti[j] > a:
+                        ti[j] = a
+                        q.append((i, j))
+
+    if t[Dh][Dw] == INF:
+        print(-1)
+    else:
+        print(t[Dh][Dw])
+
+
+main()
+```
+
 ## [ABC176E - Bomber](https://atcoder.jp/contests/abc176/tasks/abc176_e)
 
 突破できず. あと10分早くD問題が解けていたら……. というか、Dを飛ばしてこっちに手を付けていたら…….
 
-追記: D問題より明らかにこっちのほうが簡単. 一番爆破対象の多い縦と横をそれぞれ選ぶ(複数候補がある可能性があることに注意). 爆弾設置位置に爆破対象がある場合はダブルカウントになるので1引く必要がある. 爆弾設置位置に爆破対象があるかを単純な二次元配列で覚えようとすると 6×10<sup>10</sup> ビット= 7.5GB の記憶容量が必要になるので、辞書で記憶する.
+追記: D問題より明らかにこっちのほうが簡単. 一番爆破対象の多い縦と横をそれぞれ選ぶ(複数候補がある可能性があることに注意). 爆弾設置位置に爆破対象がある場合はダブルカウントになるので1引く必要がある. 爆弾設置位置に爆破対象があるかを単純な二次元配列で覚えようとすると 6×10<sup>10</sup> ビット= 7.5GB の記憶容量が必要になるので、位置のタプルの set で記憶する.
 
 ```python
 H, W, M = map(int, input().split())
 
-hc = [0] * H
-wc = [0] * W
-d = {}
+rows = [0] * H
+cols = [0] * W
+s = set()
 for _ in range(M):
     h, w = map(lambda x: int(x) - 1,input().split())
-    hc[h] += 1
-    wc[w] += 1
-    d[(h, w)] = 1
+    rows[h] += 1
+    cols[w] += 1
+    s.add((h, w))
 
-maxh = max(hc)
-maxw = max(wc)
+max_rows = max(rows)
+max_cols = max(cols)
 
-result = maxh + maxw - 1
-wi = [i for i in range(W) if wc[i] == maxw]
-for h in [i for i in range(H) if hc[i] == maxh]:
-    for w in wi:
-        if (h, w) not in d:
-            result = maxh + maxw
+max_rows_indexes = [i for i in range(H) if rows[i] == max_rows]
+max_cols_indexes = [i for i in range(W) if cols[i] == max_cols]
+
+duplicate = True
+if M >= len(max_rows_indexes) * len(max_cols_indexes):
+    for h in max_rows_indexes:
+        for w in max_cols_indexes:
+            if (h, w) not in s:
+                duplicate = False
+                break
+        if not duplicate:
             break
-print(result)
+else:
+    duplicate = False
+
+if duplicate:
+    print(max_rows + max_cols - 1)
+else:
+    print(max_rows + max_cols)
 ```
