@@ -204,3 +204,124 @@ print(result)
 ## [ABC175E - Picking Goods](https://atcoder.jp/contests/abc175/tasks/abc175_e)
 
 突破できず. 「ただし、マス目の同じ行では 3 個までしかアイテムを拾うことができません。」が無ければ DP で簡単なのになあと思った. Dを飛ばしてEを解いている勢が結構いたので、何かが分かっていればそこまで難易度差はない?
+
+追記: 冷静になって解いてみると簡単だったが、Go 言語では AC 出来るが、PyPy では TLE になってしまった. しょうがないので高速化を検討する. まず R×C×4 の3次元配列は要らない. 何故なら次の行に行くときは拾ったアイテム数がリセットされるからである. また、各列のここまでの最大値は同時には1つしか要らないので、dp の配列は長さ C の1次元配列だけあれば良い. 後は現在見ているマス目のときの情報を持つ長さ4の配列を用意してこれを更新しながら dp 配列を書き換えていけば良い.
+
+```python
+from sys import stdin
+readline = stdin.readline
+
+R, C, K = map(int, readline().split())
+
+goods = [[0] * C for _ in range(R)]
+for _ in range(K):
+    r, c, v = map(int, readline().split())
+    goods[r - 1][c - 1] = v
+
+dp = [0] * (C + 1)
+for i in range(R):
+    cur = [0] * 4
+    cur[0] = dp[0]
+    for j in range(C):
+        if goods[i][j] != 0:
+            for k in range(2, -1, -1):
+                cur[k + 1] = max(cur[k + 1], cur[k] + goods[i][j])
+        dp[j] = max(cur)
+        cur[0] = max(cur[0], dp[j + 1])
+
+print(max(cur))
+```
+
+一応捻りのない Go 言語のコードも提示しておく.
+
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+)
+
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
+}
+
+var (
+	dp    [3001][3001][4]int
+	goods [3000][3000]int
+)
+
+func main() {
+	defer flush()
+
+	R := readInt()
+	C := readInt()
+	K := readInt()
+	for i := 0; i < K; i++ {
+		r := readInt() - 1
+		c := readInt() - 1
+		v := readInt()
+		goods[r][c] = v
+	}
+
+	for i := 0; i < R; i++ {
+		for j := 0; j < C; j++ {
+			if goods[i][j] != 0 {
+				for k := 2; k >= 0; k-- {
+					dp[i][j][k+1] = max(dp[i][j][k+1], dp[i][j][k]+goods[i][j])
+				}
+			}
+			for k := 0; k < 4; k++ {
+				dp[i][j+1][k] = max(dp[i][j+1][k], dp[i][j][k])
+				dp[i+1][j][0] = max(dp[i+1][j][0], dp[i][j][k])
+			}
+		}
+	}
+
+	result := -1
+	for k := 0; k < 4; k++ {
+		result = max(result, dp[R-1][C-1][k])
+	}
+
+	println(result)
+}
+
+const (
+	ioBufferSize = 1 * 1024 * 1024 // 1 MB
+)
+
+var stdinScanner = func() *bufio.Scanner {
+	result := bufio.NewScanner(os.Stdin)
+	result.Buffer(make([]byte, ioBufferSize), ioBufferSize)
+	result.Split(bufio.ScanWords)
+	return result
+}()
+
+func readString() string {
+	stdinScanner.Scan()
+	return stdinScanner.Text()
+}
+
+func readInt() int {
+	result, err := strconv.Atoi(readString())
+	if err != nil {
+		panic(err)
+	}
+	return result
+}
+
+var stdoutWriter = bufio.NewWriter(os.Stdout)
+
+func flush() {
+	stdoutWriter.Flush()
+}
+
+func println(args ...interface{}) (int, error) {
+	return fmt.Fprintln(stdoutWriter, args...)
+}
+```
