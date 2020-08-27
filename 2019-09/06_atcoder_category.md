@@ -21,6 +21,7 @@
 * [ABC145E - All-you-can-eat](https://atcoder.jp/contests/abc145/tasks/abc145_e)
 * [ABC153E - Crested Ibis vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_e)
 * [ABC154E - Almost Everywhere Zero](https://atcoder.jp/contests/abc154/tasks/abc154_e) (桁DP / Digit DP)
+* [ABC175E - Picking Goods](https://atcoder.jp/contests/abc175/tasks/abc175_e)
 
 <!--
 * [ABC011C - 123引き算](https://atcoder.jp/contests/abc011/tasks/abc011_3)
@@ -126,6 +127,7 @@
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
 * [ABC151D - Maze Master](https://atcoder.jp/contests/abc151/tasks/abc151_d)
 * [ABC168D - .. (Double Dots)](https://atcoder.jp/contests/abc168/tasks/abc168_d)
+* [ABC176D - Wizard in Maze](https://atcoder.jp/contests/abc176/tasks/abc176_d)
 
 ## ダイクストラ法 (Dijkstra's algorithm)
 
