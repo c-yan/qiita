@@ -2,7 +2,7 @@
 
 ## [ABC177A - Don't be late](https://atcoder.jp/contests/abc177/tasks/abc177_a)
 
-2分で突破. 書くだけ.
+2分で突破. 浮動小数点数は誤差が怖いので、T分間で歩ける距離がDメートル以上かでジャッジするようにした.
 
 ```python
 D, T, S = map(int, input().split())
@@ -15,7 +15,7 @@ else:
 
 ## [ABC177B - Substring](https://atcoder.jp/contests/abc177/tasks/abc177_b)
 
-5分で突破、WA1. + 1 を忘れて死亡. ずらしながら違う文字が何文字があるかを調べて、最小値を取れば OK.
+5分で突破、WA1. + 1 を忘れて死亡. ずらしながら違う文字が何文字があるかを調べて、最小値を取れば OK. Sの長さが1000なので、計算量は最大でも2.5×10<sup>4</sup>.
 
 ```python
 S = input()
@@ -33,7 +33,7 @@ print(result)
 
 ## [ABC177C - Sum of product of pairs](https://atcoder.jp/contests/abc177/tasks/abc177_c)
 
-4分で突破. ナイーブに O(*N*<sup>2</sup>) で計算すると死んでしまうので累積和した. 右から順番にやっていけば累積和いらないけど、まあいいでしょ.
+4分で突破. ナイーブに2重ループで計算すると、計算量が2×10<sup>10</sup>で TLE してしまうので累積和した. 右から順番にやっていけば累積和いらないけど、まあいいでしょ.
 
 ```python
 from itertools import accumulate
