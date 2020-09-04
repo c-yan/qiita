@@ -1,5 +1,7 @@
 # AtCoder Beginner Contest 177 参戦記
 
+レーティングが5回連続下がっていたので、久々に上がって安心した.
+
 ## [ABC177A - Don't be late](https://atcoder.jp/contests/abc177/tasks/abc177_a)
 
 2分で突破. 浮動小数点数は誤差が怖いので、T分間で歩ける距離がDメートル以上かでジャッジするようにした.
@@ -58,11 +60,29 @@ m = 1000000007
 N, *A = map(int, open(0).read().split())
 
 result = 0
-a = 0
+c = 0
 for i in range(1, N + 1):
-    result += a * A[N - i]
-    a += A[N - i]
+    result += A[N - i] * c
     result %= m
+    c += A[N - i]
+    c %= m
+print(result)
+```
+
+追々記: 右からやる必要もないな.
+
+```python
+m = 1000000007
+
+N, *A = map(int, open(0).read().split())
+
+result = 0
+c = 0
+for a in A:
+    result += a * c
+    result %= m
+    c += a
+    c %= m
 print(result)
 ```
 
@@ -141,7 +161,7 @@ def prime_factorize(n):
     return result
 
 
-def f():
+def is_pairwise_coprime():
     s = set()
     for i in range(N - 1, -1, -1):
         t = prime_factorize(A[i])
@@ -155,7 +175,43 @@ def f():
 N, *A = map(int, open(0).read().split())
 
 prime_table = make_prime_table(10 ** 6)
-if f():
+if is_pairwise_coprime():
+    print('pairwise coprime')
+elif reduce(gcd, A) == 1:
+    print('setwise coprime')
+else:
+    print('not coprime')
+```
+
+追記: 公式解説動画を見たら素因数分解せずに解いてた. なるほどー.
+
+```python
+from math import gcd
+from functools import reduce
+
+N, *A = map(int, open(0).read().split())
+
+def is_pairwise_coprime():
+    t = [0] * (10 ** 6 + 1)
+    for a in A:
+        t[a] += 1
+
+    c = 0
+    for j in range(2, 10 ** 6 + 1, 2):
+        c += t[j]
+    if c > 1:
+        return False
+
+    for i in range(3, 10 ** 6 + 1, 2):
+        c = 0
+        for j in range(i, 10 ** 6 + 1, i):
+            c += t[j]
+        if c > 1:
+            return False
+
+    return True
+
+if is_pairwise_coprime():
     print('pairwise coprime')
 elif reduce(gcd, A) == 1:
     print('setwise coprime')
