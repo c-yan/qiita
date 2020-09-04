@@ -13,7 +13,7 @@ else:
     print(1)
 ```
 
-## [No.1199 お菓子配り-2](https://yukicoder.me/problems/no/1199)
+## [B 1199 お菓子配り-2](https://yukicoder.me/problems/no/1199)
 
 素直な DP. 偶数個取った時の最大値、奇数個取った時の最大値を更新してばいいだけ.
 
