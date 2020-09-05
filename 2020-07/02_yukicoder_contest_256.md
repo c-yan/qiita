@@ -66,7 +66,7 @@ for a in A:
 
 ## [E 1111 コード進行](https://yukicoder.me/problems/no/1111)
 
-実装重たいなあと思いつつ、DP で解いた. 最初、複雑度の合計がKを超えても計算してて TLE を食らった, PyPy じゃないと TLE になります.
+実装重たいなあと思いつつ、DP で解いた. 最初、複雑度の合計がKを超えても計算してて TLE を食らった. PyPy じゃないと TLE になります.
 
 ```python
 N, M, K = map(int, input().split())
