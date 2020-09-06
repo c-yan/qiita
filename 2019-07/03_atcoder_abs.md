@@ -1,8 +1,10 @@
 # AtCoder Beginners Selection 体験記
 
+Python 3 でやりなおしました: [AtCoder Beginners Selection 体験記 (2回目) - Qiita](https://qiita.com/c-yan/items/693c40f8c9eb69d8297f)
+
 AtCoder Beginner Contest に一度挑戦してみたいなーと思って、練習のために AtCoder Beginners Selection を解いてみた. 言語は、性能が辛ければ Go で、そうでなければ Python 3 にしようと思って提出フォームを見たら、選択肢に Python 2 があって、print にカッコつけるのダルいなと思って Python 2 になった(ダメ人間).
 
-## PracticeA - Welcome to AtCoder
+## [PracticeA - Welcome to AtCoder](https://atcoder.jp/contests/abs/tasks/practice_1)
 
 8分で完了. どっかの記事で Python で AtCoder するときは入力を `input()` で受け取るというのを見ていて、使うの初めてながら使ってみたら `SyntaxError: unexpected EOF while parsing` が出て ??? ってなりながら `raw_input()` に変えて突破. 問題自体は簡単すぎて特に何も言うことはない.
 
@@ -13,7 +15,7 @@ s = raw_input()
 print "%d %s" % (a + b + c, s)
 ```
 
-## ABC086A - Product
+## [ABC086A - Product](https://atcoder.jp/contests/abs/tasks/abc086_a)
 
 2分で完了. 簡単すぎて特に何も言うことはない.
 
@@ -24,7 +26,8 @@ if a * b % 2 == 0:
 else:
   print 'Odd'
 ```
-## ABC081A - Placing Marbles
+
+## [ABC081A - Placing Marbles](https://atcoder.jp/contests/abs/tasks/abc081_a)
 
 4分で完了. 簡単すぎて特に何も言うことはない.
 
@@ -32,7 +35,7 @@ else:
 print len([c for c in raw_input() if c == '1'])
 ```
 
-## ABC081B - Shift only
+## [ABC081B - Shift only](https://atcoder.jp/contests/abs/tasks/abc081_b)
 
 9分で完了. `any` の使い方を思い出せば特に難しいことはない.
 
@@ -47,7 +50,8 @@ while True:
   a = [e / 2 for e in a]
 print i
 ```
-## ABC087B - Coins
+
+## [ABC087B - Coins](https://atcoder.jp/contests/abs/tasks/abc087_b)
 
 4分で完了. まあ、総当たりでいいだろうで、終わりではある. 0..n なので `range` に `+ 1` するのを忘れなければよいだけ.
 
@@ -64,7 +68,8 @@ for i in range(a + 1):
         result += 1
 print result
 ```
-## ABC083B - Some Sums
+
+## [ABC083B - Some Sums](https://atcoder.jp/contests/abs/tasks/abc083_b)
 
 6分で完了. 各桁の和は一回文字列に変換して、各桁毎に数値に戻せばいいやで、後は総当りすれば OK. `a <= x <= y` みたいに書けるのは知ってたけど、初めて書いたかも. 普通の言語では `a <= x and x <= y` になるのにねー.
 
@@ -76,7 +81,8 @@ for i in range(1, n + 1):
     result += i
 print result
 ```
-## ABC088B - Card Game for Two
+
+## [ABC088B - Card Game for Two](https://atcoder.jp/contests/abs/tasks/abc088_b)
 
 7分で完了. 最後の行に `print` を書き忘れて初の WA を食らう(しょぼーん). 要するに大きい方から順に並べて、Alice が偶数個目、Bob が奇数個目を取ると思えば、Python の強みであるスライス処理一発で終わるので、ちょー楽ちん.
 
@@ -87,7 +93,8 @@ a.sort()
 a.reverse()
 print sum(a[::2]) - sum(a[1::2])
 ```
-## ABC085B - Kagami Mochi
+
+## [ABC085B - Kagami Mochi](https://atcoder.jp/contests/abs/tasks/abc085_b)
 
 3分で完了. 同じ直径のものは積めないってことは、要するに直径の unique を取ればよいわけで、Python は set に突っ込めば一発でそれを取れるので、後は set の要素数を取ってお終い.
 
@@ -97,7 +104,7 @@ d = [int(raw_input()) for i in range(n)]
 print len(set(d))
 ```
 
-## ABC085C - Otoshidama
+## [ABC085C - Otoshidama](https://atcoder.jp/contests/abs/tasks/abc085_c)
 
 7分で完了. 最初　`k = n + 1 - i - j` になっていて WA. 総当りするだけなので特に難しいことはない.
 
@@ -112,7 +119,8 @@ for i in range(n + 1):
       sys.exit()
 print "-1 -1 -1"
 ```
-## ABC049C - 白昼夢 / Daydream
+
+## [ABC049C - 白昼夢 / Daydream](https://atcoder.jp/contests/abs/tasks/arc065_a)
 
 1時間くらいで完了. 最初は再帰関数で書いて RE を食らい、あー `maximum recursion depth exceeded` かーと言いながらループ版に書き直し. これが TLE を食らいマジどーしよとなったけど、`s.find(t + w) == 0` って *O*(*n*<sup>2</sup>) じゃねと思い、*O*(*n*) な `s.startswith(t + w)` ならどうだろうと試してみたら通った.
 
@@ -135,7 +143,7 @@ while True:
   ts = nts
 ```
 
-## ABC086C - Traveling
+## [ABC086C - Traveling](https://atcoder.jp/contests/abs/tasks/arc089_a)
 
 40分くらいで完了. 到着した後の残り時間が偶数なら良いんでしょとさらさらっと書き上げて出したら WA. 延々考えてどう考えてもあってるやんけーってなった後に、前の問題と違って Yes / No が大文字小文字混じりであることに気づいた orz. しょうもねえミスすぎた.
 
