@@ -138,6 +138,7 @@
 ## 二分探索 (Binary search)
 
 * [ABC030C - 飛行機乗り](https://atcoder.jp/contests/abc030/tasks/abc030_c)
+* [ABC063D - Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC113C - ID](https://atcoder.jp/contests/abc113/tasks/abc113_c)
 * [ABC119D - Lazy Faith](https://atcoder.jp/contests/abc119/tasks/abc119_d)
@@ -149,10 +150,6 @@
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f)
 * [ABC172C - Tsundoku](https://atcoder.jp/contests/abc172/tasks/abc172_c)
 * [ABC174E - Logs](https://atcoder.jp/contests/abc174/tasks/abc174_e)
-
-<!--
-* [ABC063D - Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
--->
 
 ## ビット全探索
 
@@ -232,6 +229,7 @@
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f) (Sum)
 * [ABC157E - Simple String Queries](https://atcoder.jp/contests/abc157/tasks/abc157_e) (ビット Or)
 * [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l) (Min)
+* [ABC174F - Range Set Query](https://atcoder.jp/contests/abc174/tasks/abc174_f) (Sum)
 
 ## Sparse table
 
@@ -247,6 +245,7 @@
 
 * [ABC103D - Islands War](https://atcoder.jp/contests/abc103/tasks/abc103_d)
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f)
+* [ABC174F - Range Set Query](https://atcoder.jp/contests/abc174/tasks/abc174_f)
 
 ## 平衡二分探索木
 
