@@ -33,6 +33,7 @@
 
 * [ABC037C - 総和](https://atcoder.jp/contests/abc037/tasks/abc037_c)
 * [ABC038C - 単調増加](https://atcoder.jp/contests/abc038/tasks/abc038_c)
+* [ABC060D - Simple Knapsack](https://atcoder.jp/contests/abc060/tasks/arc073_b)
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC084D - 2017-like Number](https://atcoder.jp/contests/abc084/tasks/abc084_d)
 * [ABC087C - Candies](https://atcoder.jp/contests/abc087/tasks/arc090_a)
