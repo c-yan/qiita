@@ -14,6 +14,7 @@
 * [ABC087C - Candies](https://atcoder.jp/contests/abc087/tasks/arc090_a)
 * [ABC099C - Strange Bank](https://atcoder.jp/contests/abc099/tasks/abc099_c)
 * [ABC103D - Islands War](https://atcoder.jp/contests/abc103/tasks/abc103_d)
+* [ABC122D - We Like AGC](https://atcoder.jp/contests/abc122/tasks/abc122_d)
 * [ABC129C - Typical Stairs](https://atcoder.jp/contests/abc129/tasks/abc129_c)
 * [ABC135D - Digits Parade](https://atcoder.jp/contests/abc135/tasks/abc135_d)
 * [ABC141E - Who Says a Pun?](https://atcoder.jp/contests/abc141/tasks/abc141_e)
@@ -25,7 +26,6 @@
 
 <!--
 * [ABC011C - 123引き算](https://atcoder.jp/contests/abc011/tasks/abc011_3)
-* [ABC122D - We Like AGC](https://atcoder.jp/contests/abc122/tasks/abc122_d)
 * [ABC118D - Match Matching](https://atcoder.jp/contests/abc118/tasks/abc118_d)
 -->
 
