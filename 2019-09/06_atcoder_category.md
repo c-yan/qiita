@@ -173,7 +173,7 @@
 * [ARC035C - アットコーダー王国の交通事情](https://atcoder.jp/contests/arc035/tasks/arc035_c)
 
 <!--
-* [ABC021 - 多重ループ](https://atcoder.jp/contests/abc143/tasks/abc143_e)
+* [ABC021D - 多重ループ](https://atcoder.jp/contests/abc021/tasks/abc021_d)
 -->
 
 ## 優先度付きキュー (Priority queue)
@@ -218,6 +218,7 @@
 * [ABC156D - Bouquet](https://atcoder.jp/contests/abc156/tasks/abc156_d)
 * [ABC167E - Colorful Blocks](https://atcoder.jp/contests/abc167/tasks/abc167_e)
 * [ABC171F - Strivore](https://atcoder.jp/contests/abc171/tasks/abc171_f)
+* [ABC178D - Redistribution](https://atcoder.jp/contests/abc178/tasks/abc178_d)
 
 ## パスカルの三角形
 
