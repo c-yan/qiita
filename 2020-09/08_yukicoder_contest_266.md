@@ -52,3 +52,17 @@ for a in A:
     dp = t
 print(dp[0])
 ```
+
+## [D 1232 2^x = x](https://yukicoder.me/problems/no/1232)
+
+フェルマーの小定理より a<sup>p-1</sup> ≡ 1 (mod p) なので a<sup>(p-1)<sup>2</sup></sup>≡1 (mod p) なのだが、(p-1)<sup>2</sup> = p<sup>2</sup>-2p+1≡1 (mod p) なので (p-1)<sup>2</sup> が概ね答えになる. フェルマーの小定理にはaとpは互いに素という条件があるので、p=2だけはこの答えが使えないが、2の場合の答えはサンプルにある.
+
+```python
+N, *p = map(int, open(0).read().split())
+
+for x in p:
+    if x == 2:
+        print(2)
+    else:
+        print((x - 1) * (x - 1))
+```
