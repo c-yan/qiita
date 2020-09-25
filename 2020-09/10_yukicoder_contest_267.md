@@ -15,3 +15,28 @@ x = [i * 12 * 60 * 60 // 11 for i in range(12)]
 t = (A * 60 + B) % (12 * 60) * 60
 print(x[bisect_left(x, t)] - t)
 ```
+
+## [C 1238 選抜クラス](https://yukicoder.me/problems/no/1238)
+
+K を引いた辺りで、「あれ、同じような問題を過去に解いてるぞ」と思ったのに解けなかった悲しみ. [ABC044C - 高橋君とカード](https://atcoder.jp/contests/abc044/tasks/arc060_a) と大体同じですね(平均がちょうどXか、平均がX以上かの違い).
+
+a<sub>i</sub>=A<sub>i</sub>-K とすると、a<sub>i</sub>の合計が0以上になる選び方はいくつあるかという問題になる. DP をすれば簡単に求まる.
+
+```python
+m = 1000000007
+
+N, K, *A = map(int, open(0).read().split())
+
+for i in range(N):
+    A[i] -= K
+
+dp = {}
+dp[0] = 1
+for a in A:
+    for k in sorted(dp, reverse=True) if a >= 0 else sorted(dp):
+        dp.setdefault(k + a, 0)
+        dp[k + a] += dp[k]
+
+dp[0] -= 1
+print(sum(dp[k] for k in dp if k >= 0) % m)
+```
