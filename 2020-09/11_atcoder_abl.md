@@ -113,19 +113,6 @@ func newSegmentTree(n int, op func(x, y int) int, e int) segmentTree {
 	return result
 }
 
-func (st segmentTree) build(a []int) {
-	for i, v := range a {
-		st.data[st.offset+i] = v
-	}
-	for i := st.offset - 1; i > -1; i-- {
-		st.data[i] = st.op(st.data[i*2+1], st.data[i*2+2])
-	}
-}
-
-func (st segmentTree) get(index int) int {
-	return st.data[st.offset+index]
-}
-
 func (st segmentTree) update(index, value int) {
 	i := st.offset + index
 	st.data[i] = value
@@ -152,27 +139,23 @@ func (st segmentTree) query(start, stop int) int {
 	return result
 }
 
+const (
+	maxA = 300000
+)
+
 func main() {
 	defer flush()
 
 	N := readInt()
 	K := readInt()
 
-	A := make([]int, N)
+	st := newSegmentTree(maxA+1, max, 0)
 	for i := 0; i < N; i++ {
-		A[i] = readInt()
+		A := readInt()
+		st.update(A, st.query(max(A-K, 0), min(A+K+1, maxA+1))+1)
 	}
 
-	st := newSegmentTree(300000+1, max, 0)
-
-	t := make([]int, N)
-	result := 0
-	for i := 0; i < N; i++ {
-		t[i] = st.query(max(A[i]-K, 0), min(A[i]+K+1, 300000+1)) + 1
-		result = max(result, t[i])
-		st.update(A[i], t[i])
-	}
-	println(result)
+	println(st.query(0, maxA+1))
 }
 
 const (
@@ -208,6 +191,58 @@ func flush() {
 func println(args ...interface{}) (int, error) {
 	return fmt.Fprintln(stdoutWriter, args...)
 }
+```
+
+追記: Python では TLE になってしまうが、PyPy なら AC した.
+
+```python
+class SegmentTree:
+    def __init__(self, size, op, e):
+        self._op = op
+        self._e = e
+        self._size = size
+        t = 1
+        while t < size:
+            t *= 2
+        self._offset = t - 1
+        self._data = [e] * (t * 2 - 1)
+
+    def update(self, index, value):
+        op = self._op
+        data = self._data
+        i = self._offset + index
+        data[i] = value
+        while i >= 1:
+            i = (i - 1) // 2
+            data[i] = op(data[i * 2 + 1], data[i * 2 + 2])
+
+    def query(self, start, stop):
+        def iter_segments(data, l, r):
+            while l < r:
+                if l & 1 == 0:
+                    yield data[l]
+                if r & 1 == 0:
+                    yield data[r - 1]
+                l = l // 2
+                r = (r - 1) // 2
+        op = self._op
+        it = iter_segments(self._data, start + self._offset,
+                           stop + self._offset)
+        result = self._e
+        for v in it:
+            result = op(result, v)
+        return result
+
+
+max_A = 300000
+
+N, K, *A = map(int, open(0).read().split())
+
+st = SegmentTree(max_A + 1, max, 0)
+for a in A:
+    st.update(a, st.query(max(a - K, 0), min(a + K + 1, max_A + 1)) + 1)
+
+print(st.query(0, max_A + 1))
 ```
 
 ## [ABLE - Replace Digits](https://atcoder.jp/contests/abl/tasks/abl_e)
