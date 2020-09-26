@@ -1,7 +1,5 @@
 # yukicoder contest 267 参戦記
 
-A も B も星の数詐欺すぎて.
-
 ## [A 1236 長針と短針](https://yukicoder.me/problems/no/1236)
 
 12時間の間に長針と短針は11回巡り合う. 当然巡り合うのは12時間の秒数を11で割った秒数毎である. その秒数を求めると、現在時刻の次のその秒数との差が答えとなる.
@@ -14,6 +12,44 @@ A, B = map(int, input().split())
 x = [i * 12 * 60 * 60 // 11 for i in range(12)]
 t = (A * 60 + B) % (12 * 60) * 60
 print(x[bisect_left(x, t)] - t)
+```
+
+## [B 1237 EXP Multiple!](https://yukicoder.me/problems/no/1237)
+
+よく読むと「答えを10<sup>9</sup>+7で割った余り」じゃなくて、「答えで10<sup>9</sup>+7を割った余り」かよ orz. 確かにそれなら簡単に解ける. 解いた人数からしてこれに引っ掛かった人が多数だな(笑).
+
+```python
+m = 1000000007
+
+
+def make_factorial_table(n):
+    result = [0] * (n + 1)
+    result[0] = 1
+    for i in range(1, n + 1):
+        result[i] = result[i - 1] * i % m
+    return result
+
+
+N, *A = map(int, open(0).read().split())
+
+A.sort()
+
+if A[0] == 0:
+    print(-1)
+    exit()
+
+if A[-1] >= 4:
+    print(m)
+    exit()
+
+fac = make_factorial_table(3)
+
+t = 1
+for a in A:
+    t *= pow(a, fac[a])
+    if t > m:
+        break
+print(m % t)
 ```
 
 ## [C 1238 選抜クラス](https://yukicoder.me/problems/no/1238)
