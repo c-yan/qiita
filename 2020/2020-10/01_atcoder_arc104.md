@@ -1,6 +1,6 @@
 # AtCoder Regular Contest 104 参戦記
 
-C, D, E を眺めて D が一番簡単かなと思って考え始めて、途中で勘違いに気づいてどれも解けないやんってなった. 速解きチャレンジ失敗していて、1900位くらいになってしまったのでパフォが怖い.
+C, D, E を眺めて D が一番簡単かなと思って考え始めて、途中で勘違いに気づいてどれも解けないやんってなった. 速解きチャレンジ失敗していて、1900位くらいになってしまったのでレーティングが下がって悲しい.
 
 ## [ABC179A - Plus Minus](https://atcoder.jp/contests/arc104/tasks/arc104_a)
 
@@ -70,4 +70,58 @@ def main():
 
 
 main()
+```
+
+累積和なくても解ける.
+
+```python
+def main():
+    N, S = input().split()
+    N = int(N)
+
+    result = 0
+    for i in range(N):
+        a, b = 0, 0
+        for c in S[i:]:
+            if c == 'A':
+                a += 1
+            elif c == 'T':
+                a -= 1
+            elif c == 'C':
+                b += 1
+            elif c == 'G':
+                b -= 1
+            if a == 0 and b == 0:
+                result += 1
+    print(result)
+
+
+main()
+```
+
+*O*(*N*) でも解ける.
+
+```python
+N, S = input().split()
+N = int(N)
+
+result = 0
+t = {}
+t[(0, 0)] = 1
+a, b = 0, 0
+for c in S:
+    if c == 'A':
+        a += 1
+    elif c == 'T':
+        a -= 1
+    elif c == 'C':
+        b += 1
+    elif c == 'G':
+        b -= 1
+    if (a, b) in t:
+        result += t[(a, b)]
+        t[(a, b)] += 1
+    else:
+        t[(a, b)] = 1
+print(result)
 ```
