@@ -37,4 +37,6 @@ public void GZipMultiStreamTest()
 }
 ```
 
+なお .NET Framework 4.8 では動作しなくて調査したところ、RFC レベルでマルチストリームは動作するのが当然で、.NET Core 3.0 / 2.2 で動作するようになったようである([Add support for concatenated GZip streams. #30442](https://github.com/dotnet/corefx/pull/30442)). なんで .NET Framework にもバグ修正を反映しないんだよ…….
+
 ※1: xxx.001.csv.gz, xxx.002.csv.gz みたいな連番ファイルにすることや、xxx.csv.zip の中に 001.csv, 002.csv みたいな連番データを入れることも考えたが、002 以降に CSV ヘッダを入れても入れなくても微妙だなあと思いボツに. 前者はファイル数が多いことも微妙.
