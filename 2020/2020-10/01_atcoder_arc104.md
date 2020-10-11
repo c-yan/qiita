@@ -2,7 +2,7 @@
 
 C, D, E を眺めて D が一番簡単かなと思って考え始めて、途中で勘違いに気づいてどれも解けないやんってなった. 速解きチャレンジ失敗していて、1900位くらいになってしまったのでレーティングが下がって悲しい.
 
-## [ABC179A - Plus Minus](https://atcoder.jp/contests/arc104/tasks/arc104_a)
+## [ARC104A - Plus Minus](https://atcoder.jp/contests/arc104/tasks/arc104_a)
 
 3分で突破. どれくらいの範囲をチェックすればいいんだろうと思いつつ.
 
@@ -24,7 +24,7 @@ A, B = map(int, input().split())
 print((A + B) // 2, (A - B) // 2)
 ```
 
-## [ABC179B - DNA Sequence](https://atcoder.jp/contests/arc104/tasks/arc104_b)
+## [ARC104B - DNA Sequence](https://atcoder.jp/contests/arc104/tasks/arc104_b)
 
 14分で突破. SegmentTree かなと思ったあとで、累積和だなと思い直したのが無駄に時間がかかった原因かなって. Python だと割と制限時間ギリギリ.
 
