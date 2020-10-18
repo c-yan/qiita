@@ -8,6 +8,7 @@
 
 * [Educational DP Contest / DP まとめコンテスト](https://atcoder.jp/contests/dp)
 * [Typical DP Contest](https://atcoder.jp/contests/tdpc/)
+* [ABC021C - 正直者の高橋くん](https://atcoder.jp/contests/abc021/tasks/abc021_c)
 * [ABC040C - 柱柱柱柱柱](https://atcoder.jp/contests/abc040/tasks/abc040_c)
 * [ABC044C - 高橋君とカード](https://atcoder.jp/contests/abc044/tasks/arc060_a)
 * [ABC054D - Mixing Experiment](https://atcoder.jp/contests/abc054/tasks/abc054_d)
@@ -23,6 +24,7 @@
 * [ABC153E - Crested Ibis vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_e)
 * [ABC154E - Almost Everywhere Zero](https://atcoder.jp/contests/abc154/tasks/abc154_e) (桁DP / Digit DP)
 * [ABC175E - Picking Goods](https://atcoder.jp/contests/abc175/tasks/abc175_e)
+* [ABC180E - Traveling Salesman among Aerial Cities](https://atcoder.jp/contests/abc180/tasks/abc180_e) (bit DP)
 
 <!--
 * [ABC011C - 123引き算](https://atcoder.jp/contests/abc011/tasks/abc011_3)
@@ -51,6 +53,7 @@
 * [ABC162D - RGB Triplets](https://atcoder.jp/contests/abc162/tasks/abc162_d)
 * [ABC172C - Tsundoku](https://atcoder.jp/contests/abc172/tasks/abc172_c)
 * [ABC177C - Sum of product of pairs](https://atcoder.jp/contests/abc177/tasks/abc177_c)
+* [ARC104B - DNA Sequence](https://atcoder.jp/contests/arc104/tasks/arc104_b)
 * [AGC015B - Evilator](https://atcoder.jp/contests/agc015/tasks/agc015_b)
 
 <!--
@@ -123,6 +126,8 @@
 ## BFS (幅優先探索)
 
 * [ABC007C - 幅優先探索](https://atcoder.jp/contests/abc007/tasks/abc007_3)
+* [ABC020C - 壁抜け](https://atcoder.jp/contests/abc020/tasks/abc020_c)
+* [ABC021C - 正直者の高橋くん](https://atcoder.jp/contests/abc021/tasks/abc021_c)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
 * [ABC070D - Transit Tree Path](https://atcoder.jp/contests/abc070/tasks/abc070_d)
 * [ABC088D - Grid Repainting](https://atcoder.jp/contests/abc088/tasks/abc088_d)
@@ -138,6 +143,7 @@
 
 ## 二分探索 (Binary search)
 
+* [ABC020C - 壁抜け](https://atcoder.jp/contests/abc020/tasks/abc020_c)
 * [ABC030C - 飛行機乗り](https://atcoder.jp/contests/abc030/tasks/abc030_c)
 * [ABC063D - Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
