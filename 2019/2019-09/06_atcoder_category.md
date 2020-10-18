@@ -8,6 +8,7 @@
 
 * [Educational DP Contest / DP まとめコンテスト](https://atcoder.jp/contests/dp)
 * [Typical DP Contest](https://atcoder.jp/contests/tdpc/)
+* [ABC011C - 123引き算](https://atcoder.jp/contests/abc011/tasks/abc011_3)
 * [ABC021C - 正直者の高橋くん](https://atcoder.jp/contests/abc021/tasks/abc021_c)
 * [ABC040C - 柱柱柱柱柱](https://atcoder.jp/contests/abc040/tasks/abc040_c)
 * [ABC044C - 高橋君とカード](https://atcoder.jp/contests/abc044/tasks/arc060_a)
@@ -27,7 +28,6 @@
 * [ABC180E - Traveling Salesman among Aerial Cities](https://atcoder.jp/contests/abc180/tasks/abc180_e) (bit DP)
 
 <!--
-* [ABC011C - 123引き算](https://atcoder.jp/contests/abc011/tasks/abc011_3)
 * [ABC118D - Match Matching](https://atcoder.jp/contests/abc118/tasks/abc118_d)
 -->
 
@@ -74,6 +74,7 @@
 ## しゃくとり法 (Two pointer)
 
 * [ABC032C - 列](https://atcoder.jp/contests/abc032/tasks/abc032_c)
+* [ABC038C - 単調増加](https://atcoder.jp/contests/abc038/tasks/abc038_c)
 * [ABC098D - Xor Sum 2](https://atcoder.jp/contests/abc098/tasks/arc098_b)
 * [ABC130D - Enough Array](https://atcoder.jp/contests/abc130/tasks/abc130_d)
 * [ABC172C - Tsundoku](https://atcoder.jp/contests/abc172/tasks/abc172_c)
@@ -89,10 +90,6 @@
 * [ABC037C - 総和](https://atcoder.jp/contests/abc037/tasks/abc037_c)
 * [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
 * [ABC154D - Dice in Line](https://atcoder.jp/contests/abc154/tasks/abc154_d)
-
-<!--
-038C? 解説PDFより
--->
 
 ## Union-find Forest / Disjoint-set data structure
 
@@ -120,7 +117,6 @@
 
 <!--
 * [ABC015C - 高橋くんのバグ探し](https://atcoder.jp/contests/abc015/tasks/abc015_3)
-* [ABC020C - 壁抜け](https://atcoder.jp/contests/abc020/tasks/abc020_c)
 -->
 
 ## BFS (幅優先探索)
