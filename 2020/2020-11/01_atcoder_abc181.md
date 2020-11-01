@@ -80,7 +80,7 @@ for i in range(2, N):
         xj, yj = xy[j]
         for k in range(j):
             x, y = xy[k]
-            if y * (xj - xi) == (yj - yi) * (x - xi) + yi * (xj - xi):
+            if (y - yi) * (xj - xi) == (yj - yi) * (x - xi):
                 print('Yes')
                 exit()
 print('No')
