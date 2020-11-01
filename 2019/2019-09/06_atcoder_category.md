@@ -54,6 +54,7 @@
 * [ABC162D - RGB Triplets](https://atcoder.jp/contests/abc162/tasks/abc162_d)
 * [ABC172C - Tsundoku](https://atcoder.jp/contests/abc172/tasks/abc172_c)
 * [ABC177C - Sum of product of pairs](https://atcoder.jp/contests/abc177/tasks/abc177_c)
+* [ABC181E - Transformable Teacher](https://atcoder.jp/contests/abc181/tasks/abc181_e)
 * [ARC104B - DNA Sequence](https://atcoder.jp/contests/arc104/tasks/arc104_b)
 * [AGC015B - Evilator](https://atcoder.jp/contests/agc015/tasks/agc015_b)
 
@@ -105,6 +106,7 @@
 * [ABC157D - Friend Suggestions](https://atcoder.jp/contests/abc157/tasks/abc157_d) (サイズ付き Union-Find 木)
 * [ABC177D - Friends](https://atcoder.jp/contests/abc177/tasks/abc177_d) (サイズ付き Union-Find 木)
 * [ARC032B - 道路工事](https://atcoder.jp/contests/arc032/tasks/arc032_2)
+* [ARC037B - バウムテスト](https://atcoder.jp/contests/arc037/tasks/arc037_b)
 
 ## DFS (深さ優先探索)
 
