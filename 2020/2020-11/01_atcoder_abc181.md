@@ -68,6 +68,24 @@ for i in range(N - 1):
 print('No')
 ```
 
+追記: 両辺に除算の項を掛ければ整数で正確に計算できるし、0の除算もなかったじゃん…….
+
+```python
+N = int(input())
+xy = [tuple(map(int, input().split())) for _ in range(N)]
+
+for i in range(2, N):
+    xi, yi = xy[i]
+    for j in range(1, i):
+        xj, yj = xy[j]
+        for k in range(j):
+            x, y = xy[k]
+            if y * (xj - xi) == (yj - yi) * (x - xi) + yi * (xj - xi):
+                print('Yes')
+                exit()
+print('No')
+```
+
 ## [ABC181D - Takahashi Unevolved](https://atcoder.jp/contests/abc181/tasks/abc181_d)
 
 13分半で突破. 1000以上の桁は自動的に8の倍数になると気づけば即そこで終わりの問題ではある. で、下のコードで AC できたけど、なんかこれバグがあるような. 3桁以上の時に '008' とか '016' とかを木にしてないし、4桁で余った文字が0のパターンのチェックとかもしていない. と思ったけど、問題の制限でそもそも0は存在しなかったか、セーフ.
