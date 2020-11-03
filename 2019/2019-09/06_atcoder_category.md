@@ -107,6 +107,7 @@
 * [ABC177D - Friends](https://atcoder.jp/contests/abc177/tasks/abc177_d) (サイズ付き Union-Find 木)
 * [ARC032B - 道路工事](https://atcoder.jp/contests/arc032/tasks/arc032_2)
 * [ARC037B - バウムテスト](https://atcoder.jp/contests/arc037/tasks/arc037_b)
+* [ARC106B - Values](https://atcoder.jp/contests/arc106/tasks/arc106_b)
 
 ## DFS (深さ優先探索)
 
