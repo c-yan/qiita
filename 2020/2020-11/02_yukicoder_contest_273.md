@@ -2,7 +2,7 @@
 
 ## [A 1279 Array Battle](https://yukicoder.me/problems/no/1279)
 
-a<sub>i</sub>を降順にソートし、b<sub>i</sub>を昇順にソートして出した時の得点が常に最大値ではありそうだが、同じ最大値のものが複数ある場合いくつあるかを解く方法がなかなか思いつかない. よくよく考えると N≦9 なので N!≒3.6×10<sup>5</sup> なので、全部試すことができた.
+a<sub>i</sub>を降順にソートし、b<sub>i</sub>を昇順にソートして出した時の得点が常に最大値ではありそうだが、同じ最大値のものが複数ある場合いくつあるかを解く方法がなかなか思いつかない. よくよく考えると N≦9 で 9!≒3.6×10<sup>5</sup> なので、全部試すことができた.
 
 ```python
 from itertools import permutations
@@ -64,5 +64,47 @@ for i in range(N):
         t0.extend(t1)
         t0.sort()
         t1.clear()
+print(result)
+```
+
+追記: 想定解は座標圧縮+BITだったようなので、それでも解いた.
+
+```python
+def bit_add(bit, i, x):
+    i += 1
+    n = len(bit)
+    while i <= n:
+        bit[i - 1] += x
+        i += i & -i
+
+
+def bit_sum(bit, i):
+    result = 0
+    i += 1
+    while i > 0:
+        result += bit[i - 1]
+        i -= i & -i
+    return result
+
+
+def bit_query(bit, start, stop):
+    if start == 0:
+        return bit_sum(bit, stop - 1)
+    else:
+        return bit_sum(bit, stop - 1) - bit_sum(bit, start - 1)
+
+
+N = int(input())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+t = {j: i for i, j in enumerate(sorted(set(a + b)))}
+bit = [0] * len(t)
+
+a.sort()
+result = 0
+for i in range(N):
+    bit_add(bit, t[b[i]], 1)
+    result += bit_query(bit, 0, t[a[i]])
 print(result)
 ```
