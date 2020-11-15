@@ -73,6 +73,7 @@
 * [ABC080D - Recording](https://atcoder.jp/contests/abc080/tasks/abc080_d)
 * [ABC127C - Prison](https://atcoder.jp/contests/abc127/tasks/abc127_c)
 * [ABC141C - Attack Survival](https://atcoder.jp/contests/abc141/tasks/abc141_c)
+* [ABC183D - Water Heater](https://atcoder.jp/contests/abc183/tasks/abc183_d)
 
 ## しゃくとり法 (Two pointer)
 
