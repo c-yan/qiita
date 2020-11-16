@@ -91,7 +91,7 @@ H, W = map(int, input().split())
 S = [input() for _ in range(H)]
 
 au = [0] * W             # 上方向のアキュムレータ
-aul = [0] * (H + W + 1)  # 左上方向のアキュムレータ
+aul = [0] * (H + W - 1)  # 左上方向のアキュムレータ
 for h in range(H):
     al = 0               # 左方向のアキュムレータ
     for w in range(W):
