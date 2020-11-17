@@ -76,6 +76,56 @@ else:
     print('No')
 ```
 
+追記: まあ、imos 法を使わなくても簡単に解けるよね.
+
+```python
+N, W = map(int, input().split())
+
+t = {}
+for _ in range(N):
+    S, T, P = map(int, input().split())
+    t.setdefault(S, 0)
+    t[S] += P
+    t.setdefault(T, 0)
+    t[T] -= P
+
+c = 0
+for k in sorted(t):
+    c += t[k]
+    if c <= W:
+        continue
+    print('No')
+    break
+else:
+    print('Yes')
+```
+
+```python
+N, W = map(int, input().split())
+
+a = []
+for _ in range(N):
+    S, T, P = map(int, input().split())
+    a.append((S, P))
+    a.append((T, -P))
+
+a.sort()
+b = []
+prev = -1
+c = 0
+for t, p in a:
+    if prev != t:
+        b.append(c)
+    prev = t
+    c += p
+b.append(c)
+
+if max(b) <= W:
+    print('Yes')
+else:
+    print('No')
+```
+
 ## [ABC183E - Queen on Grid](https://atcoder.jp/contests/abc183/tasks/abc183_e)
 
 突破できず. 配列の添字の式がぱっと分からなくて仮に入れておいたのを直し漏れてあとちょっとのところで AC を漏らした. 仮に入れずにコンパイルエラーになるようにしておけばよかった、失敗.
