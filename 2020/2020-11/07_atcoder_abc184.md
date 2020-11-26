@@ -39,6 +39,47 @@ print(result)
 
 突破できず. 入出力例でも TLE したり、NaN になったりと上手く行かず.
 
+追記: 確率DP. 金貨が X 枚、銀貨が Y 枚、銅貨が Z 枚になる確率を f(X, Y, Z) とすると、f(X, Y, Z) = (f(X - 1, Y, Z) * (X - 1) + f(X, Y - 1, Z) * (Y - 1) + f(X, Y, Z - 1) * (Z - 1)) / (X + Y + Z - 1) となる. 0≦X,Y,Z≦100 なので、全て求めてもたかだか *O*(10<sup>6</sup>) なので、全て求めて問題ない. 確率が全て求まれば 0≦X,Y≦99 に対して、f(100, X, Y)、f(X, 100, Y)、f(X, Y, Z) に操作回数である (100 + X + Y) - (A + B + C) を掛けたものを積算すれば期待値が求まる.
+
+```python
+A, B, C = map(int, input().split())
+
+M = 101
+
+
+def despread(x, y, z):
+    return x * M * M + y * M + z
+
+
+dp = [0] * (despread(100, 100, 100) + 1)
+dp[despread(A, B, C)] = 1.0
+
+for i in range(A, 100):
+    for j in range(B, 100):
+        for k in range(C, 100):
+            if i + j + k == A + B + C:
+                continue
+            t = 0
+            if i != 0:
+                t += dp[despread(i - 1, j, k)] * (i - 1)
+            if j != 0:
+                t += dp[despread(i, j - 1, k)] * (j - 1)
+            if k != 0:
+                t += dp[despread(i, j, k - 1)] * (k - 1)
+            dp[despread(i, j, k)] = t / (i + j + k - 1)
+
+result = 0
+D = A + B + C
+for i in range(100):
+    for j in range(100):
+        t = 0
+        t += dp[despread(99, i, j)]
+        t += dp[despread(i, 99, j)]
+        t += dp[despread(i, j, 99)]
+        result += ((100 + i + j) - D) * t * 99 / (99 + i + j)
+print(result)
+```
+
 ## [ABC184E - Third Avenue](https://atcoder.jp/contests/abc184/tasks/abc184_e)
 
 CとDを諦めてから始めたので何分かかったのか不明. 56分未満なのは確か. 見るからに難しそうなところが何もなく、何か罠があるのかと思いながら実装したけど、何も罠はなかった(笑). ワープだけは繰り返しトライするとヤバそうだったので、一回しかトライしないようにしたけど、これは見え見えすぎて罠ではないな(笑).
