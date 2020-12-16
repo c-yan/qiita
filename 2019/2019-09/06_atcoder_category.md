@@ -26,6 +26,7 @@
 * [ABC154E - Almost Everywhere Zero](https://atcoder.jp/contests/abc154/tasks/abc154_e) (桁DP / Digit DP)
 * [ABC175E - Picking Goods](https://atcoder.jp/contests/abc175/tasks/abc175_e)
 * [ABC180E - Traveling Salesman among Aerial Cities](https://atcoder.jp/contests/abc180/tasks/abc180_e) (bit DP)
+* [ABC184D - increment of coins](https://atcoder.jp/contests/abc184/tasks/abc184_d) (確率 DP)
 * [ARC002C - コマンド入力](https://atcoder.jp/contests/arc002/tasks/arc002_3)
 
 <!--
@@ -139,6 +140,10 @@
 * [ABC151D - Maze Master](https://atcoder.jp/contests/abc151/tasks/abc151_d)
 * [ABC168D - .. (Double Dots)](https://atcoder.jp/contests/abc168/tasks/abc168_d)
 * [ABC176D - Wizard in Maze](https://atcoder.jp/contests/abc176/tasks/abc176_d)
+* [ABC184E - Third Avenue](https://atcoder.jp/contests/abc184/tasks/abc184_e)
+* [ABC185E - Sequence Matching](https://atcoder.jp/contests/abc185/tasks/abc185_e)
+* [ARC109A - Hands](https://atcoder.jp/contests/arc109/tasks/arc109_a)
+* [AGC033A - Darker and Darker](https://atcoder.jp/contests/agc033/tasks/agc033_a)
 
 ## ダイクストラ法 (Dijkstra's algorithm)
 
@@ -146,6 +151,7 @@
 
 ## 二分探索 (Binary search)
 
+* [Chokudai SpeedRun 001H - LIS](https://atcoder.jp/contests/chokudai_S001/tasks/chokudai_S001_h)
 * [ABC020C - 壁抜け](https://atcoder.jp/contests/abc020/tasks/abc020_c)
 * [ABC030C - 飛行機乗り](https://atcoder.jp/contests/abc030/tasks/abc030_c)
 * [ABC063D - Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
@@ -161,6 +167,12 @@
 * [ABC172C - Tsundoku](https://atcoder.jp/contests/abc172/tasks/abc172_c)
 * [ABC174E - Logs](https://atcoder.jp/contests/abc174/tasks/abc174_e)
 * [ARC050B - 花束](https://atcoder.jp/contests/arc050/tasks/arc050_b)
+* [ARC037C - 億マス計算](https://atcoder.jp/contests/arc037/tasks/arc037_c)
+* [ARC109B - log](https://atcoder.jp/contests/arc109/tasks/arc109_b)
+
+## 三分探索 (Ternary search) / 黄金分割探索
+
+* [ARC054B - ムーアの法則](https://atcoder.jp/contests/arc054/tasks/arc054_b)
 
 ## ビット全探索
 
@@ -236,12 +248,14 @@
 
 ## 区分木 (Segment tree)
 
+* [Chokudai SpeedRun 001H - LIS](https://atcoder.jp/contests/chokudai_S001/tasks/chokudai_S001_h) (Max)
+* [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l) (Min)
 * [ABC103D - Islands War](https://atcoder.jp/contests/abc103/tasks/abc103_d) (Sum)
 * [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (GCD)
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f) (Sum)
 * [ABC157E - Simple String Queries](https://atcoder.jp/contests/abc157/tasks/abc157_e) (ビット Or)
-* [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l) (Min)
 * [ABC174F - Range Set Query](https://atcoder.jp/contests/abc174/tasks/abc174_f) (Sum)
+* [ABC185F - Range Xor Query](https://atcoder.jp/contests/abc185/tasks/abc185_f) (ビット Xor)
 
 ## Sparse table
 
@@ -255,6 +269,8 @@
 
 ## BIT (Binary indexed tree) / Fenwick tree
 
+* [Chokudai SpeedRun 001J - 転倒数](https://atcoder.jp/contests/chokudai_S001/tasks/chokudai_S001_j)
+* [Chokudai SpeedRun 001K - 辞書順で何番目？](https://atcoder.jp/contests/chokudai_S001/tasks/chokudai_S001_k)
 * [ABC103D - Islands War](https://atcoder.jp/contests/abc103/tasks/abc103_d)
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f)
 * [ABC174F - Range Set Query](https://atcoder.jp/contests/abc174/tasks/abc174_f)
