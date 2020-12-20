@@ -1,4 +1,4 @@
-# AtCoder Beginner Contest 186 参戦記
+# パナソニックプログラミングコンテスト (AtCoder Beginner Contest 186) 参戦記
 
 ## [ABC186A - Brick](https://atcoder.jp/contests/abc186/tasks/abc186_a)
 
