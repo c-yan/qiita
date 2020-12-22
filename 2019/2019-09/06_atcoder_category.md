@@ -66,6 +66,7 @@
 
 ## imos 法 (imos method)
 
+* [ABC001D - 感雨時刻の整理](https://atcoder.jp/contests/abc001/tasks/abc001_4)
 * [ABC014C - AtColor](https://atcoder.jp/contests/abc014/tasks/abc014_3)
 * [ABC017C - ハイスコア](https://atcoder.jp/contests/abc017/tasks/abc017_3)
 * [ABC024B - 自動ドア](https://atcoder.jp/contests/abc024/tasks/abc024_b)
@@ -75,6 +76,7 @@
 * [ABC127C - Prison](https://atcoder.jp/contests/abc127/tasks/abc127_c)
 * [ABC141C - Attack Survival](https://atcoder.jp/contests/abc141/tasks/abc141_c)
 * [ABC183D - Water Heater](https://atcoder.jp/contests/abc183/tasks/abc183_d)
+* [ARC045B - ドキドキデート大作戦高橋君](https://atcoder.jp/contests/arc045/tasks/arc045_b) (Min)
 
 ## しゃくとり法 (Two pointer)
 
@@ -83,10 +85,10 @@
 * [ABC098D - Xor Sum 2](https://atcoder.jp/contests/abc098/tasks/arc098_b)
 * [ABC130D - Enough Array](https://atcoder.jp/contests/abc130/tasks/abc130_d)
 * [ABC172C - Tsundoku](https://atcoder.jp/contests/abc172/tasks/abc172_c)
+* [ARC022B - 細長いお菓子](https://atcoder.jp/contests/arc022/tasks/arc022_2)
 
 <!--
 * [ABC033C - 数式の書き換え](https://atcoder.jp/contests/abc033/tasks/abc033_c)
-* [ARC022B - 細長いお菓子](https://atcoder.jp/contests/arc022/tasks/arc022_2)
 * [ABC017D - サプリメント](https://atcoder.jp/contests/abc017/tasks/abc017_4)
 -->
 
@@ -144,6 +146,11 @@
 * [ABC185E - Sequence Matching](https://atcoder.jp/contests/abc185/tasks/abc185_e)
 * [ARC109A - Hands](https://atcoder.jp/contests/arc109/tasks/arc109_a)
 * [AGC033A - Darker and Darker](https://atcoder.jp/contests/agc033/tasks/agc033_a)
+
+## 01-BFS
+
+* [ABC176D - Wizard in Maze](https://atcoder.jp/contests/abc176/tasks/abc176_d)
+* [ARC005C - 器物損壊！高橋君](https://atcoder.jp/contests/arc005/tasks/arc005_3)
 
 ## ダイクストラ法 (Dijkstra's algorithm)
 
@@ -241,6 +248,7 @@
 * [ABC167E - Colorful Blocks](https://atcoder.jp/contests/abc167/tasks/abc167_e)
 * [ABC171F - Strivore](https://atcoder.jp/contests/abc171/tasks/abc171_f)
 * [ABC178D - Redistribution](https://atcoder.jp/contests/abc178/tasks/abc178_d)
+* [ARC039B - 高橋幼稚園](https://atcoder.jp/contests/arc039/tasks/arc039_b)
 
 ## パスカルの三角形
 
@@ -256,6 +264,7 @@
 * [ABC157E - Simple String Queries](https://atcoder.jp/contests/abc157/tasks/abc157_e) (ビット Or)
 * [ABC174F - Range Set Query](https://atcoder.jp/contests/abc174/tasks/abc174_f) (Sum)
 * [ABC185F - Range Xor Query](https://atcoder.jp/contests/abc185/tasks/abc185_f) (ビット Xor)
+* [ARC045B - ドキドキデート大作戦高橋君](https://atcoder.jp/contests/arc045/tasks/arc045_b) (Min)
 
 ## Sparse table
 
