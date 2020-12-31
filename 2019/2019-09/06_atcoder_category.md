@@ -177,6 +177,7 @@
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f)
 * [ABC172C - Tsundoku](https://atcoder.jp/contests/abc172/tasks/abc172_c)
 * [ABC174E - Logs](https://atcoder.jp/contests/abc174/tasks/abc174_e)
+* [ABC184F - Programming Contest](https://atcoder.jp/contests/abc184/tasks/abc184_f)
 * [ARC050B - 花束](https://atcoder.jp/contests/arc050/tasks/arc050_b)
 * [ARC037C - 億マス計算](https://atcoder.jp/contests/arc037/tasks/arc037_c)
 * [ARC109B - log](https://atcoder.jp/contests/arc109/tasks/arc109_b)
@@ -227,6 +228,7 @@
 
 ## 優先度付きキュー (Priority queue)
 
+* [ABC062D - 3N Numbers](https://atcoder.jp/contests/abc062/tasks/arc074_b)
 * [ABC123D - Cake 123](https://atcoder.jp/contests/abc123/tasks/abc123_d)
 * [ABC137D - Summer Vacation](https://atcoder.jp/contests/abc137/tasks/abc137_d)
 * [ABC141D - Powerful Discount Tickets](https://atcoder.jp/contests/abc141/tasks/abc141_d)
@@ -260,6 +262,7 @@
 ## フェルマーの小定理
 
 * [ABC034C - 経路](https://atcoder.jp/contests/abc034/tasks/abc034_c)
+* [ABC066D - 11](https://atcoder.jp/contests/abc066/tasks/arc077_b)
 * [ABC132D - Blue and Red Balls](https://atcoder.jp/contests/abc132/tasks/abc132_d)
 * [ABC145D - Knight](https://atcoder.jp/contests/abc145/tasks/abc145_d)
 * [ABC151E - Max-Min Sums](https://atcoder.jp/contests/abc151/tasks/abc151_e)
