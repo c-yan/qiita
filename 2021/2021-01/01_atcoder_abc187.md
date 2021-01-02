@@ -8,6 +8,7 @@
 def S(n):
     return sum(int(c) for c in str(n))
 
+
 A, B = map(int, input().split())
 
 print(max(S(A), S(B)))
@@ -67,7 +68,7 @@ N = int(input())
 AB = [tuple(map(int, input().split())) for _ in range(N)]
 
 s = sum(a for a, _ in AB)
-t = [a * 2 + b  for a, b in AB]
+t = [a * 2 + b for a, b in AB]
 t.sort(reverse=True)
 
 c = 0
@@ -80,7 +81,7 @@ for i in range(N):
 
 ## [ABC187E - Through Path](https://atcoder.jp/contests/abc187/tasks/abc187_e)
 
-突破できず. コンテスト終了から21分20秒で自力で解くことができた. 脳内で頂点 a<sub>e<sub>i</sub></sub> と頂点 b<sub>e<sub>i</sub></sub> が隣接していない問題に書き換えてしまって自爆した. 計算量を落とす方法は [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d) と同じで親ノードに足し込んで、最後に合算すればいいよねと思った. それと辻褄が合うように考えると、辿り元が親の場合には根の頂点に +x、ブロックする頂点に -x、辿り元が子の場合には辿り元の頂点に +x すればよい. 後はどっちが親かについては根を勝手に決めて、そこからトラバースして親情報を配列に入れておけば O(1) で処理できる.
+突破できず. コンテスト終了から21分20秒で自力で解くことができた(96分半). 脳内で頂点 a<sub>e<sub>i</sub></sub> と頂点 b<sub>e<sub>i</sub></sub> が隣接していない問題に書き換えてしまって自爆した. 計算量を落とす方法は [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d) と同じで親ノードに足し込んで、最後に合算すればいいよねと思った. それと辻褄が合うように考えると、辿り元が親の場合には根の頂点に +x、ブロックする頂点に -x、辿り元が子の場合には辿り元の頂点に +x すればよい. 後はどっちが親かについては根を勝手に決めて、そこからトラバースして親情報を配列に入れておけば O(1) で処理できる.
 
 ```python
 from sys import stdin
@@ -96,7 +97,7 @@ for a, b in ab:
     links[a].append(b)
     links[b].append(a)
 
-parent = [-1] * (N)
+parent = [-1] * N
 parent[0] = 0
 q = deque([0])
 while q:
@@ -106,7 +107,6 @@ while q:
             continue
         parent[j] = i
         q.append(j)
-parent[0] = -1
 
 c = [0] * N
 Q = int(readline())
