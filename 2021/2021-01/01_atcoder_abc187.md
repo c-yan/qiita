@@ -40,8 +40,12 @@ print(result)
 5分半で突破. 制限を見ずに書いたあとで、こんなんだと流石に無理かなと一瞬思ったけど、|S<sub>i</sub>|≦10 だったので「あ、大丈夫だ」となって AC.
 
 ```python
-N = int(input())
-S = [input() for _ in range(N)]
+from sys import stdin
+
+readline = stdin.readline
+
+N = int(readline())
+S = [readline()[:-1] for _ in range(N)]
 
 t = set()
 for s in S:
@@ -64,8 +68,12 @@ else:
 13分で突破. 一瞬全然わからなかったけど「Sum(A<sub>i</sub>) vs 0」で開始して、町<sub>j</sub>で演説をすると「Sum(A<sub>i</sub>) - A<sub>j</sub> vs A<sub>j</sub> + B<sub>j</sub>」になるから、移項すると「Sum(A<sub>i</sub>) vs 2A<sub>j</sub> + B<sub>j</sub>」と分かる. なので、「2A<sub>j</sub> + B<sub>j</sub>」な数列を作って降順ソートして、順番に足していけばいいと分かり、O(*N*) になったのでこれで解ける.
 
 ```python
-N = int(input())
-AB = [tuple(map(int, input().split())) for _ in range(N)]
+from sys import stdin
+
+readline = stdin.readline
+
+N = int(readline())
+AB = [tuple(map(int, readline().split())) for _ in range(N)]
 
 s = sum(a for a, _ in AB)
 t = [a * 2 + b for a, b in AB]
