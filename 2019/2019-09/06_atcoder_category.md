@@ -78,7 +78,6 @@
 * [ABC127C - Prison](https://atcoder.jp/contests/abc127/tasks/abc127_c)
 * [ABC141C - Attack Survival](https://atcoder.jp/contests/abc141/tasks/abc141_c)
 * [ABC183D - Water Heater](https://atcoder.jp/contests/abc183/tasks/abc183_d)
-* [ARC045B - ドキドキデート大作戦高橋君](https://atcoder.jp/contests/arc045/tasks/arc045_b) (Min)
 
 ## しゃくとり法 (Two pointer)
 
