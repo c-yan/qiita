@@ -35,6 +35,22 @@ for i in range(N):
 print(result)
 ```
 
+追記: x2 - x1 が 0 になることは制限から無かったのね…….
+
+```python
+N = int(input())
+xy = [tuple(map(int, input().split())) for _ in range(N)]
+
+result = 0
+for i in range(N):
+    x1, y1 = xy[i]
+    for j in range(i + 1, N):
+        x2, y2 = xy[j]
+        if abs(y2 - y1) <= abs(x2 - x1):
+            result += 1
+print(result)
+```
+
 ## [ABC187C - 1-SAT](https://atcoder.jp/contests/abc187/tasks/abc187_c)
 
 5分半で突破. 制限を見ずに書いたあとで、こんなんだと流石に無理かなと一瞬思ったけど、|S<sub>i</sub>|≦10 だったので「あ、大丈夫だ」となって AC.
