@@ -280,7 +280,6 @@
 ## 区分木 (Segment tree)
 
 * [Chokudai SpeedRun 001H - LIS](https://atcoder.jp/contests/chokudai_S001/tasks/chokudai_S001_h) (Max)
-* [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l) (Min)
 * [ABC001D - 感雨時刻の整理](https://atcoder.jp/contests/abc001/tasks/abc001_4) (範囲加算)
 * [ABC014C - AtColor](https://atcoder.jp/contests/abc014/tasks/abc014_3) (範囲加算)
 * [ABC017C - ハイスコア](https://atcoder.jp/contests/abc017/tasks/abc017_3) (範囲加算)
@@ -297,6 +296,7 @@
 * [ABC183D - Water Heater](https://atcoder.jp/contests/abc183/tasks/abc183_d) (範囲加算)
 * [ABC185F - Range Xor Query](https://atcoder.jp/contests/abc185/tasks/abc185_f) (ビット Xor)
 * [ARC045B - ドキドキデート大作戦高橋君](https://atcoder.jp/contests/arc045/tasks/arc045_b) (Min)
+* [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l) (Min)
 
 ## Sparse table
 
