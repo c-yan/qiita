@@ -11,14 +11,14 @@ $ ./configure --prefix=/home/xxx/local/python-3.8.3rc1
 $ make
 $ make install
 $ cd ../../python-3.8.3rc1/bin
-% ./pip3 install --upgrade pip
+$ ./pip3 install --upgrade pip
 $ ./pip3 install Genshi
 $ ./pip3 install SQLAlchemy
 $ ./pip3 install mercurial
 $ cd ../../
 $ ln -s /home/xxx/local/python-3.8.3rc1/ python3
 $ cd bin
-$ ln -s /home/cyanet/local/python3/bin/python3
+$ ln -s /home/xxx/local/python3/bin/python3 python3
 ```
 
 関連: [さくらのレンタルサーバで Python をまた野良ビルドした (備忘録)](https://qiita.com/c-yan/items/26aee5cbcba99eced7d3) / [Python 2 から Python 3 に移行したら Mercurial が動かなくなった (備忘録)](https://qiita.com/c-yan/items/b4447233d812868d4ade)
