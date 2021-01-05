@@ -19,7 +19,7 @@ $ ./pip install mercurial
 $ ./pip install SQLAlchemy
 $ cd ../../
 $ rm python
-$ ln -s /home/xxx/local/python-2.7.16/ python
+$ ln -s /home/xxx/local/python-2.7.16 python
 ```
 
 インストールされたバージョンは以下.
@@ -49,8 +49,10 @@ $ ./pip install Genshi
 $ ./pip install SQLAlchemy
 $ cd ../../
 $ rm python
-$ ln -s /home/xxx/local/python-2.7.18/ python
+$ ln -s /home/xxx/local/python-2.7.18 python
 ```
+
+インストールされたバージョンは以下.
 
 ```
 pip        20.3.3

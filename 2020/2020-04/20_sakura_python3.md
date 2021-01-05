@@ -16,7 +16,7 @@ $ ./pip3 install Genshi
 $ ./pip3 install SQLAlchemy
 $ ./pip3 install mercurial
 $ cd ../../
-$ ln -s /home/xxx/local/python-3.8.3rc1/ python3
+$ ln -s /home/xxx/local/python-3.8.3rc1 python3
 $ cd bin
 $ ln -s /home/xxx/local/python3/bin/python3 python3
 ```
@@ -47,7 +47,7 @@ $ ./pip3 install SQLAlchemy
 $ ./pip3 install mercurial
 $ cd ../../
 $ rm python3
-$ ln -s /home/xxx/local/python-3.8.7/ python3
+$ ln -s /home/xxx/local/python-3.8.7 python3
 ```
 
 インストールされたバージョンは以下.
