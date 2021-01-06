@@ -10,6 +10,7 @@
 * [Typical DP Contest](https://atcoder.jp/contests/tdpc/)
 * [ABC011C - 123引き算](https://atcoder.jp/contests/abc011/tasks/abc011_3)
 * [ABC021C - 正直者の高橋くん](https://atcoder.jp/contests/abc021/tasks/abc021_c)
+* [ABC032D - ナップサック問題](https://atcoder.jp/contests/abc032/tasks/abc032_d)
 * [ABC040C - 柱柱柱柱柱](https://atcoder.jp/contests/abc040/tasks/abc040_c)
 * [ABC044C - 高橋君とカード](https://atcoder.jp/contests/abc044/tasks/arc060_a)
 * [ABC054D - Mixing Experiment](https://atcoder.jp/contests/abc054/tasks/abc054_d)
@@ -168,6 +169,7 @@
 * [ABC077C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)
 * [ABC113C - ID](https://atcoder.jp/contests/abc113/tasks/abc113_c)
 * [ABC119D - Lazy Faith](https://atcoder.jp/contests/abc119/tasks/abc119_d)
+* [ABC128E - Roadwork](https://atcoder.jp/contests/abc128/tasks/abc128_e)
 * [ABC134E - Sequence Decomposing](https://atcoder.jp/contests/abc134/tasks/abc134_e)
 * [ABC143D - Triangles](https://atcoder.jp/contests/abc143/tasks/abc143_d)
 * [ABC144E - Gluttony](https://atcoder.jp/contests/abc144/tasks/abc144_e)
@@ -194,6 +196,7 @@
 
 ## 半分全列挙 (Meet in the middle)
 
+* [ABC032D - ナップサック問題](https://atcoder.jp/contests/abc032/tasks/abc032_d)
 * [ABC054D - Mixing Experiment](https://atcoder.jp/contests/abc054/tasks/abc054_d)
 * [ABC184F - Programming Contest](https://atcoder.jp/contests/abc184/tasks/abc184_f)
 * [ARC017C - 無駄なものが嫌いな人](https://atcoder.jp/contests/arc017/tasks/arc017_3)
@@ -289,6 +292,7 @@
 * [ABC103D - Islands War](https://atcoder.jp/contests/abc103/tasks/abc103_d) (Sum)
 * [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (GCD)
 * [ABC127C - Prison](https://atcoder.jp/contests/abc127/tasks/abc127_c) (範囲加算)
+* [ABC128E - Roadwork](https://atcoder.jp/contests/abc128/tasks/abc128_e) (範囲加算)
 * [ABC141C - Attack Survival](https://atcoder.jp/contests/abc141/tasks/abc141_c) (範囲加算)
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f) (Sum)
 * [ABC157E - Simple String Queries](https://atcoder.jp/contests/abc157/tasks/abc157_e) (ビット Or)
