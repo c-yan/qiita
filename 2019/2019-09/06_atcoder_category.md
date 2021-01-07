@@ -135,6 +135,7 @@
 * [ABC007C - 幅優先探索](https://atcoder.jp/contests/abc007/tasks/abc007_3)
 * [ABC020C - 壁抜け](https://atcoder.jp/contests/abc020/tasks/abc020_c)
 * [ABC021C - 正直者の高橋くん](https://atcoder.jp/contests/abc021/tasks/abc021_c)
+* [ABC035D - トレジャーハント](https://atcoder.jp/contests/abc035/tasks/abc035_d)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
 * [ABC070D - Transit Tree Path](https://atcoder.jp/contests/abc070/tasks/abc070_d)
 * [ABC088D - Grid Repainting](https://atcoder.jp/contests/abc088/tasks/abc088_d)
@@ -157,7 +158,7 @@
 
 ## ダイクストラ法 (Dijkstra's algorithm)
 
-* [ABC070D - Transit Tree Path](https://atcoder.jp/contests/abc070/tasks/abc070_d)
+* [ABC035D - トレジャーハント](https://atcoder.jp/contests/abc035/tasks/abc035_d)
 
 ## 二分探索 (Binary search)
 
