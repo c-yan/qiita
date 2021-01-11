@@ -2,7 +2,7 @@
 
 結果は76点で中級(60-79点)となりました. 前回は64点でギリギリ中級でしたが、今回は後一問解ければ上級でした.
 
-## [past202004A - エレベーター](https://atcoder.jp/contests/past202004-open/tasks/past202004_a)
+## [PAST202004A - エレベーター](https://atcoder.jp/contests/past202004-open/tasks/past202004_a)
 
 3分で突破. Bx を -x、xF を x としてしまうと、B1 と 1F の差が1にならないところだけ注意すればいいでしょう.
 
@@ -20,7 +20,7 @@ def f(s):
 print(abs(f(S) - f(T)))
 ```
 
-## [past202004B - 多数決](https://atcoder.jp/contests/past202004-open/tasks/past202004_b)
+## [PAST202004B - 多数決](https://atcoder.jp/contests/past202004-open/tasks/past202004_b)
 
 3分半で突破. 集計して一番多かったのを出力するだけ.
 
@@ -34,7 +34,7 @@ for c in S:
 print(sorted(((d[k], k) for k in d), reverse=True)[0][1])
 ```
 
-## [past202004C - 山崩し](https://atcoder.jp/contests/past202004-open/tasks/past202004_c)
+## [PAST202004C - 山崩し](https://atcoder.jp/contests/past202004-open/tasks/past202004_c)
 
 12分で突破. 問題文の通りに書くだけ.
 
@@ -59,7 +59,7 @@ for l in T:
     print(''.join(l))
 ```
 
-## [past202004D - パターンマッチ](https://atcoder.jp/contests/past202004-open/tasks/past202004_d)
+## [PAST202004D - パターンマッチ](https://atcoder.jp/contests/past202004-open/tasks/past202004_d)
 
 11分で突破. "." が任意の文字というのは正規表現なので、マッチするかは正規表現一発. 後はパターンを全生成をするだけですが、Python は `itertools.product` 一発でした.
 
@@ -80,7 +80,7 @@ for i in range(1, 4):
 print(result)
 ```
 
-## [past202004E - 順列](https://atcoder.jp/contests/past202004-open/tasks/past202004_e)
+## [PAST202004E - 順列](https://atcoder.jp/contests/past202004-open/tasks/past202004_e)
 
 8分半で突破. 問題文に書かれているとおりに書くだけなので、難しいことはなにもないかと思う.
 
@@ -100,7 +100,7 @@ for i in range(N):
 print(*result)
 ```
 
-## [past202004F - タスクの消化](https://atcoder.jp/contests/past202004-open/tasks/past202004_f)
+## [PAST202004F - タスクの消化](https://atcoder.jp/contests/past202004-open/tasks/past202004_f)
 
 7分半で突破. [ABC137D - Summer Vacation](https://atcoder.jp/contests/abc137/tasks/abc137_d) を思い出した. 実行可能日が来たタスクを優先度付きキューに突っ込んで、優先度付きキューから一番ポイントが高いタスクを取り出して消化するを繰り返すだけ.
 
@@ -125,7 +125,7 @@ for i in range(1, N + 1):
     print(result)
 ```
 
-## [past202004H - 1-9 Grid](https://atcoder.jp/contests/past202004-open/tasks/past202004_h)
+## [PAST202004H - 1-9 Grid](https://atcoder.jp/contests/past202004-open/tasks/past202004_h)
 
 32分で突破. 一つ前の全ての場所から、次の全ての場所へ最小コストを求める DP で解けた.
 
@@ -167,7 +167,7 @@ i, j = d['G'][0]
 print(dp[i][j])
 ```
 
-## [past202004G - ストリング・クエリ](https://atcoder.jp/contests/past202004-open/tasks/past202004_g)
+## [PAST202004G - ストリング・クエリ](https://atcoder.jp/contests/past202004-open/tasks/past202004_g)
 
 23分半で突破. 問題文通りに素直に文字列を作ってしまうと TLE 必至なので、文字と長さの組のリストを管理して解いた.
 
@@ -200,7 +200,7 @@ for _ in range(Q):
         print(sum(v * v for v in d.values()))
 ```
 
-## [past202004I - トーナメント](https://atcoder.jp/contests/past202004-open/tasks/past202004_i)
+## [PAST202004I - トーナメント](https://atcoder.jp/contests/past202004-open/tasks/past202004_i)
 
 12分で突破. 人の数が 2<sup>N</sup> で N も16以下と小さいので、素直にシミュレーションするだけで簡単.
 
@@ -228,7 +228,7 @@ for i in result:
     print(i)
 ```
 
-## [past202004J - 文字列解析](https://atcoder.jp/contests/past202004-open/tasks/past202004_j)
+## [PAST202004J - 文字列解析](https://atcoder.jp/contests/past202004-open/tasks/past202004_j)
 
 20分で突破. 最終的な文字列Sの長さが1000以下なので、素直にシミュレーションすれば大丈夫. 左カッコを見つけたら、対になる右カッコを探して、その内側にもカッコがあったら先に処理しないといけないので、処理を再帰関数で書いて終わり.
 
@@ -260,7 +260,7 @@ def f(s):
 print(f(S))
 ```
 
-## [past202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l)
+## [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l)
 
 素直に書くと *O*(*N*<sup>2</sup>) になって TLE なので計算量の軽減を考える. 選択可能な範囲から最小値の左端を取る貪欲法なので、区間最小値をセグ木で求めれば *O*(<i>N</i>log<i>N</i>) になって解けました.
 
@@ -413,6 +413,6 @@ for k in range(K - 1, -1, -1):
 print(*result)
 ```
 
-## [past202004K - 括弧](https://atcoder.jp/contests/past202004-open/tasks/past202004_k)
+## [PAST202004K - 括弧](https://atcoder.jp/contests/past202004-open/tasks/past202004_k)
 
 突破できず. TLE するけど、正しい答えが出るナイーブな実装すら書けず.
