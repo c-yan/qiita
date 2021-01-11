@@ -126,3 +126,26 @@ for i in range(N - 1, -1, -1):
     maxvs[i] = max(maxv, A[i])
 print(result)
 ```
+
+## [ABC188F - +1-1x2](https://atcoder.jp/contests/abc188/tasks/abc188_f)
+
+WA2 まで行ったものの突破できず. Greedy じゃなくてメモ化再帰でやればよかったのか. (Y-1)÷2 を優先していたが、(Y+1)÷2 のほうが良かったことがあったようだ. Xを変化させるのではなく、Yを変化させたほうがいいというのはどこかで似たような問題をやって知ってた.
+
+```python
+from functools import lru_cache
+
+X, Y = map(int, input().split())
+
+
+@lru_cache(maxsize=None)
+def f(y):
+    if X >= y:
+        return abs(X - y)
+    if y % 2 == 0:
+        return min(abs(y - X), f(y // 2) + 1)
+    else:
+        return min(abs(y - X), f((y - 1) // 2) + 2, f((y + 1) // 2) + 2)
+
+
+print(f(Y))
+```
