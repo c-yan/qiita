@@ -33,7 +33,7 @@ else:
 
 ## [ABC188C - ABC Tournament](https://atcoder.jp/contests/abc188/tasks/abc188_c)
 
-7分で突破. N≤16 なので、素直にトーナメントを実行しても *O*(2<sup>17</sup>) なので TLE しないので、素直にやって AC.
+7分で突破. N≤16 なので、素直にトーナメントを実行しても *O*(2<sup>17</sup>) で TLE しないので、素直にやって AC.
 
 ```python
 N, *A = map(int, open(0).read().split())
@@ -53,7 +53,7 @@ else:
     print(a[0] + 1)
 ```
 
-コンテスト後に、山を真ん中で2つに分けて、一番強いやつがいない側の一番強いやつが準優勝だから、サクッと解けたなと気づいた.
+コンテスト後に、山を真ん中で2つに分けて、一番強いやつがいない側の一番強いやつが準優勝だから、サクッと解けるなと気づいた.
 
 ```python
 N, *A = map(int, open(0).read().split())
