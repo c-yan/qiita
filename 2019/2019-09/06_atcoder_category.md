@@ -28,7 +28,12 @@
 * [ABC175E - Picking Goods](https://atcoder.jp/contests/abc175/tasks/abc175_e)
 * [ABC180E - Traveling Salesman among Aerial Cities](https://atcoder.jp/contests/abc180/tasks/abc180_e) (bit DP)
 * [ABC184D - increment of coins](https://atcoder.jp/contests/abc184/tasks/abc184_d) (確率 DP)
+* [ABC188E - Peddler](https://atcoder.jp/contests/abc188/tasks/abc188_e)
+* [ABC188F - +1-1x2](https://atcoder.jp/contests/abc188/tasks/abc188_f)
 * [ARC002C - コマンド入力](https://atcoder.jp/contests/arc002/tasks/arc002_3)
+* [PAST201912I - 部品調達](https://atcoder.jp/contests/past201912-open/tasks/past201912_i)
+* [PAST202004H - 1-9 Grid](https://atcoder.jp/contests/past202004-open/tasks/past202004_h)
+* [PAST202005H - ハードル走](https://atcoder.jp/contests/past202005-open/tasks/past202005_h)
 
 <!--
 * [ABC118D - Match Matching](https://atcoder.jp/contests/abc118/tasks/abc118_d)
@@ -78,6 +83,11 @@
 * [ABC127C - Prison](https://atcoder.jp/contests/abc127/tasks/abc127_c)
 * [ABC141C - Attack Survival](https://atcoder.jp/contests/abc141/tasks/abc141_c)
 * [ABC183D - Water Heater](https://atcoder.jp/contests/abc183/tasks/abc183_d)
+* [ABC188D - Snuke Prime](https://atcoder.jp/contests/abc188/tasks/abc188_d)
+
+## 座標圧縮 (Coordinate compression)
+
+* [ABC188D - Snuke Prime](https://atcoder.jp/contests/abc188/tasks/abc188_d)
 
 ## しゃくとり法 (Two pointer)
 
@@ -150,6 +160,7 @@
 * [ARC005C - 器物損壊！高橋君](https://atcoder.jp/contests/arc005/tasks/arc005_3)
 * [ARC109A - Hands](https://atcoder.jp/contests/arc109/tasks/arc109_a)
 * [AGC033A - Darker and Darker](https://atcoder.jp/contests/agc033/tasks/agc033_a)
+* [PAST202005G - グリッド金移動](https://atcoder.jp/contests/past202005-open/tasks/past202005_g)
 
 ## 01-BFS
 
@@ -159,6 +170,7 @@
 ## ダイクストラ法 (Dijkstra's algorithm)
 
 * [ABC035D - トレジャーハント](https://atcoder.jp/contests/abc035/tasks/abc035_d)
+* [PAST201912J - 地ならし](https://atcoder.jp/contests/past201912-open/tasks/past201912_j)
 
 ## 二分探索 (Binary search)
 
@@ -183,6 +195,7 @@
 * [ARC050B - 花束](https://atcoder.jp/contests/arc050/tasks/arc050_b)
 * [ARC037C - 億マス計算](https://atcoder.jp/contests/arc037/tasks/arc037_c)
 * [ARC109B - log](https://atcoder.jp/contests/arc109/tasks/arc109_b)
+* [PAST202005J - 回転寿司](https://atcoder.jp/contests/past202005-open/tasks/past202005_j)
 
 ## 三分探索 (Ternary search) / 黄金分割探索
 
@@ -194,6 +207,7 @@
 * [ABC147C - HonestOrUnkind2](https://atcoder.jp/contests/abc147/tasks/abc147_c)
 * [ABC167C - Skill Up](https://atcoder.jp/contests/abc167/tasks/abc167_c)
 * [ABC173C - H and V](https://atcoder.jp/contests/abc173/tasks/abc173_c) (2次元)
+* [PAST201912G - 組分け](https://atcoder.jp/contests/past201912-open/tasks/past201912_g) (Ternary digit)
 
 ## 半分全列挙 (Meet in the middle)
 
@@ -217,6 +231,7 @@
 * [ABC012D - バスと避けられない運命](https://atcoder.jp/contests/abc012/tasks/abc012_4)
 * [ABC016C - 友達の友達](https://atcoder.jp/contests/abc016/tasks/abc016_3)
 * [ABC021C - 正直者の高橋くん](https://atcoder.jp/contests/abc021/tasks/abc021_c)
+* [ABC022C - Blue Bird](https://atcoder.jp/contests/abc022/tasks/abc022_c)
 * [ABC051D - Candidates of No Shortest Paths](https://atcoder.jp/contests/abc051/tasks/abc051_d)
 * [ABC073D - joisino's travel](https://atcoder.jp/contests/abc073/tasks/abc073_d)
 * [ABC079D - Wall](https://atcoder.jp/contests/abc079/tasks/abc079_d)
