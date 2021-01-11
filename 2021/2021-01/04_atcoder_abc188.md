@@ -131,6 +131,31 @@ for i in range(len(t) - 1):
 print(result)
 ```
 
+追々記: 解説に書かれている方法で解いてみた. うーん、スマート.
+
+```python
+from sys import stdin
+
+readline = stdin .readline
+
+N, C = map(int, readline().split())
+
+q = []
+for _ in range(N):
+    a, b, c = map(int, readline().split())
+    q.append((a, c))
+    q.append((b + 1, -c))
+
+result = 0
+p = 0
+ac = 0
+for x, y in sorted(q):
+    result += min(C, ac) * (x - p)
+    p = x
+    ac += y
+print(result)
+```
+
 ## [ABC188E - Peddler](https://atcoder.jp/contests/abc188/tasks/abc188_e)
 
 67分で突破. WA2. 問題文を読んだ瞬間に後ろからやっていけばいいと分かったけど、何故か行けるところ管理に Union Find を使って自爆.
