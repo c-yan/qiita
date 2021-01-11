@@ -127,11 +127,7 @@ t = list(accumulate(t))
 
 result = 0
 for i in range(len(t) - 1):
-    if t[i] < C:
-        c = t[i]
-    else:
-        c = C
-    result += c * (inv[i + 1] - inv[i])
+    result += min(t[i], C) * (inv[i + 1] - inv[i])
 print(result)
 ```
 
