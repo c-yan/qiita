@@ -4,7 +4,7 @@
 
 この記事は随時更新されます.
 
-## DP (Dynamic programming / 動的計画法)
+## 動的計画法 (Dynamic programming: DP)
 
 * [Educational DP Contest / DP まとめコンテスト](https://atcoder.jp/contests/dp)
 * [Typical DP Contest](https://atcoder.jp/contests/tdpc/)
@@ -115,7 +115,7 @@
 * [ARC037B - バウムテスト](https://atcoder.jp/contests/arc037/tasks/arc037_b)
 * [ARC106B - Values](https://atcoder.jp/contests/arc106/tasks/arc106_b)
 
-## DFS (深さ優先探索)
+## 深さ優先探索 (Depth-first search: DFS)
 
 * [ATC001A - 深さ優先探索](https://atcoder.jp/contests/atc001/tasks/dfs_a)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
@@ -130,7 +130,7 @@
 * [ABC015C - 高橋くんのバグ探し](https://atcoder.jp/contests/abc015/tasks/abc015_3)
 -->
 
-## BFS (幅優先探索)
+## 幅優先探索 (Breadth-first search: BFS)
 
 * [ABC007C - 幅優先探索](https://atcoder.jp/contests/abc007/tasks/abc007_3)
 * [ABC020C - 壁抜け](https://atcoder.jp/contests/abc020/tasks/abc020_c)
@@ -313,7 +313,7 @@
 * [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (GCD)
 * [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l) (Min)
 
-## BIT (Binary indexed tree) / Fenwick tree
+## Fenwick tree / Binary indexed tree: BIT
 
 * [Chokudai SpeedRun 001J - 転倒数](https://atcoder.jp/contests/chokudai_S001/tasks/chokudai_S001_j)
 * [Chokudai SpeedRun 001K - 辞書順で何番目？](https://atcoder.jp/contests/chokudai_S001/tasks/chokudai_S001_k)
