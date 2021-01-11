@@ -172,6 +172,17 @@
 * [ABC035D - トレジャーハント](https://atcoder.jp/contests/abc035/tasks/abc035_d)
 * [PAST201912J - 地ならし](https://atcoder.jp/contests/past201912-open/tasks/past201912_j)
 
+
+## ダブリング (Doubling)
+
+* [ABC014D - 閉路](https://atcoder.jp/contests/abc014/tasks/abc014_4)s
+* [PAST201912K - 巨大企業](https://atcoder.jp/contests/past201912-open/tasks/past201912_k)
+
+## オイラーツアー (Euler Tour)
+
+* [ABC014D - 閉路](https://atcoder.jp/contests/abc014/tasks/abc014_4)
+* [PAST201912K - 巨大企業](https://atcoder.jp/contests/past201912-open/tasks/past201912_k)
+
 ## 二分探索 (Binary search)
 
 * [Chokudai SpeedRun 001H - LIS](https://atcoder.jp/contests/chokudai_S001/tasks/chokudai_S001_h)
