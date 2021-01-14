@@ -2,7 +2,7 @@
 
 \# 以下の記事が書かれた時の版数は .NET Core 3.1 (3.1.300) となります.
 
-あるシステムで複数回追記しないといけない CSV(中間ファイル)が大きくて困っていて、サイズ・データのチャンクの連続にするか、データ・サイズのチャンクの連続にするか悩んでいたのだが(※1)、[.NET Frameworkのbzip2ライブラリを調査](https://qiita.com/7shi/items/235328dbdc5c0c85edcb) の記事で世の中にマルチストリーム bzip2 というものがあることに気づいた. bzip2 だと外部ライブラリが必要でちょっと嫌なので、世の中にマルチストリーム GZIP は存在しないのかを調査した. Go 言語のビルトインの GZIP パッケージは[マルチストリーム対応](https://golang.org/pkg/compress/gzip/#Reader.Multistream)していた. また gzip コマンドも普通に対応していた.
+あるシステムで複数回追記しないといけない CSV(中間ファイル)が大きくて困っていて、サイズ・圧縮データのチャンクの連続にするか、圧縮データ・サイズのチャンクの連続にするか悩んでいたのだが(※1)、[.NET Frameworkのbzip2ライブラリを調査](https://qiita.com/7shi/items/235328dbdc5c0c85edcb) の記事で世の中にマルチストリーム bzip2 というものがあることに気づいた. bzip2 だと外部ライブラリが必要でちょっと嫌なので、世の中にマルチストリーム GZIP は存在しないのかを調査した. Go 言語のビルトインの GZIP パッケージは[マルチストリーム対応](https://golang.org/pkg/compress/gzip/#Reader.Multistream)していた. また gzip コマンドも普通に対応していた.
 
 ```sh
 $ echo -n "hello " | gzip > /tmp/hello.gz
@@ -37,6 +37,6 @@ public void GZipMultiStreamTest()
 }
 ```
 
-なお .NET Framework 4.8 では動作しなくて調査したところ、RFC レベルでマルチストリームは動作するのが当然で、.NET Core 3.0 / 2.2 で動作するようになったようである([Add support for concatenated GZip streams. #30442](https://github.com/dotnet/corefx/pull/30442)). なんで .NET Framework にもバグ修正を反映しないんだよ…….
+なお .NET Framework 4.8 では動作しなくて調査したところ、RFC レベルでマルチストリームは動作するのが当然で、.NET Core 3.0 / 2.2 で動作するようになったようである([Add support for concatenated GZip streams. #30442](https://github.com/dotnet/corefx/pull/30442)). なんで .NET Framework にもバグ修正を反映してくれないんだよ…….
 
 ※1: xxx.001.csv.gz, xxx.002.csv.gz みたいな連番ファイルにすることや、xxx.csv.zip の中に 001.csv, 002.csv みたいな連番データを入れることも考えたが、002 以降に CSV ヘッダを入れても入れなくても微妙だなあと思いボツに. 前者はファイル数が多いことも微妙.
