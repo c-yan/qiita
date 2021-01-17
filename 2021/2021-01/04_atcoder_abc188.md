@@ -185,6 +185,40 @@ for i in range(N - 1, -1, -1):
 print(result)
 ```
 
+追記: 前からやっていっても大丈夫だったし、こっちのほうが分かりやすい気が.
+
+```python
+from sys import setrecursionlimit, stdin
+from functools import lru_cache
+
+setrecursionlimit(10 ** 6)
+readline = stdin.readline
+
+N, M = map(int, readline().split())
+A = list(map(int, readline().split()))
+
+links = [[] for _ in range(N)]
+for _ in range(M):
+    X, Y = map(lambda x: int(x) - 1, readline().split())
+    links[X].append(Y)
+
+
+@lru_cache(maxsize=None)
+def dfs(x):
+    result = A[x]
+    for y in links[x]:
+        result = max(result, dfs(y))
+    return result
+
+
+result = -(10 ** 18)
+for i in range(N):
+    if len(links[i]) == 0:
+        continue
+    result = max(result, max(dfs(j) for j in links[i]) - A[i])
+print(result)
+```
+
 ## [ABC188F - +1-1x2](https://atcoder.jp/contests/abc188/tasks/abc188_f)
 
 WA2 まで行ったものの突破できず. Greedy じゃなくてメモ化再帰でやればよかったのか. (Y-1)÷2 を優先していたが、(Y+1)÷2 のほうが良かったことがあったようだ. Xを変化させるのではなく、Yを変化させたほうがいいというのはどこかで似たような問題をやって知ってた.
