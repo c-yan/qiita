@@ -69,7 +69,7 @@ for a in A:
 print(sum(1 for a in A if t[a]))
 ```
 
-## [ABC170E - Count Median](https://atcoder.jp/contests/abc170/tasks/abc170_e)
+## [ABC170E - Smart Infants](https://atcoder.jp/contests/abc170/tasks/abc170_e)
 
 突破できず. multiset だよなあと思ったけど、Python にはビルトインで multiset ないし、残り時間も足りなかった……. 自前の Treap をもうちょっと汎用性があるように書き直しておくべきか…….
 
