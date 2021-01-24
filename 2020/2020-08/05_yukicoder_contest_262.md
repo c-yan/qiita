@@ -35,7 +35,16 @@ print(result)
 
 ## [D 1178 Can you draw a Circle?](https://yukicoder.me/problems/no/1178)
 
-解けず. 式は必ず円(半径は正の数)をなすといいつつ、a と b が違ったら楕円じゃないのかとクルクルした.
+制限で a = b なので、b を入力で受け取る意味が謎. 円の方程式に従って計算するだけではある.
+
+```python
+a, b, c, d, e, f = map(int, input().split())
+
+x = c / a / 2
+y = d / a / 2
+t = f / a - e / a + x * x + y * y
+print(t ** 0.5)
+```
 
 ## [E 1179 Quadratic Equation](https://yukicoder.me/problems/no/1179)
 
