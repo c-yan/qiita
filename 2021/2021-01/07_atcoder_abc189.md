@@ -35,6 +35,22 @@ else:
     print(-1)
 ```
 
+みんなXを100倍してたので、天の邪鬼で割り算で(笑).
+
+```python
+N, X = map(int, input().split())
+
+c = 0
+for i in range(N):
+    V, P = map(int, input().split())
+    c += V * P
+    if (c + 99) // 100 > X:
+        print(i + 1)
+        break
+else:
+    print(-1)
+```
+
 ## [ABC189D - Logical Expression](https://atcoder.jp/contests/abc189/tasks/abc189_d)
 
 20分くらいで突破. C問題に一旦敗退してこちらを先に. 普通に AND のほうが OR より優先順位が高いんだろうと思いつつ問題文を読んだら優先順位が同じで、何この簡単な問題ってなった.
@@ -50,6 +66,26 @@ for s in S:
     elif s == 'OR':
         t = t * 2 + f
 print(t)
+```
+
+公式解説も 2<sup>N</sup> が出てきているが、他の人の回答を見ても 2<sup>N</sup> が出てきている人が多いなあ.
+
+```python
+N = int(input())
+S = [input() for _ in range(N)]
+
+
+def dfs(n):
+    if n == 0:
+        return 1
+
+    if S[n - 1] == 'AND':
+        return dfs(n - 1)
+    elif S[n - 1] == 'OR':
+        return 2 ** n + dfs(n - 1)
+
+
+print(dfs(N))
 ```
 
 ## [ABC189C - Mandarin Orange](https://atcoder.jp/contests/abc189/tasks/abc189_c)
