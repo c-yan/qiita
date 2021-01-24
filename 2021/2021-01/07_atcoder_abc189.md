@@ -113,6 +113,35 @@ for x in set(A):
 print(result)
 ```
 
+リストの中の最小要素で分割するを繰り返すと非常に高速に解けた. 上の解答は Python では TLE するので PyPy が必要だったが、こちらは Python でも AC する. とはいっても 1 から 10<sup>4</sup> まで順に並べた入力の処理に 3.5s かかるので、C問題のテストケースが弱いだけではある.
+
+```python
+from sys import setrecursionlimit
+
+setrecursionlimit(10 ** 6)
+
+N, *A = map(int, open(0).read().split())
+
+
+def f(a):
+    n = len(a)
+    m = min(a)
+    result = m * n
+    i = 0
+    for j in range(n):
+        if a[j] != m:
+            continue
+        if i < j:
+            result = max(result, f(a[i:j]))
+        i = j + 1
+    if i < n:
+        result = max(result, f(a[i:n]))
+    return result
+
+
+print(f(A))
+```
+
 ## [ABC189E - Rotate and Flip](https://atcoder.jp/contests/abc189/tasks/abc189_e)
 
 56分で突破. アフィン変換、なんでしたっけ?(まて)
