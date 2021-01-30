@@ -31,6 +31,8 @@
 * [ABC188E - Peddler](https://atcoder.jp/contests/abc188/tasks/abc188_e)
 * [ABC188F - +1-1x2](https://atcoder.jp/contests/abc188/tasks/abc188_f)
 * [ARC002C - コマンド入力](https://atcoder.jp/contests/arc002/tasks/arc002_3)
+* [ARC042C - おやつ](https://atcoder.jp/contests/arc042/tasks/arc042_c)
+* [AGC044A - Pay to Win](https://atcoder.jp/contests/agc044/tasks/agc044_a)
 * [PAST201912I - 部品調達](https://atcoder.jp/contests/past201912-open/tasks/past201912_i)
 * [PAST202004H - 1-9 Grid](https://atcoder.jp/contests/past202004-open/tasks/past202004_h)
 * [PAST202005H - ハードル走](https://atcoder.jp/contests/past202005-open/tasks/past202005_h)
@@ -121,6 +123,8 @@
 * [ABC126E - 1 or 2](https://atcoder.jp/contests/abc126/tasks/abc126_e)
 * [ABC157D - Friend Suggestions](https://atcoder.jp/contests/abc157/tasks/abc157_d) (サイズ付き Union-Find 木)
 * [ABC177D - Friends](https://atcoder.jp/contests/abc177/tasks/abc177_d) (サイズ付き Union-Find 木)
+* [ABC183F - Confluence](https://atcoder.jp/contests/abc183/tasks/abc183_f)
+* [ABC189C - Mandarin Orange](https://atcoder.jp/contests/abc189/tasks/abc189_c) (サイズ付き Union-Find 木)
 * [ARC032B - 道路工事](https://atcoder.jp/contests/arc032/tasks/arc032_2)
 * [ARC037B - バウムテスト](https://atcoder.jp/contests/arc037/tasks/arc037_b)
 * [ARC106B - Values](https://atcoder.jp/contests/arc106/tasks/arc106_b)
@@ -135,6 +139,8 @@
 * [ABC138D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)
 * [ABC146D - Coloring Edges on Tree](https://atcoder.jp/contests/abc146/tasks/abc146_d)
 * [ABC148F - Playing Tag on Tree](https://atcoder.jp/contests/abc148/tasks/abc148_f)
+* [ARC022C - ロミオとジュリエット](https://atcoder.jp/contests/arc022/tasks/arc022_3)
+* [ARC030B - ツリーグラフ](https://atcoder.jp/contests/arc030/tasks/arc030_2)
 
 <!--
 * [ABC015C - 高橋くんのバグ探し](https://atcoder.jp/contests/abc015/tasks/abc015_3)
@@ -146,6 +152,7 @@
 * [ABC020C - 壁抜け](https://atcoder.jp/contests/abc020/tasks/abc020_c)
 * [ABC021C - 正直者の高橋くん](https://atcoder.jp/contests/abc021/tasks/abc021_c)
 * [ABC035D - トレジャーハント](https://atcoder.jp/contests/abc035/tasks/abc035_d)
+* [ABC037D - 経路](https://atcoder.jp/contests/abc037/tasks/abc037_d)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
 * [ABC070D - Transit Tree Path](https://atcoder.jp/contests/abc070/tasks/abc070_d)
 * [ABC088D - Grid Repainting](https://atcoder.jp/contests/abc088/tasks/abc088_d)
@@ -158,8 +165,10 @@
 * [ABC185E - Sequence Matching](https://atcoder.jp/contests/abc185/tasks/abc185_e)
 * [ABC187E - Through Path](https://atcoder.jp/contests/abc187/tasks/abc187_e)
 * [ARC005C - 器物損壊！高橋君](https://atcoder.jp/contests/arc005/tasks/arc005_3)
+* [ARC011C - ダブレット](https://atcoder.jp/contests/arc011/tasks/arc011_3)
 * [ARC109A - Hands](https://atcoder.jp/contests/arc109/tasks/arc109_a)
 * [AGC033A - Darker and Darker](https://atcoder.jp/contests/agc033/tasks/agc033_a)
+* [AGC043A - Range Flip Find Route](https://atcoder.jp/contests/agc043/tasks/agc043_a)
 * [PAST202005G - グリッド金移動](https://atcoder.jp/contests/past202005-open/tasks/past202005_g)
 
 ## 01-BFS
@@ -187,6 +196,7 @@
 
 * [Chokudai SpeedRun 001H - LIS](https://atcoder.jp/contests/chokudai_S001/tasks/chokudai_S001_h)
 * [ABC020C - 壁抜け](https://atcoder.jp/contests/abc020/tasks/abc020_c)
+* [ABC023D - 射撃王](https://atcoder.jp/contests/abc023/tasks/abc023_d)
 * [ABC026D - 高橋君ボール1号](https://atcoder.jp/contests/abc026/tasks/abc026_d)
 * [ABC030C - 飛行機乗り](https://atcoder.jp/contests/abc030/tasks/abc030_c)
 * [ABC063D - Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
@@ -203,8 +213,10 @@
 * [ABC172C - Tsundoku](https://atcoder.jp/contests/abc172/tasks/abc172_c)
 * [ABC174E - Logs](https://atcoder.jp/contests/abc174/tasks/abc174_e)
 * [ABC184F - Programming Contest](https://atcoder.jp/contests/abc184/tasks/abc184_f)
-* [ARC050B - 花束](https://atcoder.jp/contests/arc050/tasks/arc050_b)
+* [ARC004C - 平均値太郎の憂鬱 ( The melancholy of Taro Heikinchi )](https://atcoder.jp/contests/arc004/tasks/arc004_3)
+* [ARC033C - データ構造](https://atcoder.jp/contests/arc033/tasks/arc033_3)
 * [ARC037C - 億マス計算](https://atcoder.jp/contests/arc037/tasks/arc037_c)
+* [ARC050B - 花束](https://atcoder.jp/contests/arc050/tasks/arc050_b)
 * [ARC109B - log](https://atcoder.jp/contests/arc109/tasks/arc109_b)
 * [PAST202005J - 回転寿司](https://atcoder.jp/contests/past202005-open/tasks/past202005_j)
 
@@ -218,6 +230,7 @@
 * [ABC147C - HonestOrUnkind2](https://atcoder.jp/contests/abc147/tasks/abc147_c)
 * [ABC167C - Skill Up](https://atcoder.jp/contests/abc167/tasks/abc167_c)
 * [ABC173C - H and V](https://atcoder.jp/contests/abc173/tasks/abc173_c) (2次元)
+* [ABC190C - Bowls and Dishes](https://atcoder.jp/contests/abc190/tasks/abc190_c)
 * [PAST201912G - 組分け](https://atcoder.jp/contests/past201912-open/tasks/past201912_g) (Ternary digit)
 
 ## 半分全列挙 (Meet in the middle)
@@ -279,6 +292,10 @@
 * [ABC177E - Coprime](https://atcoder.jp/contests/abc177/tasks/abc177_e)
 * [ARC034C - 約数かつ倍数](https://atcoder.jp/contests/arc034/tasks/arc034_3)
 
+## 約数列挙
+
+* [ABC190D - Staircase Sequences](https://atcoder.jp/contests/abc190/tasks/abc190_d)
+
 ## エラトステネスの篩
 
 * [ABC052C - Factors of Factorial](https://atcoder.jp/contests/abc052/tasks/arc067_a)
@@ -301,6 +318,7 @@
 * [ABC167E - Colorful Blocks](https://atcoder.jp/contests/abc167/tasks/abc167_e)
 * [ABC171F - Strivore](https://atcoder.jp/contests/abc171/tasks/abc171_f)
 * [ABC178D - Redistribution](https://atcoder.jp/contests/abc178/tasks/abc178_d)
+* [ARC023C - タコヤ木](https://atcoder.jp/contests/arc023/tasks/arc023_3)
 * [ARC039B - 高橋幼稚園](https://atcoder.jp/contests/arc039/tasks/arc039_b)
 
 ## パスカルの三角形
@@ -326,6 +344,7 @@
 * [ABC174F - Range Set Query](https://atcoder.jp/contests/abc174/tasks/abc174_f) (Sum)
 * [ABC183D - Water Heater](https://atcoder.jp/contests/abc183/tasks/abc183_d) (範囲加算)
 * [ABC185F - Range Xor Query](https://atcoder.jp/contests/abc185/tasks/abc185_f) (ビット Xor)
+* [ARC033C - データ構造](https://atcoder.jp/contests/arc033/tasks/arc033_3) (Sum)
 * [ARC045B - ドキドキデート大作戦高橋君](https://atcoder.jp/contests/arc045/tasks/arc045_b) (Min)
 * [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l) (Min)
 
@@ -337,6 +356,7 @@
 ## Disjoint sparse table
 
 * [ABC125C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c) (GCD)
+* [ARC043B - 難易度](https://atcoder.jp/contests/arc043/tasks/arc043_b) (Sum)
 * [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l) (Min)
 
 ## Fenwick tree / Binary indexed tree: BIT
@@ -346,6 +366,7 @@
 * [ABC103D - Islands War](https://atcoder.jp/contests/abc103/tasks/abc103_d)
 * [ABC153F - Silver Fox vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_f)
 * [ABC174F - Range Set Query](https://atcoder.jp/contests/abc174/tasks/abc174_f)
+* [ABC190F - Shift and Inversions](https://atcoder.jp/contests/abc190/tasks/abc190_f)
 
 ## 平衡二分探索木
 
