@@ -65,6 +65,27 @@ for p in product(range(2), repeat=K):
 print(result)
 ```
 
+解説の product の使い方がエレガントだった.
+
+```python
+from itertools import product
+
+N, M = map(int, input().split())
+AB = [tuple(map(lambda x: int(x) - 1, input().split())) for _ in range(M)]
+K = int(input())
+CD = [tuple(map(lambda x: int(x) - 1, input().split())) for _ in range(K)]
+
+result = 0
+for p in product(*CD):
+    s = set(p)
+    c = 0
+    for a, b in AB:
+        if a in s and b in s:
+            c += 1
+    result = max(result, c)
+print(result)
+```
+
 ## [ABC190D - Staircase Sequences](https://atcoder.jp/contests/abc190/tasks/abc190_d)
 
 突破できず. 素因数分解する感じだなあというのが見えた辺りで時間切れ.
