@@ -90,6 +90,71 @@ print(result)
 
 突破できず. 素因数分解する感じだなあというのが見えた辺りで時間切れ.
 
+経験則で N を割れるだけ2で繰り返し割ってできた値の2倍の約数の数であることは分かったが、解説みたいな数式とか出てこなさすぎて…….
+
+実装は簡単で、素因数分解をしてもいいし、
+
+```python
+def prime_factorize(n):
+    result = []
+    if n % 2 == 0:
+        t = 0
+        while n % 2 == 0:
+            n //= 2
+            t += 1
+        result.append((2, t))
+    for i in range(3, int(n ** 0.5) + 1, 2):
+        if n % i != 0:
+            continue
+        t = 0
+        while n % i == 0:
+            n //= i
+            t += 1
+        result.append((i, t))
+        if n == 1:
+            break
+    if n != 1:
+        result.append((n, 1))
+    return result
+
+
+N = int(input())
+
+a = N
+while a % 2 == 0:
+    a //= 2
+a *= 2
+
+result = 1
+for p, e in prime_factorize(a):
+    result *= e + 1
+print(result)
+```
+
+約数列挙をしても良い.
+
+```python
+def enumerate_divisors(n):
+    t = []
+    for i in range(1, int(n ** 0.5) + 1):
+        if n % i != 0:
+            continue
+        yield i
+        if i * i != n:
+            t.append(n // i)
+    yield from reversed(t)
+
+
+N = int(input())
+
+a = N
+while a % 2 == 0:
+    a //= 2
+a *= 2
+
+print(len(list(enumerate_divisors(a))))
+```
+
 ## [ABC190E - Magical Ornament](https://atcoder.jp/contests/abc190/tasks/abc190_e)
 
 問題文を読んで、これは解けなさそうだとスキップ.
