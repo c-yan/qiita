@@ -33,54 +33,47 @@ print(*[a for a in A if a != X])
 
 50分くらいで突破. WA1、TLE1. 10000倍で書いたら上手くいかなくて、浮動小数点数で大体の数字を出して、整数で厳密にチェックするちゃんぽんになった. 多分ちゃんぽんにする必要はないので後で書き直す.
 
+追記: 書き直した.
+
 ```python
-def main():
-    from decimal import Decimal
-    from math import floor, ceil, sqrt
+from decimal import Decimal
+from math import sqrt
 
-    X, Y, R = map(Decimal, input().split())
+m = 10000
 
-    result = 0
-    X10000 = int(X * 10000)
-    Y10000 = int(Y * 10000)
-    R10000 = int(R * 10000)
-    X = float(X)
-    Y = float(Y)
-    R = float(R)
+X, Y, R = map(lambda x: int(Decimal(x) * m), input().split())
 
-    RR = R10000 * R10000
 
-    def check(x, y):
-        x10000 = x * 10000
-        y10000 = y * 10000
-        return (x10000 - X10000) * (x10000 - X10000) + (y10000 - Y10000) * (y10000 - Y10000) <= RR
+def is_inside_circle(x, y):
+    return (x - X) * (x - X) + (y - Y) * (y - Y) <= R * R
 
-    for y in range(int(Y - R) - 10, int(Y + R) + 10 + 1):
-        a = 1
-        b = -2 * X
-        c = X * X + (y - Y) * (y - Y) - R * R
-        try:
-            x0 = int((-b - sqrt(b * b - 4 * a * c)) / 2 * a)
-            x1 = int((-b + sqrt(b * b - 4 * a * c)) / 2 * a)
-        except:
+
+result = 0
+for y in range((Y - R) // m * m, (Y + R) // m * m + 1, m):
+    a = 1
+    b = -2 * X
+    c = X * X + (y - Y) * (y - Y) - R * R
+    d = b * b - 4 * a * c
+    if d < 0:
+        continue
+    x0 = int((-b - sqrt(d)) / (2 * a)) // m * m
+    x1 = int((-b + sqrt(d)) / (2 * a)) // m * m
+    for x in range(x0 - m, x0 + m + 1, m):
+        if not is_inside_circle(x, y):
             continue
-        for x in range(x0 - 5, x0 + 5):
-            if check(x, y):
-                x0 = x
-                break
-        else:
+        x0 = x
+        break
+    else:
+        continue
+    for x in range(x1 + m, x1 - m - 1, -m):
+        if not is_inside_circle(x, y):
             continue
-        for x in range(x1 + 5, x1 - 5, -1):
-            if check(x, y):
-                x1 = x
-                break
-        else:
-            continue
-        result += (x1 - x0) + 1
-    print(result)
-
-
-main()
+        x1 = x
+        break
+    else:
+        continue
+    result += (x1 - x0) // m + 1
+print(result)
 ```
 
 ## [ABC191E - Come Back Quickly](https://atcoder.jp/contests/abc191/tasks/abc191_e)
