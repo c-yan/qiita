@@ -29,6 +29,29 @@ print(*[a for a in A if a != X])
 
 10x10 の荒い解像度で何をもって角と見なすんだよと頭真っ白. yukicoder みたいにノーペナなら、適当に書いて AC 状況から探るところだけど、AtCoder でこれはキツイ. 定義を書いておいて欲しさ. (それとも自分には意味のわからない自己交叉が分かれば自明なのだろうか……)
 
+追記: まあ、角の定義が分かれば難しいことはない.
+
+```python
+H, W = map(int, input().split())
+S = [input() for _ in range(H)]
+
+result = 0
+for y in range(H - 1):
+    for x in range(W - 1):
+        t = 0
+        if S[y][x] == '#':
+            t += 1
+        if S[y][x + 1] == '#':
+            t += 1
+        if S[y + 1][x] == '#':
+            t += 1
+        if S[y + 1][x + 1] == '#':
+            t += 1
+        if t == 1 or t == 3:
+            result += 1
+print(result)
+```
+
 ## [ABC191D - Circle Lattice Points](https://atcoder.jp/contests/abc191/tasks/abc191_d)
 
 50分くらいで突破. WA1、TLE1. 10000倍で書いたら上手くいかなくて、浮動小数点数で大体の数字を出して、整数で厳密にチェックするちゃんぽんになった. 多分ちゃんぽんにする必要はないので後で書き直す.
@@ -58,6 +81,55 @@ for y in range((Y - R) // m * m, (Y + R) // m * m + 1, m):
         continue
     x0 = int((-b - sqrt(d)) / (2 * a)) // m * m
     x1 = int((-b + sqrt(d)) / (2 * a)) // m * m
+    for x in range(x0 - m, x0 + m + 1, m):
+        if not is_inside_circle(x, y):
+            continue
+        x0 = x
+        break
+    else:
+        continue
+    for x in range(x1 + m, x1 - m - 1, -m):
+        if not is_inside_circle(x, y):
+            continue
+        x1 = x
+        break
+    else:
+        continue
+    result += (x1 - x0) // m + 1
+print(result)
+```
+
+Decimal 無しだとこんなもん?
+
+```python
+m = 10000
+
+
+def safe_convert(x):
+    t = float(x) * m
+    if t > 0:
+        return int(t + 0.5)
+    else:
+        return int(t - 0.5)
+
+
+X, Y, R = map(safe_convert, input().split())
+
+
+def is_inside_circle(x, y):
+    return (x - X) * (x - X) + (y - Y) * (y - Y) <= R * R
+
+
+result = 0
+for y in range((Y - R) // m * m, (Y + R) // m * m + 1, m):
+    a = 1
+    b = -2 * X
+    c = X * X + (y - Y) * (y - Y) - R * R
+    d = b * b - 4 * a * c
+    if d < 0:
+        continue
+    x0 = int((-b - d ** 0.5) / (2 * a)) // m * m
+    x1 = int((-b + d ** 0.5) / (2 * a)) // m * m
     for x in range(x0 - m, x0 + m + 1, m):
         if not is_inside_circle(x, y):
             continue
