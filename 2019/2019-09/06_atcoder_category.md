@@ -89,6 +89,7 @@
 
 ## 座標圧縮 (Coordinate compression)
 
+* [ABC113C - ID](https://atcoder.jp/contests/abc113/tasks/abc113_c)
 * [ABC188D - Snuke Prime](https://atcoder.jp/contests/abc188/tasks/abc188_d)
 
 ## しゃくとり法 (Two pointer)
@@ -128,10 +129,12 @@
 * [ARC032B - 道路工事](https://atcoder.jp/contests/arc032/tasks/arc032_2)
 * [ARC037B - バウムテスト](https://atcoder.jp/contests/arc037/tasks/arc037_b)
 * [ARC106B - Values](https://atcoder.jp/contests/arc106/tasks/arc106_b)
+* [ARC111B - Reversible Cards](https://atcoder.jp/contests/arc111/tasks/arc111_b) (サイズ付き Union-Find 木)
 
 ## 深さ優先探索 (Depth-first search: DFS)
 
 * [ATC001A - 深さ優先探索](https://atcoder.jp/contests/atc001/tasks/dfs_a)
+* [ABC025C - 双子と○×ゲーム](https://atcoder.jp/contests/abc025/tasks/abc025_c)
 * [ABC049D - 連結 / Connectivity](https://atcoder.jp/contests/abc049/tasks/arc065_b)
 * [ABC070D - Transit Tree Path](https://atcoder.jp/contests/abc070/tasks/abc070_d)
 * [ABC087D - People on a Line](https://atcoder.jp/contests/abc087/tasks/arc090_b)
@@ -164,6 +167,7 @@
 * [ABC184E - Third Avenue](https://atcoder.jp/contests/abc184/tasks/abc184_e)
 * [ABC185E - Sequence Matching](https://atcoder.jp/contests/abc185/tasks/abc185_e)
 * [ABC187E - Through Path](https://atcoder.jp/contests/abc187/tasks/abc187_e)
+* [ARC003C - 暗闇帰り道](https://atcoder.jp/contests/arc003/tasks/arc003_3)
 * [ARC005C - 器物損壊！高橋君](https://atcoder.jp/contests/arc005/tasks/arc005_3)
 * [ARC011C - ダブレット](https://atcoder.jp/contests/arc011/tasks/arc011_3)
 * [ARC109A - Hands](https://atcoder.jp/contests/arc109/tasks/arc109_a)
@@ -179,8 +183,8 @@
 ## ダイクストラ法 (Dijkstra's algorithm)
 
 * [ABC035D - トレジャーハント](https://atcoder.jp/contests/abc035/tasks/abc035_d)
+* [ABC191E - Come Back Quickly](https://atcoder.jp/contests/abc191/tasks/abc191_e)
 * [PAST201912J - 地ならし](https://atcoder.jp/contests/past201912-open/tasks/past201912_j)
-
 
 ## ダブリング (Doubling)
 
@@ -213,6 +217,7 @@
 * [ABC172C - Tsundoku](https://atcoder.jp/contests/abc172/tasks/abc172_c)
 * [ABC174E - Logs](https://atcoder.jp/contests/abc174/tasks/abc174_e)
 * [ABC184F - Programming Contest](https://atcoder.jp/contests/abc184/tasks/abc184_f)
+* [ARC003C - 暗闇帰り道](https://atcoder.jp/contests/arc003/tasks/arc003_3)
 * [ARC004C - 平均値太郎の憂鬱 ( The melancholy of Taro Heikinchi )](https://atcoder.jp/contests/arc004/tasks/arc004_3)
 * [ARC033C - データ構造](https://atcoder.jp/contests/arc033/tasks/arc033_3)
 * [ARC037C - 億マス計算](https://atcoder.jp/contests/arc037/tasks/arc037_c)
