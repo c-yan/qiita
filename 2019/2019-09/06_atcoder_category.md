@@ -44,6 +44,7 @@
 ## 累積和 (Prefix sum)
 
 * [ABC005D - おいしいたこ焼きの焼き方](https://atcoder.jp/contests/abc005/tasks/abc005_4) (2次元 + 累積 Max)
+* [ABC018C - 菱型カウント](https://atcoder.jp/contests/abc018/tasks/abc018_3)
 * [ABC037C - 総和](https://atcoder.jp/contests/abc037/tasks/abc037_c)
 * [ABC038C - 単調増加](https://atcoder.jp/contests/abc038/tasks/abc038_c)
 * [ABC060D - Simple Knapsack](https://atcoder.jp/contests/abc060/tasks/arc073_b)
@@ -53,6 +54,7 @@
 * [ABC089D - Practical Skill Test](https://atcoder.jp/contests/abc089/tasks/abc089_d)
 * [ABC095D - Static Sushi](https://atcoder.jp/contests/abc095/tasks/arc096_b) (累積 Max)
 * [ABC098C - Attention](https://atcoder.jp/contests/abc098/tasks/arc098_a)
+* [ABC104D - We Love ABC](https://atcoder.jp/contests/abc104/tasks/abc104_d)
 * [ABC106D - AtCoder Express 2](https://atcoder.jp/contests/abc106/tasks/abc106_d) (1次元、2次元)
 * [ABC122C - GeT AC](https://atcoder.jp/contests/abc122/tasks/abc122_c)
 * [ABC124D - Handstand](https://atcoder.jp/contests/abc124/tasks/abc124_d)
@@ -69,10 +71,6 @@
 * [ARC025B - チョコレート](https://atcoder.jp/contests/arc025/tasks/arc025_2) (2次元)
 * [ARC104B - DNA Sequence](https://atcoder.jp/contests/arc104/tasks/arc104_b)
 * [AGC015B - Evilator](https://atcoder.jp/contests/agc015/tasks/agc015_b)
-
-<!--
-* [ABC018C - 菱型カウント](https://atcoder.jp/contests/abc018/tasks/abc018_3)
--->
 
 ## imos 法 (imos method)
 
@@ -188,7 +186,7 @@
 
 ## ダブリング (Doubling)
 
-* [ABC014D - 閉路](https://atcoder.jp/contests/abc014/tasks/abc014_4)s
+* [ABC014D - 閉路](https://atcoder.jp/contests/abc014/tasks/abc014_4)
 * [PAST201912K - 巨大企業](https://atcoder.jp/contests/past201912-open/tasks/past201912_k)
 
 ## オイラーツアー (Euler Tour)
