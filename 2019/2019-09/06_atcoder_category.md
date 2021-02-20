@@ -182,6 +182,7 @@
 
 * [ABC035D - トレジャーハント](https://atcoder.jp/contests/abc035/tasks/abc035_d)
 * [ABC191E - Come Back Quickly](https://atcoder.jp/contests/abc191/tasks/abc191_e)
+* [ABC192E - Train](https://atcoder.jp/contests/abc192/tasks/abc192_e)
 * [PAST201912J - 地ならし](https://atcoder.jp/contests/past201912-open/tasks/past201912_j)
 
 ## ダブリング (Doubling)
@@ -215,6 +216,7 @@
 * [ABC172C - Tsundoku](https://atcoder.jp/contests/abc172/tasks/abc172_c)
 * [ABC174E - Logs](https://atcoder.jp/contests/abc174/tasks/abc174_e)
 * [ABC184F - Programming Contest](https://atcoder.jp/contests/abc184/tasks/abc184_f)
+* [ABC192D - Base n](https://atcoder.jp/contests/abc192/tasks/abc192_d)
 * [ARC003C - 暗闇帰り道](https://atcoder.jp/contests/arc003/tasks/arc003_3)
 * [ARC004C - 平均値太郎の憂鬱 ( The melancholy of Taro Heikinchi )](https://atcoder.jp/contests/arc004/tasks/arc004_3)
 * [ARC033C - データ構造](https://atcoder.jp/contests/arc033/tasks/arc033_3)
