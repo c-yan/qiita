@@ -311,7 +311,7 @@
 * [ABC172D - Sum of Divisors](https://atcoder.jp/contests/abc172/tasks/abc172_d)
 * [ABC177E - Coprime](https://atcoder.jp/contests/abc177/tasks/abc177_e)
 
-## フェルマーの小定理
+## 剰余の乗法の逆元 (modular multiplicative inverse)
 
 * [ABC034C - 経路](https://atcoder.jp/contests/abc034/tasks/abc034_c)
 * [ABC066D - 11](https://atcoder.jp/contests/abc066/tasks/arc077_b)
@@ -323,6 +323,7 @@
 * [ABC167E - Colorful Blocks](https://atcoder.jp/contests/abc167/tasks/abc167_e)
 * [ABC171F - Strivore](https://atcoder.jp/contests/abc171/tasks/abc171_f)
 * [ABC178D - Redistribution](https://atcoder.jp/contests/abc178/tasks/abc178_d)
+* [ABC186E - Throne](https://atcoder.jp/contests/abc186/tasks/abc186_e) (フェルマーの小定理は不可)
 * [ARC023C - タコヤ木](https://atcoder.jp/contests/arc023/tasks/arc023_3)
 * [ARC039B - 高橋幼稚園](https://atcoder.jp/contests/arc039/tasks/arc039_b)
 
