@@ -58,7 +58,7 @@ for a in c:
 print(result // 2)
 ```
 
-## [ABC194 	D - Journey](https://atcoder.jp/contests/abc194/tasks/abc194_d)
+## [ABC194D - Journey](https://atcoder.jp/contests/abc194/tasks/abc194_d)
 
 7分で突破. コンプリートガチャが揃うのにかかる試行回数の期待値をググって解いた.
 
