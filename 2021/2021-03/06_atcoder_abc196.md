@@ -28,53 +28,54 @@ else:
 
 ## [ABC196D - Hanjo](https://atcoder.jp/contests/abc196/tasks/abc196_d)
 
-20分くらい?で突破. Cがぱっと見では分からなくて、Dの問題文を眺めたら簡単だったのでこちらへ. HW≤16 なので、総当たりでいいですね.
+20分くらい?で突破. Cがぱっと見では分からなくて、Dの問題文を眺めたら簡単だったのでこちらへ. HW≤16 なので、再帰関数で全て試せばいいですね.
 
 ```python
 H, W, A, B = map(int, input().split())
 
-t = [[False] * W for _ in range(H)]
+placed = [[False] * W for _ in range(H)]
 
 
-def g(y, x):
+def proceed(p):
+    y, x = p
     if x + 1 < W:
-        return y, x + 1
-    return y + 1, 0
+        return (y, x + 1)
+    return (y + 1, 0)
 
 
-def f(y, x, a, b):
+def f(p, a, b):
+    y, x = p
+
     if y == H:
         return a + b == 0
 
-    if t[y][x]:
-        ny, nx = g(y, x)
-        return f(ny, nx, a, b)
+    if placed[y][x]:
+        return f(proceed(p), a, b)
 
     result = 0
     if a >= 0:
-        if x + 1 < W and not t[y][x + 1]:
-            t[y][x] = True
-            t[y][x + 1] = True
-            ny, nx = g(y, x)
-            result += f(ny, nx, a - 1, b)
-            t[y][x + 1] = False
-            t[y][x] = False
-        if y + 1 < H and not t[y + 1][x]:
-            t[y][x] = True
-            t[y + 1][x] = True
-            ny, nx = g(y, x)
-            result += f(ny, nx, a - 1, b)
-            t[y + 1][x] = False
-            t[y][x] = False
+        # right
+        if x + 1 < W and not placed[y][x + 1]:
+            placed[y][x] = True
+            placed[y][x + 1] = True
+            result += f(proceed(p), a - 1, b)
+            placed[y][x + 1] = False
+            placed[y][x] = False
+        # down
+        if y + 1 < H and not placed[y + 1][x]:
+            placed[y][x] = True
+            placed[y + 1][x] = True
+            result += f(proceed(p), a - 1, b)
+            placed[y + 1][x] = False
+            placed[y][x] = False
     if b >= 0:
-        t[y][x] = True
-        ny, nx = g(y, x)
-        result += f(ny, nx, a, b - 1)
-        t[y][x] = False
+        placed[y][x] = True
+        result += f(proceed(p), a, b - 1)
+        placed[y][x] = False
     return result
 
 
-print(f(0, 0, A, B))
+print(f((0, 0), A, B))
 ```
 
 ## [ABC196C - Doubled](https://atcoder.jp/contests/abc196/tasks/abc196_c)
@@ -95,7 +96,20 @@ b = int(N)
 result = 0
 for i in range(1, int(a) + 1):
     if int(str(i) * 2) > b:
-        continue
+        break
+    result += 1
+print(result)
+```
+
+追記: なんでこんなに難しく考えてたんだろうと反省した.
+
+```python
+N = int(input())
+
+result = 0
+for i in range(1, 1000000):
+    if int(str(i) * 2) > N:
+        break
     result += 1
 print(result)
 ```
