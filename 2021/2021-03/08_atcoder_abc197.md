@@ -1,4 +1,4 @@
-# AtCoder Beginner Contest 197 参戦記
+# AtCoder Beginner Contest 197 (Sponsored by Panasonic) 参戦記
 
 ## [ABC197A - Rotate](https://atcoder.jp/contests/abc197/tasks/abc197_a)
 
