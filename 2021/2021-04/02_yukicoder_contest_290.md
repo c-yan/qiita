@@ -30,7 +30,6 @@ for c in S[1:]:
 print(''.join(t))
 ```
 
-
 ## [B 1470 Mex Sum](https://yukicoder.me/problems/no/1470)
 
 2つの値の mex は 1, 2, 3 のどれか. 後は場合分けして計算するだけ.
