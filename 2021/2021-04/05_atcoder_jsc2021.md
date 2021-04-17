@@ -9,10 +9,7 @@
 ```python
 X, Y, Z = map(int, input().split())
 
-if Y * Z % X == 0:
-    print(Y * Z // X - 1)
-else:
-    print(Y * Z // X)
+print((Y * Z - 1) // X)
 ```
 
 ## [JSC2021B - Xor of Sequences](https://atcoder.jp/contests/jsc2021/tasks/jsc2021_b)
@@ -24,7 +21,7 @@ N, M = map(int, input().split())
 A = set(map(int, input().split()))
 B = set(map(int, input().split()))
 
-print(*sorted((A | B) - (A & B)))
+print(*sorted(A ^ B))
 ```
 
 ## [JSC2021C - Max GCD 2](https://atcoder.jp/contests/jsc2021/tasks/jsc2021_c)
