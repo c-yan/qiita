@@ -2,7 +2,7 @@
 
 最初は一度出たタイルは2度と入れないだと問題を完全に勘違いしていて、Web版ビジュアライザに0点と言われて勘違いに気づいた(笑).
 
-次にダイクストラ法風に heapq を使って、ある地点でのベストストアを記録して、それ未満な枝をカットしながら探索したところ 4174074点. 残り2時間で30位だったのでやったーと思ったが、その後は6.3%しかスコアを伸ばせなかった.
+次にダイクストラ法風に heapq を使って、ある地点でのベストスコアを記録して、それ未満な枝をカットしながら探索したところ 4174074点. 残り2時間で30位だったのでやったーと思ったが、その後は6.3%しかスコアを伸ばせなかった.
 
 最高スコアより低い枝もある程度枝刈りしないようにして点を伸ばしたのだが、本当は残り行ける数を評価しないとダメだったんだなあと思いました. 素直な BFS のほうが良かったかな.
 
@@ -18,7 +18,7 @@ def main():
     p = [list(map(int, input().split())) for _ in range(50)]
 
     def is_time_ok():
-        return time() - start < 1.9
+        return time() - start < 1.95
 
     best_scores = [[-1] * 50 for _ in range(50)]
     best_score = 0
@@ -42,7 +42,7 @@ def main():
             nresult = result + s
             nused = used | set([t[ni][nj]])
             heappush(q, (ni, nj, nscore, nresult, nused))
-    print(result)
+    print(best_result)
 
 
 main()
