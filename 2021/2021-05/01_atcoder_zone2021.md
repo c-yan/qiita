@@ -63,6 +63,54 @@ dh = [tuple(map(int, input().split())) for _ in range(N)]
 print(max(max(h - (H - h) / (D - d) * d for d, h in dh), 0))
 ```
 
+## [ZONE2021C - MAD TEAM](https://atcoder.jp/contests/zone2021/tasks/zone2021_c)
+
+突破できず. 解説動画を見てアハ体験. これは思いつけないなあ.
+
+```python
+from itertools import combinations
+
+N = int(input())
+ABCDE = [tuple(map(int, input().split())) for _ in range(N)]
+
+
+def f(n, t):
+    result = 0
+    for i in range(5):
+        if t[i] < n:
+            continue
+        result |= 1 << i
+    return result
+
+
+def is_ok(n):
+    s = set()
+    for i in range(N):
+        s.add(f(n, ABCDE[i]))
+    t = list(s)
+    if len(t) == 1:
+        return t[0] == 31
+    elif len(t) == 2:
+        return t[0] | t[1] == 31
+    for c in combinations(t, 3):
+        if c[0] | c[1] | c[2] != 31:
+            continue
+        return True
+    else:
+        return False
+
+
+ok = 0
+ng = 10 ** 9 + 1
+while ng - ok > 1:
+    m = ok + (ng - ok) // 2
+    if is_ok(m):
+        ok = m
+    else:
+        ng = m
+print(ok)
+```
+
 ## [ZONE2021D - 宇宙人からのメッセージ](https://atcoder.jp/contests/zone2021/tasks/zone2021_d)
 
 7分で突破. 過去問に同じようなのが合ったような. 反転を真面目に実行すると TLE 一直線なので、フラグ管理して、くっつける向きを変えるだけ. 連続消去も最後にやるとめんどくさいだけなので、足しこみながらやればワンパス.
