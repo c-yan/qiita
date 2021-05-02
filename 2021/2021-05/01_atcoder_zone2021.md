@@ -17,6 +17,14 @@ while True:
 print(result)
 ```
 
+追記: 無駄に頑張ってしまっていたことに気づいた.
+
+```python
+S = input()
+
+print(S.count('ZONe'))
+```
+
 ## [ZONE2021B - 友好の印](https://atcoder.jp/contests/zone2021/tasks/zone2021_b)
 
 9分半で突破. にぶたんで書いたけど、今考えるとB問題でにぶたん要らんよな. ミスった.
@@ -44,6 +52,15 @@ for _ in range(10000):
     else:
         ng = m
 print(ok)
+```
+
+追記: (*d<sub>i</sub>*, *h<sub>i</sub>*) と (*D*, *H*) を通る直線の式を求めて、*x*座標が0のときの*y*座標の最大値が答えですね.
+
+```python
+N, D, H = map(int, input().split())
+dh = [tuple(map(int, input().split())) for _ in range(N)]
+
+print(max(max(h - (H - h) / (D - d) * d for d, h in dh), 0))
 ```
 
 ## [ZONE2021D - 宇宙人からのメッセージ](https://atcoder.jp/contests/zone2021/tasks/zone2021_d)
