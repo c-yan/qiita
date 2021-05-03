@@ -113,7 +113,7 @@ print(ok)
 
 ## [ZONE2021D - 宇宙人からのメッセージ](https://atcoder.jp/contests/zone2021/tasks/zone2021_d)
 
-7分で突破. 過去問に同じようなのが合ったような. 反転を真面目に実行すると TLE 一直線なので、フラグ管理して、くっつける向きを変えるだけ. 連続消去も最後にやるとめんどくさいだけなので、足しこみながらやればワンパス.
+7分で突破. 過去問に同じようなのがあったような. 反転を真面目に実行すると TLE 一直線なので、フラグ管理して、くっつける向きを変えるだけ. 連続消去も最後にやるとめんどくさいだけなので、足しこみながらやればワンパス.
 
 ```python
 from collections import deque
@@ -127,14 +127,17 @@ for c in S:
     if c == 'R':
         is_reversed = not is_reversed
         continue
+    if len(T) == 0:
+        T.append(c)
+        continue
 
     if is_reversed:
-        if len(T) != 0 and T[0] == c:
+        if T[0] == c:
             T.popleft()
         else:
             T.appendleft(c)
     else:
-        if len(T) != 0 and T[-1] == c:
+        if T[-1] == c:
             T.pop()
         else:
             T.append(c)
