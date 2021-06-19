@@ -34,6 +34,22 @@ for i in range(1, 10 ** 9):
     break
 ```
 
+追記: にぶたんにすると *O*(log<i>N</i>) になります.
+
+```python
+N = int(input())
+
+ok = 10 ** 5
+ng = 0
+while ok - ng > 1:
+    m = ng + (ok - ng) // 2
+    if m * (m + 1) // 2 >= N:
+        ok = m
+    else:
+        ng = m
+print(ok)
+```
+
 ## [ABC206C - Swappable](https://atcoder.jp/contests/abc206/tasks/abc206_c)
 
 9分で突破. 間違って A<sub>i</sub>=A<sub>j</sub> を数え上げて、あれ数が合わないとかやって時間を無駄にした……. 2重ループだと間に合わないことは明らか. 個数を数え上げればシングルループになると気づくのは難しくない,
