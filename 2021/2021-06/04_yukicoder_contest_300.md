@@ -10,7 +10,7 @@ n = int(input())
 print(n % 1000000007)
 ```
 
-## [B 	1551 	誕生日の三角形 ](https://yukicoder.me/problems/no/1551)
+## [B 1551 誕生日の三角形](https://yukicoder.me/problems/no/1551)
 
 辺の長さが L / 3 の正三角形が答えなのは直感的に分かるので、後は面積の公式をググれば良い.
 
