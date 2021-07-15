@@ -81,3 +81,29 @@ for _ in range(Q):
     result.append(K + ok)
 print(*result, sep='\n')
 ```
+
+ある数字が何番目かは、Aに含まれるその数より小さい数の個数を調べれば分かり、二分探索を使えば *O*(log<i>N</i>) で求めることができる. K番目以下であるという条件で二分探索すれば *O*(<i>Q</i>log<i>N</i>log<i>N</i>) で答えを求めることができる.
+
+```python
+from sys import stdin
+from bisect import bisect_left
+
+readline = stdin.readline
+
+N, Q = map(int, readline().split())
+A = list(map(int, readline().split()))
+
+result = []
+for _ in range(Q):
+    K = int(readline())
+    ok = K
+    ng = K + N + 1
+    while ng - ok > 1:
+        m = ok + (ng - ok) // 2
+        if m - bisect_left(A, m) <= K:
+            ok = m
+        else:
+            ng = m
+    result.append(ok)
+print(*result, sep='\n')
+```
