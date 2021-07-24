@@ -13,7 +13,7 @@ for _ in range(t):
 
 ## [B 1623 三角形の制作](https://yukicoder.me/problems/no/1623)
 
-n は大きくて2重ループは無理だが、r<sub>i</sub>,g<sub>i</sub>,b<sub>i</sub> の値域は2重ループできる程度には小さいのがポイント. OK な条件は r<sub>i</sub>≧g<sub>j</sub> かつ r<sub>i</sub>≧b<sub>k</sub> かつ r<sub>i</sub>＜g<sub>j</sub>+b<sub>k</sub>. ｒの小さい順に処理しながら順次有効なg, bを投入していけば良い. 条件に合う個数を単純に集計する遅くて仕方がないので、BIT で高速化した.
+n は大きくて2重ループは無理だが、r<sub>i</sub>,g<sub>i</sub>,b<sub>i</sub> の値域は2重ループできる程度には小さいのがポイント. OK な条件は r<sub>i</sub>≧g<sub>j</sub> かつ r<sub>i</sub>≧b<sub>k</sub> かつ r<sub>i</sub>＜g<sub>j</sub>+b<sub>k</sub>. ｒの小さい順に処理しながら順次有効なg, bを投入していけば良い. 条件に合う個数を単純に集計すると遅くて仕方がないので、BIT で高速化した.
 
 ```python
 class BinaryIndexedTree:
@@ -77,5 +77,42 @@ for i in range(1, 3001):
         y = v & 4095
         bit.add(x + y, gg[x] * bb[y])
     result += rr[i] * bit.range_sum(i + 1, 6001)
+print(result)
+```
+
+g<sub>j</sub> と b<sub>k</sub> から r<sub>i</sub> の値域を考えるほうが簡単だった. 累積和しておけば個数は *O*(1) で求まるし.
+
+```python
+from itertools import accumulate
+
+n = int(input())
+r = list(map(int, input().split()))
+g = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+rr = [0] * 3001
+for i in r:
+    rr[i] += 1
+
+gg = [0] * 3001
+for i in g:
+    gg[i] += 1
+
+bb = [0] * 3001
+for i in b:
+    bb[i] += 1
+
+a = list(accumulate(rr))
+
+result = 0
+for i in range(1, 3001):
+    x = gg[i]
+    if x == 0:
+        continue
+    for j in range(1, 3001):
+        y = bb[j]
+        if y == 0:
+            continue
+        result += (a[min(i + j - 1, 3000)] - a[max(i, j) - 1]) * (x * y)
 print(result)
 ```
