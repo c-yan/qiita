@@ -34,8 +34,6 @@ print(result)
 
 ## [ABC203C - Friends and Travel costs](https://atcoder.jp/contests/abc203/tasks/abc203_c)
 
-
-
 6分半で突破. *N*≤2×10<sup>5</sup> なので *O*(<i>N</i>log<i>N</i>) くらいまで大丈夫だなと思ったら、ソートして前から順に処理していけばいいよねというのが分かる.
 
 ```python
@@ -61,6 +59,3 @@ print(result)
 ## [ABC203D - Pond](https://atcoder.jp/contests/abc203/tasks/abc203_d)
 
 突破できず. にぶたんかなと思って実装したら TLE. 方針が間違っていたのか、実装がいまいちなのか.
-
-```python
-```
