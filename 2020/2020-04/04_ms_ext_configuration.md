@@ -16,7 +16,7 @@ RetryCount=3
 
 Console App (.NET Core) プロジェクトを作成する. TargetFramework が netcoreapp3.1 (.NET Core 3.1) で作成される. 要求は .NET Standard 2.0 なので .NET Framework 4.6.1 や、.NET Core 2.0 でも動くはず.
 
-次に `Microsoft.Extensions.Configuration.Ini` と `Install-Package Microsoft.Extensions.Configuration.Binder` を nuget インストールする. これを書いている時点では 3.1.3 がインストールされる.
+次に `Microsoft.Extensions.Configuration.Ini` と `Microsoft.Extensions.Configuration.Binder` を nuget インストールする. これを書いている時点では 3.1.3 がインストールされる.
 
 ```powershell
 Install-Package Microsoft.Extensions.Configuration.Ini
