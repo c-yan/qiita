@@ -95,6 +95,8 @@
 
 * [ABC113C - ID](https://atcoder.jp/contests/abc113/tasks/abc113_c)
 * [ABC188D - Snuke Prime](https://atcoder.jp/contests/abc188/tasks/abc188_d)
+* [ABC213C - Reorder Cards](https://atcoder.jp/contests/abc213/tasks/abc213_c)
+* [ABC217D - Cutting Woods](https://atcoder.jp/contests/abc217/tasks/abc217_d)
 
 ## しゃくとり法 (Two pointer)
 
@@ -132,6 +134,8 @@
 * [ABC183F - Confluence](https://atcoder.jp/contests/abc183/tasks/abc183_f)
 * [ABC189C - Mandarin Orange](https://atcoder.jp/contests/abc189/tasks/abc189_c) (サイズ付き Union-Find 木)
 * [ABC206D - KAIBUNsyo](https://atcoder.jp/contests/abc206/tasks/abc206_d) (サイズ付き Union-Find 木)
+* [ABC214D - Sum of Maximum Weights](https://atcoder.jp/contests/abc214/tasks/abc214_d) (サイズ付き Union-Find 木)
+* [ABC218E - Destruction](https://atcoder.jp/contests/abc218/tasks/abc218_e)
 * [ARC032B - 道路工事](https://atcoder.jp/contests/arc032/tasks/arc032_2)
 * [ARC037B - バウムテスト](https://atcoder.jp/contests/arc037/tasks/arc037_b)
 * [ARC106B - Values](https://atcoder.jp/contests/arc106/tasks/arc106_b)
@@ -149,6 +153,7 @@
 * [ABC146D - Coloring Edges on Tree](https://atcoder.jp/contests/abc146/tasks/abc146_d)
 * [ABC148F - Playing Tag on Tree](https://atcoder.jp/contests/abc148/tasks/abc148_f)
 * [ABC198E - Unique Color](https://atcoder.jp/contests/abc198/tasks/abc198_e)
+* [ABC213D - Takahashi Tour](https://atcoder.jp/contests/abc213/tasks/abc213_d)
 * [ARC022C - ロミオとジュリエット](https://atcoder.jp/contests/arc022/tasks/arc022_3)
 * [ARC030B - ツリーグラフ](https://atcoder.jp/contests/arc030/tasks/arc030_2)
 
@@ -177,6 +182,7 @@
 * [ABC204C - Tour](https://atcoder.jp/contests/abc204/tasks/abc204_c)
 * [ABC209D - Collision](https://atcoder.jp/contests/abc209/tasks/abc209_d)
 * [ABC211D - Number of Shortest paths](https://atcoder.jp/contests/abc211/tasks/abc211_d)
+* [ABC213E - Stronger Takahashi](https://atcoder.jp/contests/abc213/tasks/abc213_e)
 * [ARC003C - 暗闇帰り道](https://atcoder.jp/contests/arc003/tasks/arc003_3)
 * [ARC005C - 器物損壊！高橋君](https://atcoder.jp/contests/arc005/tasks/arc005_3)
 * [ARC011C - ダブレット](https://atcoder.jp/contests/arc011/tasks/arc011_3)
@@ -230,6 +236,8 @@
 * [ABC184F - Programming Contest](https://atcoder.jp/contests/abc184/tasks/abc184_f)
 * [ABC192D - Base n](https://atcoder.jp/contests/abc192/tasks/abc192_d)
 * [ABC205D - Kth Excluded](https://atcoder.jp/contests/abc205/tasks/abc205_d)
+* [ABC212C - Min Difference](https://atcoder.jp/contests/abc212/tasks/abc212_c)
+* [ABC216E - Amusement Park](https://atcoder.jp/contests/abc216/tasks/abc216_e)
 * [ARC003C - 暗闇帰り道](https://atcoder.jp/contests/arc003/tasks/arc003_3)
 * [ARC004C - 平均値太郎の憂鬱 ( The melancholy of Taro Heikinchi )](https://atcoder.jp/contests/arc004/tasks/arc004_3)
 * [ARC033C - データ構造](https://atcoder.jp/contests/arc033/tasks/arc033_3)
@@ -293,6 +301,9 @@
 * [ABC123D - Cake 123](https://atcoder.jp/contests/abc123/tasks/abc123_d)
 * [ABC137D - Summer Vacation](https://atcoder.jp/contests/abc137/tasks/abc137_d)
 * [ABC141D - Powerful Discount Tickets](https://atcoder.jp/contests/abc141/tasks/abc141_d)
+* [ABC212D - Querying Multiset](https://atcoder.jp/contests/abc212/tasks/abc212_d)
+* [ABC213D - Takahashi Tour](https://atcoder.jp/contests/abc213/tasks/abc213_d)
+* [ABC217E - Sorting Queries](https://atcoder.jp/contests/abc217/tasks/abc217_e)
 * [PAST202004F - タスクの消化](https://atcoder.jp/contests/past202004-open/tasks/past202004_f)
 * [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l)
 
@@ -309,6 +320,7 @@
 * [ABC169D - Div Game](https://atcoder.jp/contests/abc169/tasks/abc169_d)
 * [ABC172D - Sum of Divisors](https://atcoder.jp/contests/abc172/tasks/abc172_d)
 * [ABC177E - Coprime](https://atcoder.jp/contests/abc177/tasks/abc177_e)
+* [ABC215D - Coprime 2](https://atcoder.jp/contests/abc215/tasks/abc215_d)
 * [ARC034C - 約数かつ倍数](https://atcoder.jp/contests/arc034/tasks/arc034_3)
 
 ## 約数列挙
@@ -365,6 +377,7 @@
 * [ABC183D - Water Heater](https://atcoder.jp/contests/abc183/tasks/abc183_d) (範囲加算)
 * [ABC185F - Range Xor Query](https://atcoder.jp/contests/abc185/tasks/abc185_f) (ビット Xor)
 * [ABC194E - Mex Min](https://atcoder.jp/contests/abc194/tasks/abc194_e) (Min)
+* [ABC217D - Cutting Woods](https://atcoder.jp/contests/abc217/tasks/abc217_d)
 * [ARC033C - データ構造](https://atcoder.jp/contests/arc033/tasks/arc033_3) (Sum)
 * [ARC045B - ドキドキデート大作戦高橋君](https://atcoder.jp/contests/arc045/tasks/arc045_b) (Min)
 * [PAST202004L - 辞書順最小](https://atcoder.jp/contests/past202004-open/tasks/past202004_l) (Min)
