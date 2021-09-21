@@ -1,4 +1,4 @@
-# AtCoder Beginner Contest 219 参戦記
+# サイシードプログラミングコンテスト2021 (AtCoder Beginner Contest 219) 参戦記
 
 ## [ABC219A - AtCoder Quiz 2](https://atcoder.jp/contests/abc219/tasks/abc219_a)
 
