@@ -1,5 +1,7 @@
 # HTTP Proxy 経由で Azure Storage にアクセスする (.NET Core)
 
+\# v12 以降は [HTTP Proxy 経由で Azure Storage にアクセスする (v12 バージョン) (.NET Core)](https://qiita.com/c-yan/items/c0ab8f6ecb6d97ca1e09) を参照.
+
 .NET Framework の場合、System.Net.WebRequest.DefaultWebProxy を設定すれば概ね何とかなるものの、それが封じられている .NET Core の場合、対象がサポートしていないと手も足も出ない. Azure Storage Client Library の場合は手も足も出なかったわけですが、最近の版で対応が入ったのでメモ.
 
 前提条件: Storage Client Library 9.4.1 以降であること
