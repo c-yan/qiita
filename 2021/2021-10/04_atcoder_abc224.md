@@ -131,11 +131,41 @@ for i in sorted(range(N), key=lambda x: rca[x][2], reverse=True):
             dpx[x] = max(dpx[x], t)
         qy.clear()
         qx.clear()
-    t = dpy[r] + 1
-    t = max(dpx[c] + 1, t)
+    t = max(dpy[r] + 1, dpx[c] + 1)
     result[i] = t
-    qy.append((r, t))
-    qx.append((c, t))
+    if t != 0:
+        qy.append((r, t))
+        qx.append((c, t))
     prev = a
+print(*result, sep='\n')
+```
+
+追々記: 解説を見ながら書き換えた. キューいらなかったか.
+
+```python
+from sys import stdin
+
+readline = stdin.readline
+
+H, W, N = map(int, readline().split())
+rca = [tuple(map(int, readline().split())) for _ in range(N)]
+
+q = {}
+for i in range(N):
+    _, _, a = rca[i]
+    q.setdefault(a, [])
+    q[a].append(i)
+
+dpy = [-1] * (H + 1)
+dpx = [-1] * (W + 1)
+result = [0] * N
+for a in sorted(q, reverse=True):
+    for i in q[a]:
+        r, c, _ = rca[i]
+        result[i] = max(dpy[r] + 1, dpx[c] + 1)
+    for i in q[a]:
+        r, c, _ = rca[i]
+        dpy[r] = max(dpy[r], result[i])
+        dpx[c] = max(dpx[c], result[i])
 print(*result, sep='\n')
 ```
