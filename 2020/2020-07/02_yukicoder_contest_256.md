@@ -61,7 +61,7 @@ N, D, *A = map(int, open(0).read().split())
 t = sorted(A)
 
 for a in A:
-    print(bisect_left(t, a - D))
+    print(bisect_left(t, a - D + 1))
 ```
 
 ## [E 1111 コード進行](https://yukicoder.me/problems/no/1111)
