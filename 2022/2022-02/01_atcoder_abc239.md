@@ -45,6 +45,19 @@ if dist(x1, x2, y1, y2) <= 100:
 print('No')
 ```
 
+追記: よくよく考えるとある点から距離がルート5の格子点はたかだか8つしか無いので、それらを全部チェックすればいいだけだった.
+
+```python
+x1, y1, x2, y2 = map(int, input().split())
+
+for dx, dy in [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)]:
+    x3, y3 = x1 + dx, y1 + dy
+    if (x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2) == 5:
+        print('Yes')
+        exit()
+print('No')
+```
+
 ## [ABC239D - Prime Sum Game](https://atcoder.jp/contests/abc239/tasks/abc239_d)
 
 5分半で突破. 全探索しても100×100=10<sup>4</sup>でしかないので、全探索すれば良い. 簡単すぎん?
@@ -164,4 +177,46 @@ func flush() {
 func println(args ...interface{}) (int, error) {
 	return fmt.Fprintln(stdoutWriter, args...)
 }
+```
+
+追記: K<sub>i</sub>​ の値域が狭いといっても、1回で済むことを20回する必要なかったね…….
+
+```python
+from sys import setrecursionlimit, stdin
+
+readline = stdin.readline
+setrecursionlimit(10 ** 6)
+
+N, Q = map(int, readline().split())
+X = list(map(int, readline().split()))
+
+links = [[] for _ in range(N)]
+
+for _ in range(N - 1):
+    A, B = map(int, readline().split())
+    A, B = A - 1, B - 1
+    links[A].append(B)
+    links[B].append(A)
+
+t = [None for _ in range(N)]
+
+def f(i, p):
+    a = [X[i]]
+    for j in links[i]:
+        if j == p:
+            continue
+        a.extend(f(j, i))
+    a.sort(reverse=True)
+    if len(a) > 20:
+        a = a[:20]
+    t[i] = a
+    return a
+f(0, -1)
+
+result = []
+for _ in range(Q):
+    V, K = map(int, readline().split())
+    V, K = V - 1, K - 1
+    result.append(t[V][K])
+print(*result, sep='\n')
 ```
