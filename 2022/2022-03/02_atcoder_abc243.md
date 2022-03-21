@@ -112,6 +112,23 @@ for c in q:
 print(X)
 ```
 
+追記: 2進数の文字の列としてやると消さなくても行ける.
+
+```python
+N, X = map(int, input().split())
+S = input()
+
+a = list(bin(X))[2:]
+for c in S:
+    if c == 'U':
+        a.pop()
+    elif c == 'L':
+        a.append('0')
+    elif c == 'R':
+        a.append('1')
+print(int(''.join(a), 2))
+```
+
 ## [ABC243E - Edge Deletion](https://atcoder.jp/contests/abc243/tasks/abc243_e)
 
 65分半で突破、WA1. 他を経由するルートが直通以下の距離であればその辺は不要というポリシーで数えたら合っていたらしく通った.
