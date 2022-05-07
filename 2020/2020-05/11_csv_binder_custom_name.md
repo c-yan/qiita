@@ -12,32 +12,21 @@ RowId,契約ID,開始日,終了日,顧客ID
 1,C0002,2020-03-01T00:00:00.0000000,,1
 ```
 
-みたいな CSV があるとする.
+みたいな CSV があるとします.
 
-カラム名を指定するための HeaderName 属性を用意します.
-
-```csharp
-[AttributeUsage(AttributeTargets.Property)]
-public class HeaderNameAttribute : Attribute
-{
-    public string Name { get; private set; }
-    public HeaderNameAttribute(string name) { Name = name; }
-}
-```
-
-そしてバインド対象のクラスのプロパティーにHeaderName 属性を使ってカラム名をアノテーションします.
+バインド対象のクラスのプロパティーに ` System.Runtime.Serialization.DataMember` 属性を使ってカラム名をアノテーションします.
 
 ```csharp
 public class Contract
 {
     public int RowId { get; set; }
-    [HeaderName("契約ID")]
+    [DataMember(Name = "契約ID")]
     public string Id { get; set; }
-    [HeaderName("開始日")]
+    [DataMember(Name = "開始日")]
     public DateTime StartDate { get; set; }
-    [HeaderName("終了日")]
+    [DataMember(Name = "終了日")]
     public DateTime? StopDate { get; set; }
-    [HeaderName("顧客ID")]
+    [DataMember(Name = "顧客ID")]
     public int CustomerId { get; set; }
 }
 ```
@@ -48,22 +37,22 @@ public class Contract
 public static IEnumerable<T> Load<T>(Stream stream, Encoding encoding = null)
     where T : class, new()
 {
+    var headerNameMap = typeof(T).GetProperties().Select(e =>
+    {
+        var a = e.GetCustomAttributes(typeof(DataMemberAttribute), true)
+            .Cast<DataMemberAttribute>()
+            .SingleOrDefault();
+        if (a == null || a.Name == null)
+        {
+            return new KeyValuePair<string, string>(e.Name, e.Name);
+        }
+        return new KeyValuePair<string, string>(a.Name, e.Name);
+    }).ToDictionary(e => e.Key, e => e.Value);
+
     if (encoding == null) encoding = Encoding.UTF8;
     using (var reader = new StreamReader(stream, encoding))
     {
         var header = reader.ReadLine().Split(",");
-        var headerNameMap = typeof(T).GetProperties().Select(e =>
-        {
-            var a = Attribute.GetCustomAttributes(e, typeof(HeaderNameAttribute));
-            if (a.Length == 0)
-            {
-                return new KeyValuePair<string, string>(e.Name, e.Name);
-            }
-            else
-            {
-                return new KeyValuePair<string, string>((a[0] as HeaderNameAttribute).Name, e.Name);
-            }
-        }).ToDictionary(e => e.Key, e => e.Value);
         var headerMap = new Dictionary<string, int>();
         for (var i = 0; i < header.Length; i++)
         {
