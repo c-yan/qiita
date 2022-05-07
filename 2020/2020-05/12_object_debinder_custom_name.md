@@ -5,23 +5,16 @@
 [クラスを CSV にデバインドする (C#)](https://qiita.com/c-yan/items/74345e0aad795cc23929) は有用だが、CSV のヘッダには日本語やカッコなどの識別子に使えないカラム名を使いたいということがあるのでそれに対応する.
 
 ```csharp
-[AttributeUsage(AttributeTargets.Property)]
-public class HeaderNameAttribute : Attribute
-{
-    public string Name { get; private set; }
-    public HeaderNameAttribute(string name) { Name = name; }
-}
-
 public class Contract
 {
     public int RowId { get; set; }
-    [HeaderName("契約ID")]
+    [DataMember(Name = "契約ID")]
     public string Id { get; set; }
-    [HeaderName("開始日")]
+    [DataMember(Name = "開始日")]
     public DateTime StartDate { get; set; }
-    [HeaderName("終了日")]
+    [DataMember(Name = "終了日")]
     public DateTime? StopDate { get; set; }
-    [HeaderName("顧客ID")]
+    [DataMember(Name = "顧客ID")]
     public int CustomerId { get; set; }
 }
 ```
@@ -47,25 +40,20 @@ public static void Save<T>(Stream stream, IEnumerable<T> content, Encoding encod
     {
         var headerName = typeof(T).GetProperties().Select(e =>
         {
-            var a = Attribute.GetCustomAttributes(e, typeof(HeaderNameAttribute));
-            if (a.Length == 0)
+            var a = e.GetCustomAttributes(typeof(DataMemberAttribute), true)
+                .Cast<DataMemberAttribute>()
+                .SingleOrDefault();
+            if (a == null || a.Name == null)
             {
                 return e.Name;
             }
-            else
-            {
-                return (a[0] as HeaderNameAttribute).Name;
-            }
-        }).ToList();
+            return a.Name;
+        });
         writer.WriteLine(string.Join(",", headerName));
 
-        var header = typeof(T).GetProperties().Select(e => e.Name).ToList();
-        var headerMap = new Dictionary<string, int>();
-        for (var i = 0; i < header.Count; i++)
-        {
-            headerMap[header[i]] = i;
-        }
-
+        var headerMap = typeof(T).GetProperties()
+            .Select((e, i) => new KeyValuePair<string, int>(e.Name, i))
+            .ToDictionary(e => e.Key, e => e.Value);
         foreach (var o in content)
         {
             writer.WriteLine(string.Join(",", Debind(headerMap, o)));
