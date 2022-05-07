@@ -11,6 +11,6 @@
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Get, url);
 request.Headers.Add("ContentType", "application/json");
-request.Headers.Add("Authorization", "Bearer " + accessToken);
+request.Headers.Add("Authorization", $"Bearer {accessToken}");
 var response = await client.SendAsync(request);
 ```
