@@ -61,6 +61,14 @@ public static T Bind<T>(Dictionary<string, int> headerMap, string[] values)
         {
             p.SetValue(result, value);
         }
+        else if (type == typeof(decimal))
+        {
+            p.SetValue(result, decimal.Parse(value));
+        }
+        else if (type == typeof(Guid))
+        {
+            p.SetValue(result, Guid.Parse(value));
+        }
         else if (type == typeof(DateTime))
         {
             if (!DateTime.TryParseExact(value, "o", null, DateTimeStyles.RoundtripKind, out var _))
@@ -69,9 +77,13 @@ public static T Bind<T>(Dictionary<string, int> headerMap, string[] values)
             }
             p.SetValue(result, DateTime.ParseExact(value, "o", null, DateTimeStyles.RoundtripKind));
         }
+        else if (type.IsEnum)
+        {
+            p.SetValue(result, Enum.Parse(type, value));
+        }
         else
         {
-            throw new ApplicationException($"Unsupported type: {typeof(T).Name}");
+            throw new ApplicationException($"Unsupported type: {typeof(T).Name}.");
         }
     }
     return result;
@@ -102,6 +114,6 @@ public static IEnumerable<T> Load<T>(Stream stream, Encoding encoding = null)
 
 なお、プロパティではなくフィールドにしたい場合には `.GetProperties()` が `.GetFields()` になり、`.PropertyType` が `.FieldType` になります.
 
-aまた、class ではなく struct にしたい場合には、`where T : class, new()` が `where T : struct` になり、`var result = new T();` が `var result = default(T);`  になり、`p.SetValue(result, v);` が `p.SetValueDirect(__makeref(result), v);` になります.
+また、class ではなく struct にしたい場合には、`where T : class, new()` が `where T : struct` になり、`var result = new T();` が `var result = default(T);`  になり、`p.SetValue(result, v);` が `p.SetValueDirect(__makeref(result), v);` になります.
 
 関連記事: [クラスを CSV にデバインドする (C#)](https://qiita.com/c-yan/items/74345e0aad795cc23929)
