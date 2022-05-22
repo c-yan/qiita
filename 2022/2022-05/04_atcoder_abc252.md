@@ -28,7 +28,7 @@ else:
 
 ## [ABC252C - Slot Strategy](https://atcoder.jp/contests/abc252/tasks/abc252_c)
 
-35分で突破. 「ここで、*S*<sub>*i*</sub>​ は 0, 1, ..., 9 がちょうど 1 回ずつ現れる長さ 10 の文字列です。」を読み飛ばして、揃わない数字もある難しい問題に勝手にして自滅. シミュレートを `heapq` で高速化して解いたけど、高速化しなくても問題なかった模様.
+35分で突破. 「ここで、$S_i$​ は $0, 1, \ldots , 9$ がちょうど $1$ 回ずつ現れる長さ $10$ の文字列です。」を読み飛ばして、揃わない数字もある難しい問題に勝手にして自滅. シミュレートを `heapq` で高速化して解いたけど、高速化しなくても問題なかった模様.
 
 ```python
 from heapq import heappush, heappop
@@ -72,7 +72,7 @@ print(result)
 
 ## [ABC252D - Distinct Trio](https://atcoder.jp/contests/abc252/tasks/abc252_d)
 
-7分半で突破. 過去に似たような問題を解いたような. 組み合わせの問題なのでソートしても大丈夫. ソートさえすれば、真ん中に対し、左右がどこまで移動できるかがにぶたんで *O*(log*N*) で取れるので、*O*(*N*log*N*) で解ける.
+7分半で突破. 過去に似たような問題を解いたような. 組み合わせの問題なのでソートしても大丈夫. ソートさえすれば、真ん中に対し、左右がどこまで移動できるかがにぶたんで $O(\log N)$ で取れるので、$O(N \log N )$ で解ける.
 
 ```python
 from bisect import bisect_left, bisect_right
